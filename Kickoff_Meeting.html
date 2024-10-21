@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick-Off Meeting - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #28a745;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            position: relative;
+        }
+        nav a {
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            position: relative;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #222;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #575757;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 10px 0 5px;
+        }
+        form input, form button {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        form button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kick-Off Meeting - SustAInability</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <div class="dropdown-container">
+            <a href="events.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+            </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
+                <a href="paragon.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Kick-Off Meeting - 25th November 2024</h2>
+            <p>Welcome to the Kick-Off Meeting of the SustAInability project! This meeting marks the official beginning of our initiative to integrate AI and sustainability into educational and environmental management practices.</p>
+            <p>The Kick-Off Meeting is a fantastic opportunity for students to get involved in international collaboration. During this meeting, we will discuss the formation of working groups and the topics they will address throughout the project. It's a great chance to experience international cultural exchange while learning from experts in environmental sciences and artificial intelligence.</p>
+            <p>Students will have the opportunity to meet with academics specializing in environmental sciences and AI, and work together to define the roadmap for our project. Guided by mentors, participants will work on specific topics, present their progress in upcoming workshops, and potentially contribute to academic publications.</p>
+            <p>The Kick-Off Meeting will also include an introduction session, where all participants will get to know each other, fostering a collaborative and friendly environment for the upcoming activities.</p>
+            <p><strong>Date:</strong> 25th November 2024</p>
+            <p><strong>Time:</strong> 10:00 AM - 4:00 PM (CET)</p>
+            <p><strong>Location:</strong> SRH University Heidelberg, Germany (with online participation available)</p>
+            
+            <h3>Registration</h3>
+            <p>Don't miss out on this opportunity to be a part of an international project combining sustainability and AI. Register now to secure your spot in the Kick-Off Meeting and start your journey towards making a meaningful impact.</p>
+            <form action="https://script.google.com/macros/s/AKfycbziEFPGaYKPeGvrthycth14TlREJjU5idGg8ZsyOOcBX5zu5caM_J_aAThlEJEosw2Y4A/exec" method="post">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="institution">Institution/Organization:</label>
+                <input type="text" id="institution" name="institution">
+                
+                <label for="comments">Comments:</label>
+                <input type="text" id="comments" name="comments">
+                
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SustAInability. All rights reserved.</p>
+    </footer>
+</body>
+</html>

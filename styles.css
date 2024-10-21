@@ -1,0 +1,54 @@
+/* Genel menü stili */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown menü için gerekli yapı */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap; /* Uzun metinlerin taşmasını engeller */
+}
+
+.dropdown-menu a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown menünün açılması */
+.dropdown-container:hover .dropdown-menu {
+    display: flex;
+}
