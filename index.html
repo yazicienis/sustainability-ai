@@ -9,32 +9,34 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #001f3f;
             color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #28a745;
+            background-color: #000080;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            background-color: #222;
+            background-color: #ff8c00;
             flex-wrap: wrap;
             padding: 10px;
         }
         nav a {
             color: #fff;
-            padding: 10px;
+            padding: 10px 15px;
             text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #ffb84d;
+            color: #fff;
         }
         .dropdown-container {
             position: relative;
@@ -44,19 +46,19 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #222;
+            background-color: #ff8c00;
             flex-direction: column;
             z-index: 1;
         }
         .dropdown-menu a {
             padding: 10px;
-            background-color: #333;
+            background-color: #ffa64d;
             color: #fff;
             text-decoration: none;
             white-space: nowrap;
         }
         .dropdown-menu a:hover {
-            background-color: #575757;
+            background-color: #ffd1a3;
         }
         .dropdown-container:hover .dropdown-menu {
             display: flex;
@@ -93,6 +95,12 @@
         .logos {
             margin-top: 20px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .logos-row {
+            display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
@@ -119,7 +127,7 @@
     
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        
         <a href="projects.html">Projects</a>
         <div class="dropdown-container">
             <a href="events.html" class="dropdown-toggle">Events</a>
@@ -128,7 +136,7 @@
             </div>
         </div>
         <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        
         <div class="dropdown-container">
             <a href="#" class="dropdown-toggle">Partners</a>
             <div class="dropdown-menu">
