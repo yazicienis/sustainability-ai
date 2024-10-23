@@ -132,8 +132,14 @@
         <p>Dr. CHAN obtained a BSc. in natural resources—inland fisheries and a graduate diploma in environment and agricultural economics from the AgroStudies International Center Ruppin Campus, Israel, and a PhD in urban and environmental engineering, specialized in urban and regional development, from the Hanyang University Seoul Campus, South Korea. He also attended the 3rd UN PAGE Green Industry Summer School 2024 at the UNIDO Headquarters in Vienna, Austria and got certified in the core concepts of circular entrepreneurship from the Rochester Institute of Technology, New York, USA.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2024 SustAInability. All rights reserved.</p>
-    </footer>
+<div id="footer"></div>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
 </body>
 </html>
