@@ -22,16 +22,16 @@
         }
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: #222;
-            position: relative;
+            flex-wrap: wrap;
+            padding: 10px;
         }
         nav a {
             color: #fff;
-            padding: 15px;
+            padding: 10px;
             text-decoration: none;
-            position: relative;
         }
         nav a:hover {
             background-color: #575757;
@@ -79,12 +79,35 @@
             min-width: 250px;
         }
         footer {
-            background-color: #222;
-            color: #fff;
+            background-color: #f8f9fa;
+            color: #333;
             text-align: center;
-            padding: 10px;
-            width: 100%;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
             position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logos {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .content {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -96,6 +119,7 @@
     
     <nav>
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <div class="dropdown-container">
             <a href="events.html" class="dropdown-toggle">Events</a>
@@ -147,7 +171,7 @@
         </div>
     </div>
 
-<div id="footer"></div>
+    <div id="footer"></div>
 <script>
     fetch('footer.html')
         .then(response => response.text())
@@ -155,6 +179,5 @@
             document.getElementById('footer').innerHTML = data;
         });
 </script>
-
 </body>
 </html>
