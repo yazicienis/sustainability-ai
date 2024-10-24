@@ -9,13 +9,13 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #e6f7f8;
             color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #28a745;
+            background-color: #000080;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -24,17 +24,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #222;
-            position: relative;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
         }
         nav a {
             color: #fff;
-            padding: 15px;
+            padding: 10px 15px;
             text-decoration: none;
-            position: relative;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #ffb84d;
+            color: #fff;
         }
         .dropdown-container {
             position: relative;
@@ -44,19 +46,19 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: #222;
+            background-color: #ff8c00;
             flex-direction: column;
             z-index: 1;
         }
         .dropdown-menu a {
             padding: 10px;
-            background-color: #333;
+            background-color: #ffa64d;
             color: #fff;
             text-decoration: none;
             white-space: nowrap;
         }
         .dropdown-menu a:hover {
-            background-color: #575757;
+            background-color: #ffd1a3;
         }
         .dropdown-container:hover .dropdown-menu {
             display: flex;
@@ -72,12 +74,16 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #222;
-            color: #fff;
+            background-color: #f8f9fa;
+            color: #333;
             text-align: center;
-            padding: 10px;
-            width: 100%;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
             position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
         }
         form {
             display: flex;
@@ -92,13 +98,18 @@
             font-size: 1em;
         }
         form button {
-            background-color: #28a745;
+            background-color: #000080;
             color: #fff;
             border: none;
             cursor: pointer;
         }
         form button:hover {
-            background-color: #218838;
+            background-color: #333399;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -109,7 +120,6 @@
     
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <div class="dropdown-container">
             <a href="events.html" class="dropdown-toggle">Events</a>
@@ -118,7 +128,6 @@
             </div>
         </div>
         <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
         <div class="dropdown-container">
             <a href="#" class="dropdown-toggle">Partners</a>
             <div class="dropdown-menu">
