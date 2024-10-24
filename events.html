@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustAInability: Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .logos {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .logos-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SustAInability: Events</h1>
+        <p>Upcoming Workshops, Conferences, and On-Site Visits</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <div class="dropdown-container">
+            <a href="events.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+            </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
+                <a href="paragon.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h2>Events Overview</h2>
+        <p>The Sustainability-AI project includes a series of key events aimed at enhancing participants' skills, fostering cultural exchange, and providing hands-on experience in the field of AI-driven sustainability solutions. Below are the details of our upcoming workshops, on-site visits, and conferences.</p>
+
+        <h3>Kick-Off Meeting (November 2024)</h3>
+        <p>A half-day event to introduce the project team and interested students. During this meeting, the project goals and the application process will be presented. It serves as an opportunity for students and project team members to get to know each other and understand the vision of the Sustainability-AI project.</p>
+
+        <h3>Online Workshops</h3>
+        <ul>
+            <li><strong>March 2025:</strong> A two-day event focusing on innovative technologies for environmental monitoring, AI applications, and intercultural training. This workshop will introduce participants to AI, machine learning, and embedded systems, with case study discussions highlighting the integration of AI into sustainable development practices. Additionally, intercultural training titled "Interaction Across Cultures" will be provided to promote international communication.</li>
+            <li><strong>November 2025:</strong> A two-day event featuring discussions on AI and immersive technologies, promoting STEM fields, and including presentations from industry experts, students, and civil society organizations, followed by interactive discussions.</li>
+            <li><strong>May 2026:</strong> A two-day round table for lecturers and researchers to share insights, discuss challenges, and build partnerships to foster collaboration in AI and sustainability research.</li>
+        </ul>
+
+        <h3>Online Conference (June 2026)</h3>
+        <p>A one-day online conference where project groups will present their results. The conference will also feature expert presentations by researchers from the project team, discussions with additional invited scientists, and industry experts. This is a valuable opportunity for participants to showcase their work, gain feedback, and learn from experienced professionals in the field.</p>
+
+        <h3>On-Site Events</h3>
+        <ul>
+            <li><strong>Heidelberg Visit (August 2025 - 2 Weeks):</strong> Participants will visit SRH University Heidelberg for two weeks. Activities will include tutorials on AI and machine learning, workshops on embedded systems and IoT, cultural activities, and project prototype development. The visit will also feature a field trip to the Alps to observe the impacts of climate change and interact with experts from the German Weather Service (DWD).</li>
+            <li><strong>Phnom Penh Visit (April 2026 - 1 Week):</strong> Participants will visit Paragon International University in Cambodia for one week. The visit will include workshops on the integration of AI and embedded systems for sustainable environmental management, cultural programs such as visits to historical sites, and field trips to engage with local environmental experts.</li>
+        </ul>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
