@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post {
+            margin-bottom: 40px;
+        }
+        .post h3 {
+            color: #000080;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SustAInability Blog</h1>
+        <p>Insights, Experiences, and Stories from Our Community</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <div class="dropdown-container">
+            <a href="events.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+            </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
+                <a href="paragon.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <div class="post">
+                <h3>Project Kick-Off Reflections</h3>
+                <p><strong>Posted by:</strong> John Doe | <strong>Date:</strong> 21st November 2024</p>
+                <p>The Kick-Off Meeting was an inspiring start to our journey towards sustainability and AI integration. We had the opportunity to meet with experts and students from diverse backgrounds, and set the stage for what promises to be an exciting project.</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="post">
+                <h3>Student Perspectives: Cultural Exchange and Learning</h3>
+                <p><strong>Posted by:</strong> Jane Smith | <strong>Date:</strong> 5th December 2024</p>
+                <p>Participating in this project has not only helped me improve my understanding of AI technologies, but also allowed me to experience cultural exchange with students from different countries. The friendships and knowledge we are building are invaluable.</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="post">
+                <h3>AI and Environmental Monitoring: Opportunities for Cambodia</h3>
+                <p><strong>Posted by:</strong> Dr. Puthearath Chan | <strong>Date:</strong> 10th January 2025</p>
+                <p>Cambodia faces numerous environmental challenges, but with the power of AI, we can create real solutions. In this post, I discuss how AI can be applied to tackle deforestation, improve water management, and support sustainability initiatives.</p>
+                <a href="#">Read more...</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
