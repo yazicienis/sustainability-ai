@@ -9,13 +9,13 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #e6f7f8;
             color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #28a745;
+            background-color: #000080;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -24,36 +24,77 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #222;
-            position: relative;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
         }
         nav a {
             color: #fff;
-            padding: 15px;
+            padding: 10px 15px;
             text-decoration: none;
-            position: relative;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
-            background-color: #575757;
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
         }
         .container {
             padding: 20px;
             max-width: 1200px;
             margin: auto;
         }
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            position: relative;
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         img {
-            max-width: 100%;
+            max-width: 70%;
             height: auto;
             display: block;
-            margin: 20px 0;
+            margin: 20px auto;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -64,7 +105,6 @@
     
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <div class="dropdown-container">
             <a href="events.html" class="dropdown-toggle">Events</a>
@@ -73,7 +113,6 @@
             </div>
         </div>
         <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
         <div class="dropdown-container">
             <a href="#" class="dropdown-toggle">Partners</a>
             <div class="dropdown-menu">
@@ -85,61 +124,62 @@
     </nav>
     
     <div class="container">
-        <h2>Paragon International University - Cambodia</h2>
-        <img src="cambodia_landscape.jpg" alt="Beautiful landscape of Cambodia">
-        <p><strong>Partner Country:</strong> Cambodia</p>
-        <h3>Cambodia: A Land of Opportunity for AI and Sustainability</h3>
-        <p><strong>Geography and Environment:</strong> Located in Southeast Asia, Cambodia is known for its rich history, stunning landscapes, and diverse ecosystems. The country is home to the famous Angkor Wat temple complex, vast rainforests, fertile plains, and the mighty Mekong River. Cambodia's environmental resources are vital to its economy and the livelihoods of its people, but these resources are increasingly under threat due to deforestation, climate change, and water scarcity.</p>
+        <div class="content">
+            <h2>Paragon International University - Cambodia</h2>
+            <img src="cambodia_landscape.jpg" alt="Beautiful landscape of Cambodia">
+            <p><strong>Partner Country:</strong> Cambodia</p>
+            <h3>Cambodia: A Land of Opportunity for AI and Sustainability</h3>
+            <p><strong>Geography and Environment:</strong> Located in Southeast Asia, Cambodia is known for its rich history, stunning landscapes, and diverse ecosystems. The country is home to the famous Angkor Wat temple complex, vast rainforests, fertile plains, and the mighty Mekong River. Cambodia's environmental resources are vital to its economy and the livelihoods of its people, but these resources are increasingly under threat due to deforestation, climate change, and water scarcity.</p>
 
-        <h3>Environmental Challenges</h3>
-        <p>Cambodia faces several environmental challenges that make it a focal point for sustainability initiatives:</p>
-        <ul>
-            <li><strong>Deforestation:</strong> Rapid logging and land clearing for agriculture have led to significant forest loss, threatening biodiversity and natural habitats.</li>
-            <li><strong>Water Management:</strong> The Mekong River, a lifeline for millions, faces issues like flooding, drought, and pollution, making sustainable water management essential for Cambodia’s future.</li>
-            <li><strong>Climate Change:</strong> Cambodia is highly vulnerable to the impacts of climate change, including rising temperatures, changing rainfall patterns, and extreme weather events that disrupt agriculture and food security.</li>
-        </ul>
-        <h3>Education and Development</h3>
+            <h3>Environmental Challenges</h3>
+            <p>Cambodia faces several environmental challenges that make it a focal point for sustainability initiatives:</p>
+            <ul>
+                <li><strong>Deforestation:</strong> Rapid logging and land clearing for agriculture have led to significant forest loss, threatening biodiversity and natural habitats.</li>
+                <li><strong>Water Management:</strong> The Mekong River, a lifeline for millions, faces issues like flooding, drought, and pollution, making sustainable water management essential for Cambodia’s future.</li>
+                <li><strong>Climate Change:</strong> Cambodia is highly vulnerable to the impacts of climate change, including rising temperatures, changing rainfall patterns, and extreme weather events that disrupt agriculture and food security.</li>
+            </ul>
+            <h3>Education and Development</h3>
 
-        <p>Cambodia has made significant strides in education and economic development in recent decades. However, access to quality education, particularly in rural areas, remains a challenge. Integrating AI into the education system can enhance learning outcomes, digital literacy, and promote sustainability-focused education that empowers the younger generation to tackle environmental issues.</p>
-        <h3>AI and Sustainability in Cambodia</h3>
-        <p>With its unique environmental challenges and developing educational infrastructure, Cambodia provides a fertile ground for implementing AI-driven solutions. AI can:</p>
-        <ul>
-            <li>Help monitor deforestation and biodiversity loss in real-time using satellite imagery and machine learning.</li>
-            <li>Improve water management by predicting flood risks and managing water resources more effectively.</li>
-            <li>Support educational initiatives that focus on sustainability, empowering students with knowledge and tools to protect their environment.</li>
-        </ul>
- 
-       <h3>Cambodia’s Role in the SustAInability Project</h3>
-        <p>As a partner country, Cambodia plays a pivotal role in shaping the direction of our AI projects. We are working closely with local institutions, government bodies, and environmental organizations to ensure that our solutions are tailored to Cambodia’s specific needs. Our collaboration aims to protect Cambodia's rich natural heritage while supporting sustainable development through innovative educational programs.</p>
+            <p>Cambodia has made significant strides in education and economic development in recent decades. However, access to quality education, particularly in rural areas, remains a challenge. Integrating AI into the education system can enhance learning outcomes, digital literacy, and promote sustainability-focused education that empowers the younger generation to tackle environmental issues.</p>
+            <h3>AI and Sustainability in Cambodia</h3>
+            <p>With its unique environmental challenges and developing educational infrastructure, Cambodia provides a fertile ground for implementing AI-driven solutions. AI can:</p>
+            <ul>
+                <li>Help monitor deforestation and biodiversity loss in real-time using satellite imagery and machine learning.</li>
+                <li>Improve water management by predicting flood risks and managing water resources more effectively.</li>
+                <li>Support educational initiatives that focus on sustainability, empowering students with knowledge and tools to protect their environment.</li>
+            </ul>
         
-        <h2>About Paragon International University</h2>
-        <img src="paragon_university.jpg" alt="Paragon International University Building">
-        <p>Paragon International University, established in 2010, is a leading private higher education institution in Cambodia. With a strong focus on academic excellence, research, and community service, the university provides quality education to over 1400 students across three main faculties: the Faculty of Economic and Administrative Sciences, the Faculty of Information and Computer Technologies, and the Faculty of Engineering.</p>
-        <p>Offering 11 undergraduate programs, including Civil Engineering, Computer Science, Business Administration, and Political Science, Paragon International University prepares students with the skills needed to thrive in the global economy. Its core values—Responsibility, Integrity, Discovery, and Excellence—are reflected in the university's commitment to fostering socially responsible and globally aware graduates.</p>
-        <p>Paragon International University has developed strong international partnerships with institutions around the world and continues to expand its global outlook. Through its dedication to innovation and quality education, Paragon International University aims to be a leader in higher education in Cambodia and the ASEAN region.</p>
-        
-        <h3>Key Personnel at Paragon International University</h3>
-        <h4>Daniiar SATYBALDIEV, PhD</h4>
-        <img src="daniiar_satybaldiev.jpg" alt="Dr. Daniiar Satybaldiev">
-        <p>Daniiar Satybaldiev is a full-time lecturer at the Department of Computer Science and the Director of the ERP and Web Development Department at Paragon International University, Cambodia. He holds a Ph.D. in Computer Science from International Black Sea University, Tbilisi, Georgia (2016), and both Bachelor's and Master's degrees in Electronics Engineering from Ala-Too International University, Bishkek, Kyrgyzstan (2009).</p>
-        <p>With over 10 years of teaching experience in Electronic Engineering and Computer Science, Daniiar moved to Cambodia in 2019 to continue his academic career at Paragon International University. His research interests include digital systems design, blockchain technologies, and AI integration into ERP systems. Daniiar has participated in various international workshops and conferences in Turkey, Poland, the United States, Malaysia, and Singapore.</p>
-        <p>Currently, he is conducting research on integrating artificial intelligence into ERP systems to enhance functionality and improve educational environments.</p>
-        
-        <h4>Puthearath CHAN, PhD</h4>
-        <img src="puthearath_chan.jpg" alt="Dr. Puthearath Chan">
-        <p>Dr. Puthearath CHAN has over 12 years of work experience as a researcher, university lecturer, senior technical officer, and national coordinator for various projects on green and circular economy, urban sustainability, and climate change, with governmental and non-governmental organizations, national and international universities, as well as UN Agencies, such as UNCDF, UNIDO, UNDP, etc. He has worked as a senior technical officer for more than 10 years at the Department of Green Economy (formerly Division of Green Economy and Investment), Ministry of Environment/ National Council for Sustainable Development.</p>
-        <p>Dr. CHAN is a member of the National Steering Committee (NSC) Secretariat for the United Nations Partnership for Action on Green Economy (UN PAGE) in Cambodia, which is led by the Ministry of Environment and supported by the five UN Agencies (UNDP, UNIDO, ILO, UNEP & UNITAR). He is also an advisory board member and lecturer at the Faculty of Engineering, Paragon International University, and a visiting professor for international master’s degree programs (dual degrees) in entrepreneurship and project management at the Royal University of Law and Economics and the Lumière Lyon 2 University, France.</p>
-        <p>Dr. CHAN obtained a BSc. in natural resources—inland fisheries and a graduate diploma in environment and agricultural economics from the AgroStudies International Center Ruppin Campus, Israel, and a PhD in urban and environmental engineering, specialized in urban and regional development, from the Hanyang University Seoul Campus, South Korea. He also attended the 3rd UN PAGE Green Industry Summer School 2024 at the UNIDO Headquarters in Vienna, Austria and got certified in the core concepts of circular entrepreneurship from the Rochester Institute of Technology, New York, USA.</p>
+            <h3>Cambodia’s Role in the SustAInability Project</h3>
+            <p>As a partner country, Cambodia plays a pivotal role in shaping the direction of our AI projects. We are working closely with local institutions, government bodies, and environmental organizations to ensure that our solutions are tailored to Cambodia’s specific needs. Our collaboration aims to protect Cambodia's rich natural heritage while supporting sustainable development through innovative educational programs.</p>
+            
+            <h2>About Paragon International University</h2>
+            <img src="paragon_university.jpg" alt="Paragon International University Building">
+            <p>Paragon International University, established in 2010, is a leading private higher education institution in Cambodia. With a strong focus on academic excellence, research, and community service, the university provides quality education to over 1400 students across three main faculties: the Faculty of Economic and Administrative Sciences, the Faculty of Information and Computer Technologies, and the Faculty of Engineering.</p>
+            <p>Offering 11 undergraduate programs, including Civil Engineering, Computer Science, Business Administration, and Political Science, Paragon International University prepares students with the skills needed to thrive in the global economy. Its core values—Responsibility, Integrity, Discovery, and Excellence—are reflected in the university's commitment to fostering socially responsible and globally aware graduates.</p>
+            <p>Paragon International University has developed strong international partnerships with institutions around the world and continues to expand its global outlook. Through its dedication to innovation and quality education, Paragon International University aims to be a leader in higher education in Cambodia and the ASEAN region.</p>
+            
+            <h3>Key Personnel at Paragon International University</h3>
+            <h4>Daniiar SATYBALDIEV, PhD</h4>
+            <img src="daniiar_satybaldiev.jpg" alt="Dr. Daniiar Satybaldiev">
+            <p>Daniiar Satybaldiev is a full-time lecturer at the Department of Computer Science and the Director of the ERP and Web Development Department at Paragon International University, Cambodia. He holds a Ph.D. in Computer Science from International Black Sea University, Tbilisi, Georgia (2016), and both Bachelor's and Master's degrees in Electronics Engineering from Ala-Too International University, Bishkek, Kyrgyzstan (2009).</p>
+            <p>With over 10 years of teaching experience in Electronic Engineering and Computer Science, Daniiar moved to Cambodia in 2019 to continue his academic career at Paragon International University. His research interests include digital systems design, blockchain technologies, and AI integration into ERP systems. Daniiar has participated in various international workshops and conferences in Turkey, Poland, the United States, Malaysia, and Singapore.</p>
+            <p>Currently, he is conducting research on integrating artificial intelligence into ERP systems to enhance functionality and improve educational environments.</p>
+            
+            <h4>Puthearath CHAN, PhD</h4>
+            <img src="puthearath_chan.jpg" alt="Dr. Puthearath Chan">
+            <p>Dr. Puthearath CHAN has over 12 years of work experience as a researcher, university lecturer, senior technical officer, and national coordinator for various projects on green and circular economy, urban sustainability, and climate change, with governmental and non-governmental organizations, national and international universities, as well as UN Agencies, such as UNCDF, UNIDO, UNDP, etc. He has worked as a senior technical officer for more than 10 years at the Department of Green Economy (formerly Division of Green Economy and Investment), Ministry of Environment/ National Council for Sustainable Development.</p>
+            <p>Dr. CHAN is a member of the National Steering Committee (NSC) Secretariat for the United Nations Partnership for Action on Green Economy (UN PAGE) in Cambodia, which is led by the Ministry of Environment and supported by the five UN Agencies (UNDP, UNIDO, ILO, UNEP & UNITAR). He is also an advisory board member and lecturer at the Faculty of Engineering, Paragon International University, and a visiting professor for international master’s degree programs (dual degrees) in entrepreneurship and project management at the Royal University of Law and Economics and the Lumière Lyon 2 University, France.</p>
+            <p>Dr. CHAN obtained a BSc. in natural resources—inland fisheries and a graduate diploma in environment and agricultural economics from the AgroStudies International Center Ruppin Campus, Israel, and a PhD in urban and environmental engineering, specialized in urban and regional development, from the Hanyang University Seoul Campus, South Korea. He also attended the 3rd UN PAGE Green Industry Summer School 2024 at the UNIDO Headquarters in Vienna, Austria and got certified in the core concepts of circular entrepreneurship from the Rochester Institute of Technology, New York, USA.</p>
+        </div>
     </div>
 
-<div id="footer"></div>
-<script>
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-</script>
-
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
