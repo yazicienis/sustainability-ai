@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project {
+            margin-bottom: 40px;
+        }
+        .project h3 {
+            color: #000080;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SustAInability Projects</h1>
+        <p>Collaborative Mentoring Groups and Their Initiatives</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <div class="dropdown-container">
+            <a href="events.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+            </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
+                <a href="paragon.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <div class="project">
+                <h3>Mentoring Group 1: AI for Environmental Monitoring</h3>
+                <p><strong>Focus Area:</strong> Leveraging AI technologies to monitor and manage environmental resources.</p>
+                <p>Students from Germany, Cambodia, and Kyrgyzstan are working together to develop AI-driven solutions to monitor deforestation, predict water scarcity, and assess air quality. Regular online meetings are held to discuss progress and exchange ideas, fostering both technological learning and intercultural understanding.</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="project">
+                <h3>Mentoring Group 2: Sustainable Agriculture Using AI</h3>
+                <p><strong>Focus Area:</strong> Using AI to improve agricultural practices and ensure sustainability.</p>
+                <p>This group is focusing on how AI can be used to optimize agricultural output while reducing environmental impact. They aim to develop models that predict crop yields, optimize irrigation, and manage soil health. The participants are sharing knowledge from their respective cultures, enhancing both the technical and cultural depth of their project.</p>
+                <a href="#">Read more...</a>
+            </div>
+            <div class="project">
+                <h3>Mentoring Group 3: AI and Renewable Energy Solutions</h3>
+                <p><strong>Focus Area:</strong> Exploring AI's role in optimizing renewable energy systems.</p>
+                <p>Members of this group are investigating how AI can enhance renewable energy technologies, such as solar and wind energy. They are developing predictive models to optimize energy generation and storage. This collaboration encourages students to learn about renewable energy while appreciating each other's cultural perspectives.</p>
+                <a href="#">Read more...</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
