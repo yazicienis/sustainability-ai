@@ -52,3 +52,11 @@ nav a:hover {
 .dropdown-container:hover .dropdown-menu {
     display: flex;
 }
+
+.logo {
+    height: 100px;
+    width: auto;
+    margin: 10px;
+    object-fit: contain; /* Görüntünün kesilmeden uygun bir şekilde sığmasını sağlar */
+}
+
