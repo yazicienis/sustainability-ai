@@ -53,34 +53,16 @@ nav a:hover {
     display: flex;
 }
 
-/* Footer stili */
-.footer {
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    width: 80%;
-    margin: 20px auto;
-    position: relative;
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo stili */
 .logo {
     height: 100px;
     width: auto;
-    margin: 20px; /* Logolar arasındaki boşluğu artırdım */
+    margin: 20px; /* Her logoya daha fazla boşluk ekledim */
     object-fit: contain; /* Görüntünün kesilmeden uygun bir şekilde sığmasını sağlar */
 }
 
-/* Logos row düzenlemesi */
 .logos-row {
     display: flex;
-    justify-content: space-around; /* Logoları dengelemek için space-around kullandım */
+    justify-content: space-around; /* Logolar arasındaki boşlukları dengelemek için ekledim */
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
+    gap: 20px; /* Logolar arasındaki boşluk */
 }
