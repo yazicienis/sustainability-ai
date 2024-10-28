@@ -145,9 +145,10 @@ img {
 
 
 .sub-heading {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 1.2em;
+    display: block;  /* Cümleyi blok halinde göstermek için */
+    text-align: center;  /* Cümleyi ortalamak için */
+    margin: 10px 0 20px 0;  /* Üst ve alt boşlukları düzenlemek için */
+    font-size: 1.2em;  /* Cümleyi daha belirgin hale getirmek için */
     color: #555;
 }
+
