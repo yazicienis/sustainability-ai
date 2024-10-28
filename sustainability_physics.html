@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics for a Sustainable Future - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Physics for a Sustainable Future</h1>
+        <p>Exploring Physics for Addressing Environmental Challenges</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <div class="dropdown-container">
+            <a href="events.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+            </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
+                <a href="paragon.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h2>About the Research Group</h2>
+            <p>The <strong>Physics for a Sustainable Future Research Group</strong> focuses on exploring renewable energy technologies, climate science, and sustainable materials to address environmental challenges through physics. Our goal is to use physics to create innovative solutions for sustainability and help students understand the importance of applying scientific knowledge to real-world problems.</p>
+            
+            <h2>Areas of Research</h2>
+            <ul>
+                <li><strong>Renewable Energy Systems:</strong> Understanding the physics of solar, wind, and hydroelectric power generation, focusing on energy efficiency and transformation.</li>
+                <li><strong>Climate Science:</strong> Basics of thermodynamics, the greenhouse effect, and atmospheric physics to understand climate change mechanisms.</li>
+                <li><strong>Sustainable Materials:</strong> Exploring the properties of recyclable and biodegradable materials and their applications in sustainable technologies.</li>
+                <li><strong>Water Management:</strong> Studying fluid dynamics and its application in water resource management and conservation.</li>
+                <li><strong>Energy Storage:</strong> Basics of batteries, capacitors, and innovative storage methods contributing to sustainability.</li>
+            </ul>
+            
+            <h2>Join Us</h2>
+            <p>If you are passionate about sustainability and want to explore how physics can help address environmental challenges, this is the perfect research group for you. We meet regularly to conduct experiments, analyze data, and develop new ideas for a sustainable future.</p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
