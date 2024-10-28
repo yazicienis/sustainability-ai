@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustAInability News</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .news-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SustAInability News</h1>
+        <p>Latest Updates on Our Project and Activities</p>
+    </header>
+    
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+    
+    <div class="container">
+        <div class="news-item">
+            <h2>Project Kickoff Announcement</h2>
+            <p><strong>October 2024:</strong> The SustAInability project officially started in October 2024. The first kickoff meeting will be held online on <strong>October 21, 2024</strong> at <strong>10:00 AM Berlin time</strong>. Interested participants are encouraged to join us to learn more about the project's goals and activities.</p>
+            <p>To register for the kickoff meeting, please visit: <a href="https://sustainability-ai.org/Kickoff:Meeting.html">sustainability-ai.org/Kickoff:Meeting.html</a></p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
