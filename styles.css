@@ -124,11 +124,25 @@ nav a:hover {
 
 
 /* Diğer stil tanımları */
+
+
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: block; /* Flex yerine block kullanarak dikey hizalama sağlıyoruz */
+    margin: 0 auto; /* Ortaya hizalamak için */
+    padding: 20px;
+    max-width: 1000px; /* İçeriğin genişliğini sınırlayarak daha düzgün görünmesini sağlıyoruz */
 }
+
+
+.project {
+    background: #fff; /* Kartın arka planını beyaz yapıyoruz */
+    padding: 20px; /* İçerik boşluklarını düzenliyoruz */
+    margin: 20px auto; /* Kartlar arasında dikey boşluk ve ortalama sağlıyoruz */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge ekliyoruz */
+    border-radius: 8px; /* Kenarları yuvarlıyoruz */
+    max-width: 800px; /* Kartların genişliğini sınırlıyoruz */
+}
+
 
 .content .card {
     background: #fff;
