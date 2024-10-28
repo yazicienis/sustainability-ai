@@ -142,3 +142,12 @@ img {
         flex-direction: column;
     }
 }
+
+
+.sub-heading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
