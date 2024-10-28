@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Computers and AI - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quantum Computers and AI</h1>
+        <p>Exploring Quantum Computing and Its Impact on Artificial Intelligence</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <div class="dropdown-container">
+            <a href="events.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+            </div>
+        </div>
+        <a href="blog.html">Blog</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
+                <a href="paragon.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h2>About the Research Group</h2>
+            <p>The <strong>Quantum Computers and AI Research Group</strong> is dedicated to exploring the fascinating world of quantum computing and its impact on artificial intelligence. Our goal is to understand the foundational concepts of quantum mechanics, develop quantum algorithms, and explore how quantum technologies can revolutionize AI and problem-solving.</p>
+            
+            <h2>Areas of Research</h2>
+            <ul>
+                <li><strong>Quantum Mechanics Basics:</strong> Understanding fundamental concepts such as superposition, entanglement, and the uncertainty principle.</li>
+                <li><strong>Quantum Algorithms:</strong> Exploring simple quantum algorithms, including Grover's and Shor's algorithms, and understanding their advantages over classical algorithms.</li>
+                <li><strong>Quantum Computing in AI:</strong> Investigating how quantum computing can enhance machine learning and AI, focusing on potential applications and benefits.</li>
+                <li><strong>Quantum Error Correction:</strong> Learning about the challenges of quantum computation and the methods used to correct errors in quantum systems.</li>
+                <li><strong>Ethics and Impact:</strong> Discussing the ethical implications and societal impacts of quantum computing and AI technologies.</li>
+            </ul>
+            
+            <h2>Join Us</h2>
+            <p>If you are curious about the future of computing and excited to learn about how quantum technologies can change the world, join our research group! We meet regularly to study quantum concepts, conduct simulations, and work on real-world applications of quantum computing and AI.</p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
