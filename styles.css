@@ -98,6 +98,31 @@ nav a:hover {
     display: flex;
 }
 
+
+
+
+.sub-heading {
+    display: block;  /* Cümleyi blok halinde göstermek için */
+    text-align: center;  /* Cümleyi ortalamak için */
+    margin: 10px 0 20px 0;  /* Üst ve alt boşlukları düzenlemek için */
+    font-size: 1.2em;  /* Cümleyi daha belirgin hale getirmek için */
+    color: #555;
+}
+
+
+.project {
+    background: #fff; /* Kartın arka planını beyaz yapıyoruz */
+    padding: 20px; /* İç boşlukları düzenliyoruz */
+    margin: 20px auto; /* Kartlar arasında dikey boşluk ekliyoruz ve ortalıyoruz */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge ekliyoruz */
+    border-radius: 8px; /* Kenarları yuvarlatıyoruz */
+    max-width: 800px; /* Kart genişliğini sınırlıyoruz */
+    text-align: left; /* Metin hizalamasını sola yapıyoruz */
+}
+
+
+
+
 /* Diğer stil tanımları */
 .content {
     display: flex;
@@ -144,11 +169,4 @@ img {
 }
 
 
-.sub-heading {
-    display: block;  /* Cümleyi blok halinde göstermek için */
-    text-align: center;  /* Cümleyi ortalamak için */
-    margin: 10px 0 20px 0;  /* Üst ve alt boşlukları düzenlemek için */
-    font-size: 1.2em;  /* Cümleyi daha belirgin hale getirmek için */
-    color: #555;
-}
 
