@@ -5,127 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - SustAInability</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #e6f7f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ff8c00;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 15px;
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #ffb84d;
-            color: #fff;
-        }
-        .dropdown-container {
-            position: relative;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ff8c00;
-            flex-direction: column;
-            z-index: 1;
-        }
-        .dropdown-menu a {
-            padding: 10px;
-            background-color: #ffa64d;
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .dropdown-menu a:hover {
-            background-color: #ffd1a3;
-        }
-        .dropdown-container:hover .dropdown-menu {
-            display: flex;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            width: 80%;
-            margin: 20px auto;
-            position: relative;
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>SustAInability Blog</h1>
         <p>A Platform for Sharing Insights, Experiences, and Stories</p>
     </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <div class="dropdown-container">
-            <a href="events.html" class="dropdown-toggle">Events</a>
-            <div class="dropdown-menu">
-                <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
-            </div>
-        </div>
-        <a href="blog.html">Blog</a>
-        <div class="dropdown-container">
-            <a href="#" class="dropdown-toggle">Partners</a>
-            <div class="dropdown-menu">
-                <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
-                <a href="paragon.html">Paragon International University</a>
-                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="container">
-        <div class="content">
-            <h2>Coming Soon!</h2>
-            <p>Our blog will be a platform where students, mentors, and faculty members share their experiences, reflections, and insights from the SustAInability project. Stay tuned for upcoming posts and stories that capture the essence of our international collaboration.</p>
-        </div>
+
+
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+        <div class="banner-container">
+        <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
     </div>
 
+ 
     <div id="footer"></div>
     <script>
         fetch('footer.html')
