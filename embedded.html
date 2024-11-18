@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Systems for Sustainability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="content">
+            <h2>About the Project</h2>
+            <p>The <strong>Embedded Systems for Sustainability</strong> project, led by Enis Yazıcı, focuses on designing embedded systems using microcontrollers and sensors to collect environmental data and transmit it to the cloud. This initiative aims to leverage technology for sustainable development, offering real-time insights into various ecological metrics.</p>
+
+            <h2>Project Goals</h2>
+            <p>We plan to develop a long-term project that involves:
+                <ul>
+                    <li>Designing and implementing robust embedded systems capable of operating in diverse environmental conditions.</li>
+                    <li>Collecting high-quality data on parameters like temperature, humidity, and air quality.</li>
+                    <li>Utilizing cloud technologies to store and analyze collected data, enhancing our understanding of environmental patterns.</li>
+                </ul>
+            </p>
+
+            <h2>Join the Sustainability Study Group</h2>
+            <p>If you are passionate about technology and sustainability, consider joining our study group. This group will focus on developing and expanding the embedded systems project, with opportunities for learning, collaboration, and innovation.</p>
+
+            <h2>How to Get Involved</h2>
+            <p>To join the project or for more information, please contact Enis Yazıcı at <a href="mailto:enis.yazici@srh.de">enis.yazici@srh.de</a>.</p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
