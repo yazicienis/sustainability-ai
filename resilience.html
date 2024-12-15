@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Climate Change Resilience</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff8c00;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ffb84d;
+            color: #fff;
+        }
+        .dropdown-container {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ff8c00;
+            flex-direction: column;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            padding: 10px;
+            background-color: #ffa64d;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ffd1a3;
+        }
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            position: relative;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI for Climate Change Resilience</h1>
+        <p>AI-Driven Solutions for Climate Resilience and Sustainability</p>
+    </header>
+    
+    <div id="nav-placeholder"></div>
+<script>
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+</script>
+    
+      <div class="content">
+
+        
+        <strong>AI for Climate Change Resilience</strong> study group is under the leadership of 
+        <a href="https://ucentralasia.org/faculty-and-staff/dr-ayman-aljarbouh" target="_blank">
+            Dr. Ayman Aljarbouh
+        </a>. This group will explore cutting-edge applications of artificial intelligence 
+        to address critical challenges posed by climate change.
+    </p>
+    <h3>Group Lead</h3>
+    <p>
+        <strong>Dr. Ayman Aljarbouh</strong><br>
+        Chair, Computer Science Department<br>
+        School of Arts and Sciences, University of Central Asia (UCA)<br>
+        Email: <a href="mailto:ayman.aljarbouh@ucentralasia.org">ayman.aljarbouh@ucentralasia.org</a><br>
+        Faculty Profile: <a href="https://ucentralasia.org/faculty-and-staff/dr-ayman-aljarbouh" target="_blank">Dr. Ayman Aljarbouh</a>
+    </p>
+    <h3>Focus Areas:</h3>
+    <ul>
+        <li>
+            <strong>Climate Change Forecasting and Observation:</strong> Leveraging AI for 
+            enhanced climate modeling, temperature variation forecasting, and greenhouse 
+            gas tracking through satellite data and IoT sensors.
+        </li>
+        <li>
+            <strong>Solar and Wind Energy Efficiency:</strong> Employing AI to optimize 
+            renewable energy systems, from solar panel orientation to wind turbine performance, 
+            while increasing resilience to extreme weather conditions.
+        </li>
+        <li>
+            <strong>Urban Sustainability:</strong> Promoting smart cities with AI solutions 
+            for energy-efficient buildings, waste management, and mitigation of urban heat islands.
+        </li>
+        <li>
+            <strong>Agriculture:</strong> Innovating precision agriculture strategies and 
+            AI-driven frameworks to manage water use, improve yields, and prevent crop losses 
+            due to floods.
+        </li>
+    </ul>
+    <p>
+        This initiative aims to foster interdisciplinary collaboration and develop innovative 
+        AI-driven solutions to enhance resilience and sustainability in the face of climate change. 
+        Join us as we work towards a sustainable future!
+    </p>
+</div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
