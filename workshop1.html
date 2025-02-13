@@ -90,7 +90,7 @@
         
         <div class="content">
             <h2>Apply to Give a Talk or Present a Poster</h2>
-        <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" enctype="multipart/form-data" onsubmit="submitFormWithFile(event, 'presentationForm');">
+        <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" enctype="multipart/form-data">
     <label for="name_presentation">Name and Surname:</label><br>
     <input type="text" id="name_presentation" name="name_presentation" required><br>
 
@@ -211,42 +211,6 @@ dropArea.addEventListener("drop", (event) => {
 
 
 
-<script>
-function submitFormWithFile(event, formId) {
-    event.preventDefault();
-
-    const form = document.getElementById(formId);
-    const formData = new FormData(form);
-
-    // Debugging: Check formData contents before sending
-    for (const pair of formData.entries()) {
-        console.log(`${pair[0]}: ${pair[1]}`);
-    }
-
-    fetch(form.action, {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text()) // Ensure response is properly parsed
-    .then(data => {
-        console.log("Response:", data);
-        
-        try {
-            let jsonResponse = JSON.parse(data);
-            if (jsonResponse.fileUrl) {
-                alert("File uploaded successfully! View it here: " + jsonResponse.fileUrl);
-            }
-        } catch (error) {
-            console.error("JSON Parsing Error:", error);
-        }
-
-        showSuccessMessage(formId);
-    })
-    .catch(error => {
-        console.error("Upload Error:", error);
-    });
-}
-</script>
 
 
 
