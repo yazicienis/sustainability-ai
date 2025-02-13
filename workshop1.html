@@ -89,30 +89,35 @@
         
         <div class="content">
             <h2>Apply to Give a Talk or Present a Poster</h2>
-            <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="submitForm(event, 'presentationForm');">
-                <label for="name_presentation">Name and Surname:</label><br>
-                <input type="text" id="name_presentation" name="name_presentation" required><br>
+        <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" enctype="multipart/form-data" onsubmit="submitFormWithFile(event, 'presentationForm');">
+    <label for="name_presentation">Name and Surname:</label><br>
+    <input type="text" id="name_presentation" name="name_presentation" required><br>
 
-                <label for="email_presentation">Email Address:</label><br>
-                <input type="email" id="email_presentation" name="email_presentation" required><br>
+    <label for="email_presentation">Email Address:</label><br>
+    <input type="email" id="email_presentation" name="email_presentation" required><br>
 
-                <label for="institution_presentation">Institution/Organization:</label><br>
-                <input type="text" id="institution_presentation" name="institution_presentation"><br>
+    <label for="institution_presentation">Institution/Organization:</label><br>
+    <input type="text" id="institution_presentation" name="institution_presentation"><br>
 
-                <label for="presentation_type">Presentation Type:</label>
-                <select id="presentation_type" name="presentation_type" required>
-                    <option value="talk">Talk</option>
-                    <option value="poster">Poster</option>
-                </select>
-                
-                <label for="file_upload">Upload Your Poster/Talk File:</label>
-                <p><a href="https://drive.google.com/drive/folders/1IjGTXZi6Csd9sJsbpY9i48EQT04dc69c?usp=drive_link" target="_blank">Click here to upload your file</a></p>
-                
-                <label for="abstract">Abstract (max 250 words):</label>
-                <textarea id="abstract" name="abstract" rows="5" required></textarea>
+    <label for="presentation_type">Presentation Type:</label>
+    <select id="presentation_type" name="presentation_type" required>
+        <option value="talk">Talk</option>
+        <option value="poster">Poster</option>
+    </select>
+    
+    <label for="abstract">Abstract (max 250 words):</label>
+    <textarea id="abstract" name="abstract" rows="5" required></textarea>
 
-                <button type="submit">Submit</button>
-            </form>
+    <!-- Drag & Drop File Upload -->
+    <label for="file_upload">Upload Your Poster/Talk File:</label>
+    <div id="drop-area" class="drop-area">
+        <p>Drag & Drop file here or click to upload</p>
+        <input type="file" id="file_upload" name="file_upload" accept=".pdf,.doc,.docx,.png,.jpg" required>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
         </div>
     </div>
     
