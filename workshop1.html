@@ -187,14 +187,20 @@ document.addEventListener("DOMContentLoaded", function() {
             dropArea.classList.remove("dragover");
         });
 
-        dropArea.addEventListener("drop", (event) => {
-            event.preventDefault();
-            dropArea.classList.remove("dragover");
-            
-            if (event.dataTransfer.files.length > 0) {
-                fileInput.files = event.dataTransfer.files;
-            }
-        });
+dropArea.addEventListener("drop", (event) => {
+    event.preventDefault();
+    dropArea.classList.remove("dragover");
+    
+    if (event.dataTransfer.files.length > 0) {
+        // Yeni bir DataTransfer nesnesi oluşturun
+        let dt = new DataTransfer();
+        for (let i = 0; i < event.dataTransfer.files.length; i++) {
+            dt.items.add(event.dataTransfer.files[i]);
+        }
+        fileInput.files = dt.files; // Dosyaları input'a atayın
+    }
+});
+
 
         dropArea.addEventListener("click", () => {
             fileInput.click();
