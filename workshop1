@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Announcement - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Upcoming Workshop Announcement</h1>
+        <p><strong>Innovative Technologies for Environmental Monitoring and Resource Management</strong></p>
+        <p>27-28 March 2025 | 9:00 - 12:00 Berlin Time | Online</p>
+    </header>
+    
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+    
+    <div class="container">
+        <h2>About the Workshop</h2>
+        <p>Join us for a two-day online workshop discussing innovative AI-driven solutions for environmental monitoring and resource management. The detailed schedule and speakers will be announced soon.</p>
+        
+        <h2>Register for the Workshop</h2>
+        <form action="https://script.google.com/macros/s/AKfycbyiB8EVFjYHABfl4cSQ99kdaRHIObAdveL0ymSVZWnuxyEQPdkgerrRTAakxZsz2Fd7/exec" method="post">
+            <label for="name">Name and Surname:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="institution">Institution/Organization:</label>
+            <input type="text" id="institution" name="institution">
+
+            <button type="submit">Register</button>
+        </form>
+        
+        <h2>Apply to Give a Talk or Present a Poster</h2>
+        <form action="https://script.google.com/macros/s/YOUR_SCRIPT_URL/exec" method="post">
+            <label for="name_presentation">Name and Surname:</label>
+            <input type="text" id="name_presentation" name="name_presentation" required>
+
+            <label for="email_presentation">Email Address:</label>
+            <input type="email" id="email_presentation" name="email_presentation" required>
+
+            <label for="institution_presentation">Institution/Organization:</label>
+            <input type="text" id="institution_presentation" name="institution_presentation">
+
+            <label for="presentation_type">Presentation Type:</label>
+            <select id="presentation_type" name="presentation_type" required>
+                <option value="talk">Talk</option>
+                <option value="poster">Poster</option>
+            </select>
+            
+            <label for="abstract">Abstract (max 250 words):</label>
+            <textarea id="abstract" name="abstract" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
