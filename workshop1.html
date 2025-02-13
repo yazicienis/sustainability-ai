@@ -76,7 +76,12 @@
         
         <div class="content">
             <h2>Register for the Workshop</h2>
-            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="event.preventDefault(); submitForm(registrationForm);">
+<form
+  id="registrationForm"
+  action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec"
+  method="post"
+  onsubmit="submitForm('registrationForm'); return false;"
+>
                 <label for="name">Name and Surname:</label><br>
                 <input type="text" id="name" name="name" required><br>
 
@@ -92,7 +97,12 @@
         
         <div class="content">
             <h2>Apply to Give a Talk or Present a Poster</h2>
-        <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="event.preventDefault(); submitForm(presentationForm);">
+<form
+  id="presentationForm"
+  action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec"
+  method="post"
+  onsubmit="submitForm('presentationForm'); return false;"
+>
     <label for="name_presentation">Name and Surname:</label><br>
     <input type="text" id="name_presentation" name="name_presentation" required><br>
 
@@ -129,10 +139,18 @@
     </script>
   
 <script>
+<script>
 function submitForm(formId) {
-    event.preventDefault();  // Stop default form submission
+    // Form submit'i durdurmak için
+    event.preventDefault();
 
+    // ID üzerinden forma ulaşıyoruz
     const form = document.getElementById(formId);
+    if (!form) {
+        console.error("Form not found with ID:", formId);
+        return;
+    }
+
     const formData = new FormData(form);
 
     fetch(form.action, {
@@ -141,8 +159,8 @@ function submitForm(formId) {
     })
     .then(response => response.text())
     .then(data => {
-        console.log("Response:", data);  // Debugging in console
-        showSuccessMessage(formId);  // Show success message
+        console.log("Response:", data);  // Debug amaçlı
+        showSuccessMessage(formId);      // Başarı mesajı göster
     })
     .catch(error => {
         console.error("Error:", error);
@@ -150,14 +168,19 @@ function submitForm(formId) {
 }
 </script>
 
+</script>
+
 
 
     
-    <script>
+<script>
 function showSuccessMessage(formId) {
     const form = document.getElementById(formId);
-    form.reset();  // Clear form inputs
+    if (!form) return;
 
+    form.reset();  // Form alanlarını temizle
+
+    // Formun içinde (veya parentında) bir .success-message var mı kontrol edelim
     let successDiv = form.parentNode.querySelector('.success-message');
     if (!successDiv) {
         successDiv = document.createElement('div');
@@ -167,12 +190,13 @@ function showSuccessMessage(formId) {
     }
 
     successDiv.style.display = 'block';
-    
+
     setTimeout(() => {
         successDiv.style.display = 'none';
     }, 5000);
 }
 </script>
+
 
 
 
