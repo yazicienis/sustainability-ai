@@ -187,25 +187,33 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropArea = document.getElementById("drop-area");
     const fileInput = document.getElementById("file_upload");
 
-    dropArea.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        dropArea.classList.add("dragover");
-    });
+    if (dropArea && fileInput) { // Ensure these elements exist
+        dropArea.addEventListener("dragover", (event) => {
+            event.preventDefault();
+            dropArea.classList.add("dragover");
+        });
 
-    dropArea.addEventListener("dragleave", () => {
-        dropArea.classList.remove("dragover");
-    });
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.classList.remove("dragover");
+        });
 
-    dropArea.addEventListener("drop", (event) => {
-        event.preventDefault();
-        dropArea.classList.remove("dragover");
-        fileInput.files = event.dataTransfer.files;
-    });
+        dropArea.addEventListener("drop", (event) => {
+            event.preventDefault();
+            dropArea.classList.remove("dragover");
+            
+            if (event.dataTransfer.files.length > 0) {
+                fileInput.files = event.dataTransfer.files;
+            }
+        });
 
-    dropArea.addEventListener("click", () => {
-        fileInput.click();
-    });
+        dropArea.addEventListener("click", () => {
+            fileInput.click();
+        });
+    }
 });
+</script>
+
+
 
 <script>
 function submitFormWithFile(event, formId) {
@@ -214,40 +222,37 @@ function submitFormWithFile(event, formId) {
     const form = document.getElementById(formId);
     const formData = new FormData(form);
 
-    // Convert file to Base64
-    const fileInput = document.getElementById("file_upload");
-    if (fileInput.files.length > 0) {
-        const file = fileInput.files[0];
-        const reader = new FileReader();
-        
-        reader.onloadend = function () {
-            formData.append("file_upload", reader.result.split(',')[1]); // Extract base64
-            formData.append("file_uploadName", file.name);
-            formData.append("file_uploadMimeType", file.type);
-            
-            fetch(form.action, {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log("Response:", data);
-                if (data.fileUrl) {
-                    alert("File uploaded successfully! View it here: " + data.fileUrl);
-                }
-                showSuccessMessage(formId);
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-        };
-
-        reader.readAsDataURL(file); // Read file as Base64
-    } else {
-        alert("Please upload a file before submitting.");
+    // Debugging: Check formData contents before sending
+    for (const pair of formData.entries()) {
+        console.log(`${pair[0]}: ${pair[1]}`);
     }
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text()) // Ensure response is properly parsed
+    .then(data => {
+        console.log("Response:", data);
+        
+        try {
+            let jsonResponse = JSON.parse(data);
+            if (jsonResponse.fileUrl) {
+                alert("File uploaded successfully! View it here: " + jsonResponse.fileUrl);
+            }
+        } catch (error) {
+            console.error("JSON Parsing Error:", error);
+        }
+
+        showSuccessMessage(formId);
+    })
+    .catch(error => {
+        console.error("Upload Error:", error);
+    });
 }
 </script>
+
+
 
 
 
