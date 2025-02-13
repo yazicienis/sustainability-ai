@@ -207,29 +207,48 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+<script>
 function submitFormWithFile(event, formId) {
     event.preventDefault();
 
     const form = document.getElementById(formId);
     const formData = new FormData(form);
 
-    fetch("https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("Response:", data);
-        if (data.fileUrl) {
-            alert("File uploaded successfully! View it here: " + data.fileUrl);
-        }
-        showSuccessMessage(formId);
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
+    // Convert file to Base64
+    const fileInput = document.getElementById("file_upload");
+    if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        
+        reader.onloadend = function () {
+            formData.append("file_upload", reader.result.split(',')[1]); // Extract base64
+            formData.append("file_uploadName", file.name);
+            formData.append("file_uploadMimeType", file.type);
+            
+            fetch(form.action, {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response:", data);
+                if (data.fileUrl) {
+                    alert("File uploaded successfully! View it here: " + data.fileUrl);
+                }
+                showSuccessMessage(formId);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        };
+
+        reader.readAsDataURL(file); // Read file as Base64
+    } else {
+        alert("Please upload a file before submitting.");
+    }
 }
 </script>
+
 
 
     
