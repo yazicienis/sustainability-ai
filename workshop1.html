@@ -74,14 +74,14 @@
         <div class="content">
             <h2>Register for the Workshop</h2>
             <form id="registrationForm" action="https://script.google.com/macros/s/AKfycby3Fe_UFG9D8RoPMdVlX624-GPLiNZ7dAI5LCcGZzWQv4dKiNXS4N1S2Q_xvboY1totFg/exec" method="post" onsubmit="event.preventDefault(); showSuccessMessage('registrationForm');">
-                <label for="name">Name and Surname:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Name and Surname:</label><br>
+                <input type="text" id="name" name="name" required><br>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br>
 
-                <label for="institution">Institution/Organization:</label>
-                <input type="text" id="institution" name="institution">
+                <label for="institution">Institution/Organization:</label><br>
+                <input type="text" id="institution" name="institution"><br>
 
                 <button type="submit">Register</button>
             </form>
@@ -90,20 +90,23 @@
         <div class="content">
             <h2>Apply to Give a Talk or Present a Poster</h2>
             <form id="presentationForm" action="https://script.google.com/macros/s/AKfycby3Fe_UFG9D8RoPMdVlX624-GPLiNZ7dAI5LCcGZzWQv4dKiNXS4N1S2Q_xvboY1totFg/exec" method="post" onsubmit="event.preventDefault(); showSuccessMessage('presentationForm');">
-                <label for="name_presentation">Name and Surname:</label>
-                <input type="text" id="name_presentation" name="name_presentation" required>
+                <label for="name_presentation">Name and Surname:</label><br>
+                <input type="text" id="name_presentation" name="name_presentation" required><br>
 
-                <label for="email_presentation">Email Address:</label>
-                <input type="email" id="email_presentation" name="email_presentation" required>
+                <label for="email_presentation">Email Address:</label><br>
+                <input type="email" id="email_presentation" name="email_presentation" required><br>
 
-                <label for="institution_presentation">Institution/Organization:</label>
-                <input type="text" id="institution_presentation" name="institution_presentation">
+                <label for="institution_presentation">Institution/Organization:</label><br>
+                <input type="text" id="institution_presentation" name="institution_presentation"><br>
 
                 <label for="presentation_type">Presentation Type:</label>
                 <select id="presentation_type" name="presentation_type" required>
                     <option value="talk">Talk</option>
                     <option value="poster">Poster</option>
                 </select>
+                
+                <label for="file_upload">Upload Your Poster/Talk File:</label>
+                <p><a href="https://drive.google.com/drive/folders/1IjGTXZi6Csd9sJsbpY9i48EQT04dc69c?usp=drive_link" target="_blank">Click here to upload your file</a></p>
                 
                 <label for="abstract">Abstract (max 250 words):</label>
                 <textarea id="abstract" name="abstract" rows="5" required></textarea>
