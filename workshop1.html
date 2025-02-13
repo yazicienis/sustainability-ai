@@ -36,6 +36,18 @@
             text-align: center;
             font-weight: bold;
         }
+        .drop-area {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+        }
+        .drop-area.dragover {
+            background-color: #ddd;
+          }
+     
     </style>
 
 </head>
@@ -130,6 +142,7 @@
                 document.getElementById('footer').innerHTML = data;
             });
     </script>
+  
 <script>
 function submitForm(event, formId) {
     event.preventDefault();  // Stop default form submission
