@@ -73,7 +73,7 @@
         
         <div class="content">
             <h2>Register for the Workshop</h2>
-            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="event.preventDefault(); showSuccessMessage('registrationForm');">
+            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="submitForm(event, 'registrationForm');">
                 <label for="name">Name and Surname:</label><br>
                 <input type="text" id="name" name="name" required><br>
 
@@ -89,7 +89,7 @@
         
         <div class="content">
             <h2>Apply to Give a Talk or Present a Poster</h2>
-            <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="event.preventDefault(); showSuccessMessage('presentationForm');">
+            <form id="presentationForm" action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec" method="post" onsubmit="submitForm(event, 'registrationForm');">
                 <label for="name_presentation">Name and Surname:</label><br>
                 <input type="text" id="name_presentation" name="name_presentation" required><br>
 
@@ -124,5 +124,46 @@
                 document.getElementById('footer').innerHTML = data;
             });
     </script>
+<script>
+function submitForm(event, formId) {
+    event.preventDefault();  // Stop default form submission
+
+    const form = document.getElementById(formId);
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log("Response:", data);  // Debugging in console
+        showSuccessMessage(formId);  // Show success message
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+
+function showSuccessMessage(formId) {
+    const form = document.getElementById(formId);
+    form.reset();  // Clear form inputs
+
+    let successDiv = form.parentNode.querySelector('.success-message');
+    if (!successDiv) {
+        successDiv = document.createElement('div');
+        successDiv.className = 'success-message';
+        successDiv.innerText = 'Your submission was successful!';
+        form.parentNode.appendChild(successDiv);
+    }
+
+    successDiv.style.display = 'block';
+    
+    setTimeout(() => {
+        successDiv.style.display = 'none';
+    }, 5000);
+}
+</script>
+
 </body>
 </html>
