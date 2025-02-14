@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>SustAInability Blog</h1>
-        <p>A Platform for Sharing Insights, Experiences, and Stories</p>
+        <p>A platform for sharing insights, experiences, and stories on AI and sustainability</p>
     </header>
 
+    <!-- Navigation Placeholder -->
     <div id="nav-placeholder"></div>
     <script>
         fetch('nav.html')
@@ -21,26 +23,80 @@
             });
     </script>
 
+    <!-- Main Container -->
     <div class="container">
         <div class="content">
+
+            <!-- About This Blog -->
+            <section>
+                <h2>About This Blog</h2>
+                <p>
+                    Welcome to the SustAInability blog, where we explore the intersection of <strong>artificial intelligence</strong>, 
+                    <strong>sustainability</strong>, and <strong>global collaboration</strong>. Through interviews and updates, 
+                    we aim to highlight innovative research, best practices, and success stories from experts and students across 
+                    multiple universities and countries. Join us as we share diverse perspectives on how AI can shape a more 
+                    sustainable future.
+                </p>
+                <p>
+                    A special thanks to <strong>Katharina Krohm</strong>, an SRH University Heidelberg student, 
+                    for conducting this engaging conversations.
+                </p>
+            </section>
+
+            <!-- Recent Interviews Heading -->
             <h2>Recent Interviews</h2>
             
+            <!-- Interview 1: Prof. Dr. Thomas Sterr -->
             <div class="interview">
                 <h3>Interview with Prof. Dr. Thomas Sterr</h3>
-                <img src="https://www.srh-university.de/fileadmin/_processed_/7/c/csm_Sterr-Thomas-HSHD_29950ebd9b.webp" alt="Prof. Dr. Thomas Sterr" style="width:150px; display:block; margin:10px auto; border-radius:10px;">
-                <p>In this insightful interview, Prof. Dr. Thomas Sterr shares his expertise on how economics, sustainability, and climate change management intertwine. He discusses the importance of integrating social, economic, and environmental considerations to effectively tackle climate challenges. A special thanks to <strong>Katharina Krohm</strong>, an SRH University Heidelberg student, for conducting this engaging conversation.</p>
+                <img 
+                    src="https://www.srh-university.de/fileadmin/_processed_/7/c/csm_Sterr-Thomas-HSHD_29950ebd9b.webp" 
+                    alt="Prof. Dr. Thomas Sterr" 
+                    style="width:150px; display:block; margin:10px auto; border-radius:10px;"
+                >
+                <p>
+                    In this insightful interview, Prof. Dr. Thomas Sterr shares his expertise on how economics, 
+                    sustainability, and climate change management intertwine. He discusses the importance of 
+                    integrating social, economic, and environmental considerations to effectively tackle climate 
+                    challenges. 
+                </p>
+                <!-- Example of a 'Tags' line to help categorize or filter posts -->
+                <p class="tags"><strong>Tags:</strong> Interview, Sustainability, Economics</p>
                 <a href="interview_sterr.html">Read More</a>
             </div>
             
+            <!-- Interview 2: Dr. Puthearath Chan -->
             <div class="interview">
                 <h3>Interview with Dr. Puthearath Chan</h3>
-                <img src="https://sustainability-ai.org/puthearath_chan.jpg" alt="Dr. Puthearath Chan" style="width:150px; display:block; margin:10px auto; border-radius:10px;">
-                <p>Dr. Puthearath Chan is a senior sustainability researcher at Cambodia’s Ministry of Environment and an adjunct lecturer at Paragon International University. In this interview, he highlights Cambodia’s cultural richness, evolving economy, and infrastructure advancements—such as new expressways—while addressing challenges like energy demands and climate change impacts along the Mekong River. He also emphasizes the government’s commitment to renewable energy, avoiding large hydropower projects on the Mekong, and the growing role of AI in environmental monitoring and sustainable urban development.</p>
+                <img 
+                    src="https://sustainability-ai.org/puthearath_chan.jpg" 
+                    alt="Dr. Puthearath Chan" 
+                    style="width:150px; display:block; margin:10px auto; border-radius:10px;"
+                >
+                <p>
+                    Dr. Puthearath Chan is a senior sustainability researcher at Cambodia’s Ministry of Environment 
+                    and an adjunct lecturer at Paragon International University. In this interview, he highlights 
+                    Cambodia’s cultural richness, evolving economy, and infrastructure advancements—while addressing 
+                    challenges like energy demands and climate change impacts along the Mekong River. 
+                </p>
+                <p class="tags"><strong>Tags:</strong> Interview, Cambodia, Renewable Energy</p>
                 <a href="interview_chan.html">Read More</a>
             </div>
+
+            <!-- Optional: Additional Section for Engagement -->
+            <section style="margin-top: 40px;">
+                <h2>Get Involved or Learn More</h2>
+                <p>
+                    Interested in contributing to our blog or working with us on sustainability and AI?
+                    <br>
+                    <a href="contact.html">Contact our team</a> or check out our <a href="projects.html">ongoing projects</a> 
+                    to learn how you can participate.
+                </p>
+            </section>
         </div>
     </div>
 
+    <!-- Footer Placeholder -->
     <div id="footer"></div>
     <script>
         fetch('footer.html')
