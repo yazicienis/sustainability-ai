@@ -36,8 +36,15 @@
             text-align: center;
             font-weight: bold;
         }
-
-     
+        /* Ek olarak, duyuru başlıklarını biraz daha ön plana çıkarabilirsiniz */
+        h2 {
+            margin-top: 1em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 2em;
+            margin-bottom: 1em;
+        }
     </style>
 
 </head>
@@ -45,13 +52,13 @@
     <header>
         <h1>Upcoming Workshop Announcement</h1>
         <p><strong>Innovative Technologies for Environmental Monitoring and Resource Management</strong></p>
-<p>
-  27-28 March 2025 |
-  9:00 - 12:00 (Germany) •
-  14:00 - 17:00 (Kyrgyzstan) •
-  15:00 - 18:00 (Cambodia) |
-  Online
-</p>
+        <p>
+          27-28 March 2025 |
+          9:00 - 12:00 (Germany) •
+          14:00 - 17:00 (Kyrgyzstan) •
+          15:00 - 18:00 (Cambodia) |
+          Online
+        </p>
     </header>
     
     <div id="nav-placeholder"></div>
@@ -63,36 +70,89 @@
             });
     </script>
 
-            <div class="banner-container">
+    <div class="banner-container">
         <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
     </div>
 
-    
-<div class="container">
-    <div class="content">
-        <h2>About the Workshop</h2>
-        <p>Join us for a two-day online workshop discussing innovative AI-driven solutions for environmental monitoring and resource management. The detailed schedule and speakers will be announced soon.</p>
-        
-        <p><strong>🔗 Online Meeting Link:</strong></p>
-        <p>
-            <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_ODE0NzhiMDEtNGRlMS00YzQwLWEwNDctZTIxNmJjNWFjMzAy%40thread.v2/0?context=%7b%22Tid%22%3a%22787048c4-ce0e-4446-81e0-2fa0524ec702%22%2c%22Oid%22%3a%22a4c9a9bf-23ec-4c4e-b6e3-b2a2c03a9163%22%7d" 
-               target="_blank" 
-               style="display: inline-block; padding: 10px 15px; background-color: #0078D4; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-                ▶ Join the Workshop
-            </a>
-        </p>
-    </div>
-</div>
-
-        
+    <div class="container">
+        <!-- ABOUT THE WORKSHOP -->
         <div class="content">
-            <h2>Join the Workshop as a Listener</h2>
-                <p>
+            <h2>About the Workshop</h2>
+            <p>
+                We are pleased to invite you to our upcoming two-day online workshop as part of the Sustainability and AI Project. 
+                This workshop will focus on <strong>innovative AI-driven solutions for environmental monitoring</strong> and 
+                resource management. We will also host special sessions to <strong>energize our study groups</strong> where future plans, 
+                project ideas, and collaboration opportunities will be discussed.
+            </p>
+            <p>
+                <strong>Dates:</strong> March 27-28, 2025<br>
+                <strong>Time:</strong> 09:00 - 12:00 (CET) / 14:00 – 17:00 (Bishkek) / 15:00 – 18:00 (Phnom Penh)<br>
+                <strong>Registration Link:</strong> 
+                <a href="https://sustainability-ai.org/workshop1.html" target="_blank">https://sustainability-ai.org/workshop1.html</a><br>
+            </p>
+            <p>
+                <strong>All accepted posters and talks will be published in our e-book</strong> at the project's conclusion.
+                Detailed program schedule will be announced in March.
+            </p>
+            
+            <p><strong>Submission Deadline for Talks/Posters:</strong> March 7, 2025</p>
+            
+            <p>
+                <strong>Workshop Themes:</strong><br>
+                During the workshop, we will delve into various topics, such as:
+            </p>
+            <ul>
+                <li>AI-driven environmental monitoring and data analysis</li>
+                <li>Climate change physics and less-researched influences in climate systems</li>
+                <li>Renewable energy optimization (e.g., solar panel maintenance with reinforcement learning)</li>
+                <li>Resource management, composting applications, and sustainability solutions</li>
+                <li>Strengthening project groups and intercultural collaboration</li>
+            </ul>
+            
+            <p><strong>🔗 Online Meeting Link:</strong></p>
+            <p>
+                <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_ODE0NzhiMDEtNGRlMS00YzQwLWEwNDctZTIxNmJjNWFjMzAy%40thread.v2/0?context=%7b%22Tid%22%3a%22787048c4-ce0e-4446-81e0-2fa0524ec702%22%2c%22Oid%22%3a%22a4c9a9bf-23ec-4c4e-b6e3-b2a2c03a9163%22%7d" 
+                   target="_blank" 
+                   style="display: inline-block; padding: 10px 15px; background-color: #0078D4; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                    ▶ Join the Workshop
+                </a>
+            </p>
+        </div>
+
+        <!-- CONFIRMED TALKS / EXAMPLES -->
+        <div class="content">
+            <h2>Sample Talks & Project Ideas</h2>
+            <p>Below are a few early submissions we have received so far:</p>
+            <ul>
+                <li>
+                    <strong>Climate Physics:</strong> An introductory talk on the fundamental physics behind climate change.
+                </li>
+                <li>
+                    <strong>The CompostLink Project:</strong> A mobile application designed to bridge the gap between food waste 
+                    generators (restaurants, hotels, apartment complexes) and compost facilities, with the goal of repurposing 
+                    food waste into valuable resources.
+                </li>
+                <li>
+                    <strong>Understudied Influences in Climate Systems:</strong> A proposal focusing on cloud feedback 
+                    loops, atomic vibrations, water vapor behavior, and the classification of different cloud types — addressing 
+                    lesser-known factors in global warming.
+                </li>
+                <li>
+                    <strong>Optimizing PV Panel Maintenance with Reinforcement Learning for Sustainable Solar Energy:</strong>
+                    A reinforcement learning-based approach to determine optimal cleaning schedules for PV panels, factoring in 
+                    real-time environmental sensor data to improve energy output and sustainability.
+                </li>
+            </ul>
+        </div>
+
+        <!-- JOIN AS A LISTENER -->
+        <div class="content">
+            <h2>Join as a Listener</h2>
+            <p>
                 Interested in the intersection of <strong>AI and environmental sustainability</strong>? 
                 This workshop provides a <strong>unique opportunity</strong> to learn from experts, 
                 researchers, and students working on innovative AI-driven solutions for environmental challenges.
             </p>
-
             <h3>Why Attend?</h3>
             <ul>
                 <li>Gain insights into <strong>cutting-edge AI applications</strong> in climate change and resource management.</li>
@@ -102,16 +162,13 @@
                 <li>Network with <strong>students, researchers, and professionals</strong> working in AI, 
                     sustainability, and environmental science.</li>
             </ul>
-
-<h3>Registration Form</h3>
-
-            
-<form
-  id="registrationForm"
-  action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec"
-  method="post"
-  onsubmit="submitForm('registrationForm'); return false;"
->
+            <h3>Registration Form</h3>
+            <form
+              id="registrationForm"
+              action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec"
+              method="post"
+              onsubmit="submitForm('registrationForm'); return false;"
+            >
                 <label for="name">Name and Surname:</label><br>
                 <input type="text" id="name" name="name" required><br>
 
@@ -125,45 +182,47 @@
             </form>
         </div>
         
+        <!-- APPLY TO PRESENT -->
         <div class="content">
-            <h2>Apply to Give a Talk or Present a Poster</h2>
-
+            <h2>Give a Talk or Present a Poster</h2>
             <p>
-                Are you a <strong>student, researcher, or professional</strong> working on AI applications for 
-                environmental challenges? The <strong>SustAInability Workshop</strong> invites submissions for 
-                <em>short presentations, project ideas, and ongoing research work</em> related to 
-                <strong>AI and sustainability</strong>.
+                We encourage <strong>students, researchers, and professionals</strong> working on AI applications 
+                for environmental challenges to submit their proposals. Whether you have a full research paper, a 
+                project idea, or initial work in progress, we welcome short presentations or posters that contribute 
+                to the <strong>AI and sustainability</strong> dialogue.
             </p>
-            
-<form
-  id="presentationForm"
-  action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec"
-  method="post"
-  onsubmit="submitForm('presentationForm'); return false;"
->
-    <label for="name_presentation">Name and Surname:</label><br>
-    <input type="text" id="name_presentation" name="name_presentation" required><br>
+            <p>
+                <strong>Please note:</strong> All accepted talks and posters will be published in an e-book at the conclusion of the project.
+            </p>
+            <p>
+                <strong>Submission Deadline:</strong> March 7, 2025
+            </p>
+            <form
+              id="presentationForm"
+              action="https://script.google.com/macros/s/AKfycbzhfZcvMuHMR45SR5bsf3Woacgdc0lbbVRUNdfysWkpzUwczdfSSa-QtqEYDQ6jCnAI7w/exec"
+              method="post"
+              onsubmit="submitForm('presentationForm'); return false;"
+            >
+                <label for="name_presentation">Name and Surname:</label><br>
+                <input type="text" id="name_presentation" name="name_presentation" required><br>
 
-    <label for="email_presentation">Email Address:</label><br>
-    <input type="email" id="email_presentation" name="email_presentation" required><br>
+                <label for="email_presentation">Email Address:</label><br>
+                <input type="email" id="email_presentation" name="email_presentation" required><br>
 
-    <label for="institution_presentation">Institution/Organization:</label><br>
-    <input type="text" id="institution_presentation" name="institution_presentation"><br>
+                <label for="institution_presentation">Institution/Organization:</label><br>
+                <input type="text" id="institution_presentation" name="institution_presentation"><br>
 
-    <label for="presentation_type">Presentation Type:</label>
-    <select id="presentation_type" name="presentation_type" required>
-        <option value="talk">Talk</option>
-        <option value="poster">Poster</option>
-    </select><br>
-    
-    <label for="abstract">Abstract (max 250 words):</label>
-    <textarea id="abstract" name="abstract" rows="5" style="width: 80%; display: block; margin-left: 0;" required></textarea><br>
+                <label for="presentation_type">Presentation Type:</label>
+                <select id="presentation_type" name="presentation_type" required>
+                    <option value="talk">Talk</option>
+                    <option value="poster">Poster</option>
+                </select><br>
+                
+                <label for="abstract">Abstract (max 250 words):</label>
+                <textarea id="abstract" name="abstract" rows="5" style="width: 80%; display: block; margin-left: 0;" required></textarea><br>
 
-
-
-    <button type="submit">Submit</button>
-</form>
-
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
     
@@ -174,66 +233,46 @@
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
+
+        function submitForm(formId) {
+            event.preventDefault();
+            const form = document.getElementById(formId);
+            if (!form) {
+                console.error("Form not found with ID:", formId);
+                return;
+            }
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log("Response:", data);
+                showSuccessMessage(formId);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+
+        function showSuccessMessage(formId) {
+            const form = document.getElementById(formId);
+            if (!form) return;
+
+            form.reset();  
+            let successDiv = form.parentNode.querySelector('.success-message');
+            if (!successDiv) {
+                successDiv = document.createElement('div');
+                successDiv.className = 'success-message';
+                successDiv.innerText = 'Your submission was successful!';
+                form.parentNode.appendChild(successDiv);
+            }
+            successDiv.style.display = 'block';
+            setTimeout(() => {
+                successDiv.style.display = 'none';
+            }, 5000);
+        }
     </script>
-  
-
-<script>
-function submitForm(formId) {
-    // Form submit'i durdurmak için
-    event.preventDefault();
-
-    // ID üzerinden forma ulaşıyoruz
-    const form = document.getElementById(formId);
-    if (!form) {
-        console.error("Form not found with ID:", formId);
-        return;
-    }
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log("Response:", data);  // Debug amaçlı
-        showSuccessMessage(formId);      // Başarı mesajı göster
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
-}
-
-function showSuccessMessage(formId) {
-    const form = document.getElementById(formId);
-    if (!form) return;
-
-    form.reset();  // Form alanlarını temizle
-
-    // Formun içinde (veya parentında) bir .success-message var mı kontrol edelim
-    let successDiv = form.parentNode.querySelector('.success-message');
-    if (!successDiv) {
-        successDiv = document.createElement('div');
-        successDiv.className = 'success-message';
-        successDiv.innerText = 'Your submission was successful!';
-        form.parentNode.appendChild(successDiv);
-    }
-
-    successDiv.style.display = 'block';
-
-    setTimeout(() => {
-        successDiv.style.display = 'none';
-    }, 5000);
-}
-</script>
-
-
-
-
-
-
-
-    
 </body>
 </html>
