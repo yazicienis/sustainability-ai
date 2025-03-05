@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project TreeStrike - Autonomous Drone-Based Reforestation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Opsiyonel: Ek stil düzenlemeleri burada yapılabilir */
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project TreeStrike</h1>
+        <p>Autonomous Drone-Based Reforestation System for a Sustainable Future</p>
+    </header>
+    
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Project Overview</h2>
+            <p>Project TreeStrike is an innovative, autonomous drone-based reforestation system designed to enhance environmental restoration efforts. The system utilizes advanced drone technology, onboard AI, and high-resolution imaging to identify optimal planting sites and efficiently deploy seed bombs.</p>
+            
+            <h3>How It Works</h3>
+            <ul>
+                <li><strong>High-Altitude Imaging:</strong> The primary drone captures high-altitude images or LiDAR data to locate the base station and assess the terrain.</li>
+                <li><strong>Onboard Analysis:</strong> AI algorithms process the collected data to determine the best planting locations based on terrain suitability.</li>
+                <li><strong>Optimized Flight Planning:</strong> The system calculates optimal flight paths that adapt to wind conditions, scheduling flights appropriately (e.g., morning outbound and evening return or nighttime operations).</li>
+                <li><strong>Autonomous Docking & Charging:</strong> Upon return, the drone autonomously docks at the base station to recharge via photovoltaic panels and receive seed bomb resupply.</li>
+                <li><strong>Seed Deployment:</strong> A secondary drone, specialized for deploying seed bombs, follows the calculated trajectory to plant seeds in the designated areas.</li>
+            </ul>
+            
+            <h3>Technical Enhancements</h3>
+            <ul>
+                <li><strong>Autonomous Charging Mechanism:</strong> Efficient recharging through an automated docking process.</li>
+                <li><strong>Real-Time Weather Integration:</strong> Incorporation of local weather data to adjust flight paths and optimize operational timing.</li>
+                <li><strong>3D Imaging & RTK GPS Integration:</strong> High-precision mapping with up to 1 cm positional accuracy to construct detailed 3D terrain models.</li>
+                <li><strong>Offline Operation:</strong> Pre-downloaded environmental resources ensure reliable functionality even with limited internet connectivity.</li>
+            </ul>
+            
+            <h3>Team and Collaboration</h3>
+            <p>Project TreeStrike is a collaborative initiative supported by a multidisciplinary team including AI & Machine Learning Engineers, Autonomous Navigation Specialists, Embedded Systems Developers, and Geospatial Analysts. Regular meetings and coordinated efforts ensure smooth progress, while industry partners contribute expert guidance and resources.</p>
+            
+            <h3>Industry Support and Call for Participation</h3>
+            <p>Our project benefits from industry support in RTK GPS technology and sustainable agriculture practices. We welcome passionate individuals to join our team. For more information or to participate, please contact <a href="mailto:jasper.golembiewski@stud.hochschule-heidelberg.de">jasper.golembiewski@stud.hochschule-heidelberg.de</a>.</p>
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
