@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven Solutions for Water Management in Smart Cities - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Data-Driven Solutions for Water Management in Smart Cities</h1>
+        <p>Exploring Smart Technologies for Sustainable Urban Water Infrastructure</p>
+    </header>
+
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="content">
+            <h2>About the Study Group</h2>
+            <p>The <strong>Data-Driven Solutions for Water Management in Smart Cities</strong> study group focuses on utilizing cutting-edge technologies to address water-related challenges faced by rapidly growing urban populations. The group aims to develop and apply innovative data-driven methodologies for efficient and sustainable water management.</p>
+
+            <h3>Project Objectives</h3>
+            <ul>
+                <li>Integrating IoT devices for comprehensive real-time monitoring of water resources.</li>
+                <li>Employing advanced data analytics and machine learning techniques to predict water demand, detect leaks, and manage water quality.</li>
+                <li>Exploring policy frameworks and sustainable practices to enhance urban resilience to water-related challenges.</li>
+            </ul>
+
+            <h3>Main Areas of Study</h3>
+            <ul>
+                <li><strong>Smart Water Management Introduction:</strong> Fundamentals of smart urban water infrastructures.</li>
+                <li><strong>IoT and Real-Time Monitoring:</strong> Application of IoT sensors for monitoring water usage, leakage, and quality.</li>
+                <li><strong>Data Analytics and Machine Learning:</strong> Techniques for analyzing real-time water data and predictive modeling.</li>
+                <li><strong>Sustainable Practices and Policy Implications:</strong> Strategies to incorporate innovative solutions into actionable urban water policies.</li>
+            </ul>
+
+            <h3>Group Lead</h3>
+            <p>
+                <strong>Ulrike Gayh</strong><br>
+                Head of Water Technology Master Program,<br>
+                SRH Hochschule Heidelberg<br>
+                Email: <a href="mailto:ulrike.gayh@srh.de">ulrike.gayh@srh.de</a>
+            </p>
+
+            <h3>Join the Group</h3>
+            <p>If you're interested in contributing or learning more about sustainable urban water management through smart data-driven solutions, please contact Ulrike for more details.</p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
