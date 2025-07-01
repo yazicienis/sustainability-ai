@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustAInability Summer School 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SustAInability Summer School 2025</h1>
+        <p>Empowering Sustainable Solutions through AI & Cultural Exchange</p>
+    </header>
+
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div class="banner-container">
+        <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>About the Summer School</h2>
+            <p>
+                Join our 14-day international summer school in Heidelberg to explore sustainability, AI, sensor networks,
+                and cross-cultural collaboration. Participants will co-develop Environmental Data Monitoring Systems,
+                engage in hands-on workshops, and take part in exciting excursions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Program Highlights</h2>
+            <ul>
+                <li>Workshops on AI/ML, Embedded Systems, and Sensor Design</li>
+                <li>Mentorship by Professors and Engineering Students</li>
+                <li>2-day Excursion to Taschachhaus</li>
+                <li>City tour of Heidelberg and cultural exchange activities</li>
+                <li>Open-air Poster Presentation & Picnic Dialogue</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Who Can Apply?</h2>
+            <p>
+                Students from German universities, especially in engineering, AI, or sustainability fields.
+                English proficiency (min. B2) and motivation for international teamwork are required.
+            </p>
+        </section>
+
+        <section>
+            <h2>What is Included?</h2>
+            <ul>
+                <li>Meals, excursions, technical materials</li>
+                <li>Certificate of Participation</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Important Dates</h2>
+            <ul>
+                <li><strong>Application Deadline:</strong> 20 July 2025</li>
+                <li><strong>Program Dates:</strong> 26 July – 9 August 2025</li>
+                <li><strong>Location:</strong> SRH University Heidelberg</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>How to Apply</h2>
+            <p>
+                To apply, please fill out the form using the link below. Make sure to upload your CV where required.<br><br>
+                <a href="https://forms.gle/1mqbTpiuEZdGMk138" target="_blank" 
+                   style="padding: 12px 24px; background-color: #000080; color: white; text-decoration: none; border-radius: 6px;">
+                    Apply Now
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>For questions: <a href="mailto:enis.yazici@srh.de">enis.yazici@srh.de</a></p>
+        </section>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
