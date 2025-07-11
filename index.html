@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SustAInability: Sustainability and AI</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <header>
@@ -22,11 +21,10 @@
             });
     </script>
 
-        <div class="banner-container">
+    <div class="banner-container">
         <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
     </div>
 
-    
     <div class="container">
         <h2>The Importance of Sustainability</h2>
         <p>Sustainability has become a pressing global concern due to escalating issues like climate change, increasing carbon emissions, and the rapid depletion of natural resources. As global temperatures rise, extreme weather events such as hurricanes, floods, and droughts are becoming more frequent and severe, impacting ecosystems and human livelihoods. The industrial activities, deforestation, and unsustainable agricultural practices have all contributed to the degradation of the environment. The impact of human activity on the environment is evident, and without a focus on sustainable practices, the future of our planet is at risk. To mitigate these challenges, it is crucial to adopt sustainable practices that balance environmental, social, and economic needs, ensuring that future generations can also thrive.</p>
@@ -75,6 +73,31 @@
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
+    </script>
+
+    <!-- ✅ Language Switcher Script -->
+    <script>
+    function switchLanguage() {
+        const filename = window.location.pathname.split('/').pop();
+        let newPage;
+
+        if (filename.includes('_de')) {
+            newPage = filename.replace('_de', '');
+        } else {
+            const parts = filename.split('.');
+            newPage = parts[0] + '_de.' + parts[1];
+        }
+
+        window.location.href = newPage;
+    }
+
+    window.onload = function() {
+        const langLink = document.getElementById('langSwitch');
+        if (!langLink) return;
+
+        const filename = window.location.pathname.split('/').pop();
+        langLink.textContent = filename.includes('_de') ? 'English' : 'Deutsch';
+    };
     </script>
 </body>
 </html>
