@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustAInability: Veranstaltungen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SustAInability: Veranstaltungen</h1>
+        <p>Bevorstehende Workshops, Konferenzen und Präsenzbesuche</p>
+    </header>
+    
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div class="banner-container">
+        <img src="banner.jpg" alt="Banner zu Nachhaltigkeit und KI" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
+    </div>
+    
+    <div class="container">
+        <h2>Veranstaltungsübersicht</h2>
+        <p>Das Projekt Sustainability-AI umfasst eine Reihe zentraler Veranstaltungen, die darauf abzielen, die Fähigkeiten der Teilnehmenden zu stärken, den interkulturellen Austausch zu fördern und praktische Erfahrungen im Bereich KI-gestützter Nachhaltigkeitslösungen zu vermitteln. Nachfolgend finden Sie Details zu unseren bevorstehenden Workshops, Präsenzbesuchen und Konferenzen.</p>
+
+        <h3>Auftaktveranstaltung (November 2024)</h3>
+        <p>Eine halbtägige Veranstaltung zur Vorstellung des Projektteams und interessierter Studierender. Während dieses Treffens werden die Projektziele und der Bewerbungsprozess präsentiert. Die Veranstaltung bietet die Gelegenheit, sich gegenseitig kennenzulernen und die Vision des Projekts Sustainability-AI zu verstehen.</p>
+
+        <h3>Online-Workshops</h3>
+        <ul>
+            <li><strong>März 2025:</strong> Eine zweitägige Veranstaltung mit Fokus auf innovative Technologien für Umweltmonitoring, KI-Anwendungen und interkulturelles Training. In diesem Workshop werden die Teilnehmenden in KI, maschinelles Lernen und Embedded Systems eingeführt. Fallstudien verdeutlichen die Integration von KI in nachhaltige Entwicklungspraktiken. Zudem wird ein interkulturelles Training mit dem Titel „Interaktion zwischen Kulturen“ angeboten, um die internationale Kommunikation zu fördern.</li>
+            <li><strong>November 2025:</strong> Eine zweitägige Veranstaltung mit Diskussionen zu KI und immersiven Technologien, der Förderung von MINT-Fächern sowie Präsentationen von Expert*innen aus Industrie, Studierendengruppen und zivilgesellschaftlichen Organisationen. Interaktive Diskussionen runden das Programm ab.</li>
+            <li><strong>Mai 2026:</strong> Eine zweitägige Roundtable-Veranstaltung für Lehrende und Forschende zum Austausch von Erkenntnissen, zur Diskussion über Herausforderungen und zum Aufbau von Partnerschaften im Bereich KI und Nachhaltigkeit.</li>
+        </ul>
+
+        <h3>Online-Konferenz (Juni 2026)</h3>
+        <p>Eine eintägige Online-Konferenz, bei der die Projektgruppen ihre Ergebnisse vorstellen. Die Konferenz beinhaltet außerdem Fachvorträge von Forschenden aus dem Projektteam sowie Diskussionen mit weiteren eingeladenen Wissenschaftler*innen und Industrieexpert*innen. Diese Veranstaltung bietet eine wertvolle Gelegenheit, die eigene Arbeit zu präsentieren, Feedback zu erhalten und von erfahrenen Fachleuten zu lernen.</p>
+
+        <h3>Präsenzveranstaltungen</h3>
+        <ul>
+            <li><strong>Besuch in Heidelberg (August 2025 – 2 Wochen):</strong> Die Teilnehmenden besuchen für zwei Wochen die SRH Hochschule Heidelberg. Geplant sind Tutorien zu KI und maschinellem Lernen, Workshops zu Embedded Systems und IoT, kulturelle Aktivitäten sowie die Entwicklung von Projektprototypen. Zudem ist eine Exkursion in die Alpen vorgesehen, um die Auswirkungen des Klimawandels zu beobachten und mit Expert*innen des Deutschen Wetterdienstes (DWD) in Austausch zu treten.</li>
+            <li><strong>Besuch in Phnom Penh (April 2026 – 1 Woche):</strong> Die Teilnehmenden besuchen für eine Woche die Paragon International University in Kambodscha. Das Programm umfasst Workshops zur Integration von KI und Embedded Systems im nachhaltigen Umweltmanagement, kulturelle Angebote wie Besuche historischer Stätten sowie Exkursionen zur Zusammenarbeit mit lokalen Umweltfachleuten.</li>
+        </ul>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
