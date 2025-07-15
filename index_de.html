@@ -11,59 +11,98 @@
         <h1>SustAInability: Nachhaltigkeit und KI</h1>
         <p>Eine interkulturelle Partnerschaft zur Verbesserung von Bildung und Umweltmanagement</p>
     </header>
-    
-    <div id="nav-placeholder"></div>
-    <script>
-        fetch('nav_de.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
-    </script>
+
+    <!-- Navigation (inline, no fetch) -->
+    <nav>
+        <a href="index_de.html">Home</a>
+        <a href="projects_de.html">Projekte</a>
+        <div class="dropdown-container">
+            <a href="events_de.html" class="dropdown-toggle">Events</a>
+            <div class="dropdown-menu">
+                <a href="Kickoff_Meeting_de.html">Kick-Off Meeting</a>
+                <a href="workshop1_de.html">March 2025 Workshop</a>
+                <a href="summerschool_de.html">Summer School 2025</a>
+            </div>
+        </div>
+        <a href="blog_de.html">Blog</a>
+        <a href="news_de.html">News</a>
+        <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle">Partners</a>
+            <div class="dropdown-menu">
+                <a href="https://www.srh-hochschule-heidelberg.de/">SRH Hochschule Heidelberg</a>
+                <a href="paragon_de.html">Paragon International University</a>
+                <a href="https://www.ucentralasia.org/">University of Central Asia</a>
+            </div>
+        </div>
+        <a href="#" id="langSwitch" onclick="switchLanguage()">English</a>
+    </nav>
 
     <div class="banner-container">
         <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
     </div>
 
     <div class="container">
-        <!-- ✅ All your German content remains unchanged -->
-        <!-- I'm omitting it here for brevity, but your full content stays in place -->
-        <!-- (Everything between <div class="container"> and </div> is untouched) -->
+        <h2>Die Bedeutung der Nachhaltigkeit</h2>
+        <p>Nachhaltigkeit ist aufgrund eskalierender Probleme wie Klimawandel, steigenden CO₂-Emissionen und der raschen Erschöpfung natürlicher Ressourcen zu einem dringenden globalen Anliegen geworden...</p>
+
+        <h2>Die Rolle der Künstlichen Intelligenz in der Nachhaltigkeit</h2>
+        <p>Künstliche Intelligenz (KI) birgt großes Potenzial für die Transformation verschiedener Sektoren, einschließlich Umweltwissenschaften und Nachhaltigkeit...</p>
+
+        <h2>Was ist Sustainability-AI?</h2>
+        <p>Sustainability-AI ist ein internationales Projekt mit dem Ziel, den Einsatz von Künstlicher Intelligenz zur Förderung nachhaltiger Praktiken und zur Bewältigung drängender Umweltprobleme voranzutreiben...</p>
+
+        <h2>Projektmeilensteine</h2>
+        <ul>
+            <li><strong>Auftaktveranstaltung (November 2024)</strong>: Halbtägige Einführung mit Projektzielen und Kennenlernen.</li>
+            <li><strong>Online-Workshops</strong>:
+                <ul>
+                    <li><strong>März 2025:</strong> Umweltmonitoring, KI, interkulturelles Training.</li>
+                    <li><strong>November 2025:</strong> KI, immersive Technologien, Präsentationen.</li>
+                    <li><strong>Mai 2026:</strong> Round Table für Forschende und Dozierende.</li>
+                </ul>
+            </li>
+            <li><strong>Präsenzveranstaltungen</strong>:
+                <ul>
+                    <li><strong>Heidelberg (August 2025):</strong> Workshops, Alpen-Exkursion, Prototyping.</li>
+                    <li><strong>Phnom Penh (April 2026):</strong> Workshops zu KI & Nachhaltigkeit, kulturelle Exkursionen.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Auswahl der Teilnehmenden</h2>
+        <p>Die Auswahl erfolgt über die Universitäten, basierend auf Motivation, interkulturellem Interesse, Nachhaltigkeitsbezug, Studienleistung und Englischkenntnissen (mindestens B2). Ergebnisse werden präsentiert und publiziert.</p>
     </div>
 
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+    <!-- Footer (inline, no fetch) -->
+    <footer>
+        <p>&copy; 2025 SustAInability Project | Gefördert durch das Baden-Württemberg-STIPENDIUM</p>
+    </footer>
 
-    <!-- ✅ Language Switcher Script -->
+    <!-- Language Switcher -->
     <script>
-    function switchLanguage() {
-        const filename = window.location.pathname.split('/').pop();
-        let newPage;
+        function switchLanguage() {
+            const filename = window.location.pathname.split('/').pop();
+            let newPage;
 
-        if (filename.includes('_de')) {
-            newPage = filename.replace('_de', '');
-        } else {
-            const parts = filename.split('.');
-            newPage = parts[0] + '_de.' + parts[1];
+            if (filename.includes('_de')) {
+                newPage = filename.replace('_de', '');
+            } else {
+                const parts = filename.split('.');
+                newPage = parts[0] + '_de.' + parts[1];
+            }
+
+            window.location.href = newPage;
         }
 
-        window.location.href = newPage;
-    }
+        window.onload = function () {
+            const langLink = document.getElementById('langSwitch');
+            if (!langLink) return;
 
-    window.onload = function () {
-        const langLink = document.getElementById('langSwitch');
-        if (!langLink) return;
-
-        const filename = window.location.pathname.split('/').pop();
-        langLink.textContent = filename.includes('_de') ? "English" : "Deutsch";
-    };
+            const filename = window.location.pathname.split('/').pop();
+            langLink.textContent = filename.includes('_de') ? "English" : "Deutsch";
+        };
     </script>
 </body>
 </html>
+
 
