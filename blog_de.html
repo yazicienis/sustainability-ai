@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog – SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Kopfbereich -->
+    <header>
+        <h1>SustAInability Blog</h1>
+        <p>Eine Plattform für Einblicke, Erfahrungen und Geschichten zu KI und Nachhaltigkeit</p>
+    </header>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav_de.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <div class="content">
+
+            <!-- Über den Blog -->
+            <section>
+                <h2>Über diesen Blog</h2>
+                <p>
+                    Willkommen auf dem SustAInability Blog, auf dem wir die Schnittstelle zwischen 
+                    <strong>Künstlicher Intelligenz</strong>, <strong>Nachhaltigkeit</strong> und 
+                    <strong>internationaler Zusammenarbeit</strong> erkunden. In Interviews und Beiträgen 
+                    stellen wir innovative Forschung, Best Practices und Erfolgsgeschichten von 
+                    Expert*innen und Studierenden aus verschiedenen Ländern und Hochschulen vor. 
+                    Erleben Sie mit uns vielfältige Perspektiven darauf, wie KI zu einer nachhaltigen Zukunft beitragen kann.
+                </p>
+                <p>
+                    Besonderer Dank an <strong>Katharina Krohm</strong>, Studentin der SRH Hochschule Heidelberg, 
+                    für die Durchführung dieser spannenden Interviews.
+                </p>
+            </section>
+
+            <!-- Aktuelle Interviews -->
+            <h2>Aktuelle Interviews</h2>
+
+            <!-- Interview 1 -->
+            <div class="interview">
+                <h3>Interview mit Prof. Dr. Thomas Sterr</h3>
+                <img 
+                    src="https://www.srh-university.de/fileadmin/_processed_/7/c/csm_Sterr-Thomas-HSHD_29950ebd9b.webp" 
+                    alt="Prof. Dr. Thomas Sterr" 
+                    style="width:150px; display:block; margin:10px auto; border-radius:10px;"
+                >
+                <p>
+                    In diesem aufschlussreichen Interview spricht Prof. Dr. Thomas Sterr über die Verknüpfung 
+                    von Wirtschaft, Nachhaltigkeit und Klimamanagement. Er betont die Bedeutung einer integrativen 
+                    Betrachtung sozialer, wirtschaftlicher und ökologischer Aspekte im Umgang mit Klimaherausforderungen.
+                </p>
+                <p class="tags"><strong>Tags:</strong> Interview, Nachhaltigkeit, Wirtschaft</p>
+                <a href="interview_sterr.html">Mehr lesen</a>
+            </div>
+
+            <!-- Interview 2 -->
+            <div class="interview">
+                <h3>Interview mit Dr. Puthearath Chan</h3>
+                <img 
+                    src="https://sustainability-ai.org/puthearath_chan.jpg" 
+                    alt="Dr. Puthearath Chan" 
+                    style="width:150px; display:block; margin:10px auto; border-radius:10px;"
+                >
+                <p>
+                    Dr. Puthearath Chan ist leitender Nachhaltigkeitsforscher im Umweltministerium von Kambodscha 
+                    und Lehrbeauftragter an der Paragon International University. Im Interview berichtet er über 
+                    die kulturelle Vielfalt, wirtschaftliche Entwicklung und Umweltfragen in Kambodscha – insbesondere 
+                    in Bezug auf den Mekong und die Herausforderungen durch den Klimawandel.
+                </p>
+                <p class="tags"><strong>Tags:</strong> Interview, Kambodscha, Erneuerbare Energien</p>
+                <a href="interview_chan.html">Mehr lesen</a>
+            </div>
+
+            <!-- Beteiligung -->
+            <section style="margin-top: 40px;">
+                <h2>Mitmachen oder mehr erfahren</h2>
+                <p>
+                    Möchtest du zum Blog beitragen oder mit uns im Bereich Nachhaltigkeit und KI zusammenarbeiten?<br>
+                    <a href="mailto:enis.yazici@srh.de">Schreibe uns eine E-Mail</a> oder besuche unsere 
+                    <a href="projects_de.html">laufenden Projekte</a>, um mehr zu erfahren.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
