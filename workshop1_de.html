@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Workshop-Ankündigung – SustAInability</title>
   <link rel="stylesheet" href="styles.css"/>
-  <!-- You can keep your custom <style> block unchanged or move it to styles.css -->
 </head>
 <body>
   <header>
@@ -34,7 +33,7 @@
   </div>
 
   <div class="container">
-    <!-- ABOUT THE WORKSHOP -->
+    <!-- ÜBER DEN WORKSHOP -->
     <div class="content">
       <h2>Über den Workshop</h2>
       <p>
@@ -58,9 +57,6 @@
       </p>
     </div>
 
-    <!-- The schedule table remains in English unless you're translating presenter/titles as well -->
-    <!-- If you’d like help localizing the table text or session names into German too, I can assist -->
-
     <!-- JOIN AS A LISTENER -->
     <div class="content">
       <h2>Teilnahme als Zuhörer*in</h2>
@@ -81,6 +77,22 @@
       .then(data => {
         document.getElementById('footer').innerHTML = data;
       });
+
+    // ✅ Language Switcher Function
+    function switchLanguage() {
+      const currentPath = window.location.pathname;
+      const file = currentPath.substring(currentPath.lastIndexOf("/") + 1);
+
+      if (file.includes("_de.html")) {
+        const newFile = file.replace("_de.html", ".html");
+        window.location.href = newFile;
+      } else {
+        const dotIndex = file.lastIndexOf(".html");
+        const base = file.substring(0, dotIndex);
+        const newFile = base + "_de.html";
+        window.location.href = newFile;
+      }
+    }
   </script>
 </body>
 </html>
