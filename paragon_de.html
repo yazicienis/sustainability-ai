@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragon International University - SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Paragon International University - SustAInability</h1>
+    </header>
+
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav_de.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="content">
+            <h2>Paragon International University – Kambodscha</h2>
+            <img src="cambodia_landscape.jpg" alt="Landschaft in Kambodscha">
+
+            <p><strong>Partnerland:</strong> Kambodscha</p>
+
+            <h3>Kambodscha: Ein Land mit Potenzial für KI und Nachhaltigkeit</h3>
+            <p><strong>Geografie und Umwelt:</strong> Kambodscha liegt in Südostasien und ist bekannt für seine reiche Geschichte, beeindruckende Landschaften und vielfältige Ökosysteme. Das Land beheimatet das berühmte Tempelareal Angkor Wat, große Regenwälder, fruchtbare Ebenen und den mächtigen Mekong-Fluss. Diese Umweltressourcen sind entscheidend für die Wirtschaft und das Leben der Bevölkerung – stehen aber zunehmend unter Druck durch Abholzung, Klimawandel und Wasserknappheit.</p>
+
+            <h3>Umweltprobleme</h3>
+            <p>Kambodscha steht vor zahlreichen ökologischen Herausforderungen, die es zu einem zentralen Schauplatz für Nachhaltigkeitsinitiativen machen:</p>
+            <ul>
+                <li><strong>Abholzung:</strong> Rasche Rodungen und landwirtschaftliche Umwidmungen haben zu erheblichem Waldverlust geführt und bedrohen Biodiversität und Lebensräume.</li>
+                <li><strong>Wassermanagement:</strong> Der Mekong ist eine Lebensader für Millionen Menschen, doch Überschwemmungen, Dürren und Verschmutzung stellen große Risiken dar.</li>
+                <li><strong>Klimawandel:</strong> Kambodscha ist stark vom Klimawandel betroffen – steigende Temperaturen, veränderte Niederschlagsmuster und extreme Wetterlagen beeinträchtigen Landwirtschaft und Ernährungssicherheit.</li>
+            </ul>
+
+            <h3>Bildung und Entwicklung</h3>
+            <p>In den letzten Jahrzehnten hat Kambodscha Fortschritte im Bildungs- und Wirtschaftsbereich gemacht. Dennoch bleibt der Zugang zu hochwertiger Bildung – insbesondere in ländlichen Gebieten – eine Herausforderung. Die Integration von KI in das Bildungssystem kann Lernerfolge verbessern, digitale Kompetenzen stärken und eine nachhaltigkeitsorientierte Ausbildung fördern.</p>
+
+            <h3>KI und Nachhaltigkeit in Kambodscha</h3>
+            <p>Aufgrund seiner einzigartigen Herausforderungen und einer sich entwickelnden Bildungsinfrastruktur bietet Kambodscha großes Potenzial für KI-gestützte Lösungen:</p>
+            <ul>
+                <li>Echtzeit-Überwachung von Abholzung und Biodiversitätsverlust durch Satellitenbilder und maschinelles Lernen</li>
+                <li>Vorhersage von Hochwasserrisiken und effizientes Wassermanagement</li>
+                <li>Förderung nachhaltigkeitsbezogener Bildung durch KI-gestützte Plattformen</li>
+            </ul>
+
+            <h3>Rolle Kambodschas im SustAInability-Projekt</h3>
+            <p>Als Partnerland spielt Kambodscha eine zentrale Rolle bei der Gestaltung unserer KI-Initiativen. Wir arbeiten eng mit lokalen Institutionen, Regierungsbehörden und Umweltorganisationen zusammen, um passgenaue Lösungen zu entwickeln. Unser Ziel ist es, das Naturerbe des Landes zu schützen und gleichzeitig nachhaltige Entwicklung durch Bildung und Technologie zu fördern.</p>
+
+            <h2>Über <a href="https://paragoniu.edu.kh/">Paragon International University</a></h2>
+            <img src="paragon_university.jpg" alt="Gebäude der Paragon International University">
+            <p><a href="https://paragoniu.edu.kh/">Paragon International University</a> wurde 2010 gegründet und ist eine führende private Hochschule in Kambodscha. Mit einem Fokus auf Innovation und Qualität will sie eine zentrale Rolle in der Region ASEAN einnehmen.</p>
+            <p>Sie bietet 11 Bachelor-Programme an – darunter Bauingenieurwesen, Informatik, Betriebswirtschaft und Politikwissenschaft – und bereitet Studierende auf den globalen Arbeitsmarkt vor. Ihre Kernwerte Verantwortung, Integrität, Entdeckung und Exzellenz spiegeln sich in ihrem Bildungsansatz wider.</p>
+
+            <h3>Wichtige Ansprechpersonen</h3>
+            <h4>Daniiar SATYBALDIEV, PhD</h4>
+            <img src="daniiar_satybaldiev.jpg" alt="Dr. Daniiar Satybaldiev">
+            <p>Dr. Daniiar Satybaldiev ist Dozent im Fachbereich Informatik sowie Direktor für ERP- und Webentwicklung an der Paragon International University. Er promovierte in Informatik an der International Black Sea University (Tiflis, Georgien) und hat Bachelor- und Masterabschlüsse in Elektronik von der Ala-Too International University in Kirgisistan.</p>
+            <p>Mit über 10 Jahren Lehrerfahrung zog er 2019 nach Kambodscha. Seine Forschungsschwerpunkte umfassen digitale Systementwicklung, Blockchain-Technologie und KI-Integration in ERP-Systeme. Er nahm an Workshops und Konferenzen in der Türkei, Polen, den USA, Malaysia und Singapur teil.</p>
+            <p>Derzeit forscht er zur Integration künstlicher Intelligenz in ERP-Systeme zur Verbesserung von Funktionalität und Lernumgebungen.</p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
