@@ -1,37 +1,112 @@
-<div class="container">
-  <div class="content">
-    <h2>Kick-Off-Meeting – 21. November 2024</h2>
-    <p>Willkommen zum Kick-Off-Meeting des SustAInability-Projekts! Dieses Treffen markiert den offiziellen Beginn unserer Initiative zur Integration von Künstlicher Intelligenz und Nachhaltigkeit in Bildung und Umweltmanagement.</p>
-    
-    <p>Das Kick-Off-Meeting bietet eine hervorragende Gelegenheit für Studierende, sich an einer internationalen Zusammenarbeit zu beteiligen. In dieser Sitzung werden wir die Bildung von Arbeitsgruppen sowie die Themen vorstellen, die im Verlauf des Projekts behandelt werden. Es ist auch eine wertvolle Chance für interkulturellen Austausch und dafür, von Expert*innen aus den Bereichen Umweltwissenschaften und Künstliche Intelligenz zu lernen.</p>
-    
-    <p>Die Teilnehmenden haben die Möglichkeit, mit Wissenschaftler*innen aus dem Bereich Umwelt und KI zusammenzuarbeiten und gemeinsam den Fahrplan für das Projekt zu gestalten. Begleitet von Mentor*innen werden sie an spezifischen Themen arbeiten, ihre Fortschritte in kommenden Workshops präsentieren und möglicherweise zu wissenschaftlichen Publikationen beitragen.</p>
-    
-    <p>Das Kick-Off-Meeting umfasst außerdem eine Vorstellungsrunde, bei der sich alle Teilnehmenden kennenlernen – so entsteht ein kooperatives und freundliches Umfeld für die kommenden Aktivitäten.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kick-Off-Meeting – SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #e6f7f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .banner-container img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .content {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 10px 0 5px;
+        }
+        form input, form button {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        form button {
+            background-color: #000080;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #333399;
+        }
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kick-Off-Meeting – SustAInability</h1>
+    </header>
 
-    <p><strong>Datum:</strong> 21. November 2024</p>
-    <p><strong>Uhrzeit:</strong> 10:00 – 13:00 (MEZ)</p>
-    <p><strong>Link:</strong> Der Teams-Link zum Online-Workshop ist verfügbar:  
-      <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzhlYjk2MTctMmQzOC00NDRiLWI3YmMtM2IzZjRjODk4YjYw%40thread.v2/0?context=%7b%22Tid%22%3a%22787048c4-ce0e-4446-81e0-2fa0524ec702%22%2c%22Oid%22%3a%22a4c9a9bf-23ec-4c4e-b6e3-b2a2c03a9163%22%7d" target="_blank">Am Workshop teilnehmen</a>
-    </p>
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav_de.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
 
-    <h3>Registrierung</h3>
-    <p>Jetzt anmelden, um einen Platz im Kick-Off-Meeting zu sichern und den ersten Schritt in Richtung nachhaltiger Wandel zu machen.</p>
+    <div class="banner-container">
+        <img src="banner.jpg" alt="Banner zu Nachhaltigkeit und KI">
+    </div>
 
-    <form action="https://script.google.com/macros/s/AKfycbziEFPGaYKPeGvrthycth14TlREJjU5idGg8ZsyOOcBX5zu5caM_J_aAThlEJEosw2Y4A/exec" method="post">
-      <label for="name">Vor- und Nachname:</label>
-      <input type="text" id="name" name="name" required>
+    <div class="container">
+        <div class="content">
+            <h2>Kick-Off-Meeting – 21. November 2024</h2>
+            <p>Willkommen zum Kick-Off-Meeting des SustAInability-Projekts! Dieses Treffen markiert den offiziellen Beginn unserer Initiative zur Integration von Künstlicher Intelligenz und Nachhaltigkeit in Bildung und Umweltmanagement.</p>
 
-      <label for="email">E-Mail-Adresse:</label>
-      <input type="email" id="email" name="email" required>
+            <p>Das Kick-Off-Meeting bietet eine hervorragende Gelegenheit für Studierende, sich an einer internationalen Zusammenarbeit zu beteiligen. In dieser Sitzung werden wir die Bildung von Arbeitsgruppen sowie die Themen vorstellen, die im Verlauf des Projekts behandelt werden. Es ist auch eine wertvolle Chance für interkulturellen Austausch und dafür, von Expert*innen aus den Bereichen Umweltwissenschaften und Künstliche Intelligenz zu lernen.</p>
 
-      <label for="institution">Institution/Organisation:</label>
-      <input type="text" id="institution" name="institution">
+            <p>Die Teilnehmenden haben die Möglichkeit, mit Wissenschaftler*innen aus dem Bereich Umwelt und KI zusammenzuarbeiten und gemeinsam den Fahrplan für das Projekt zu gestalten. Begleitet von Mentor*innen werden sie an spezifischen Themen arbeiten, ihre Fortschritte in kommenden Workshops präsentieren und möglicherweise zu wissenschaftlichen Publikationen beitragen.</p>
 
-      <label for="comments">Kommentare:</label>
-      <input type="text" id="comments" name="comments">
+            <p>Das Kick-Off-Meeting umfasst außerdem eine Vorstellungsrunde, bei der sich alle Teilnehmenden kennenlernen – so entsteht ein kooperatives und freundliches Umfeld für die kommenden Aktivitäten.</p>
 
-      <button type="submit">Registrieren</button>
-    </form>
-  </div>
-</div>
+            <p><strong>Datum:</strong> 21. November 2024</p>
+            <p><strong>Uhrzeit:</strong> 10:00 – 13:00 (MEZ)</p>
+            <p><strong>Link:</strong> Der Teams-Link zum Online-Workshop ist verfügbar:  
+                <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzhlYjk2MTctMmQzOC00NDRiLWI3YmMtM2IzZjRjODk4YjYw%40thread.v2/0?context=%7b%22Tid%22%3a%22787048c4-ce0e-4446-81e0-2fa0524ec702%22%2c%22Oid%22%3a%22a4c9a9bf-23ec-4c4e-b6e3-b2a2c03a9163%22%7d" target="_blank">Am Workshop teilnehmen</a>
+            </p>
+
+            <h3>Registrierung</h3>
+            <p>Jetzt anmelden, um einen Platz im Kick-Off-Meeting zu sichern und den ersten Schritt in Richtung nachhaltiger Wandel zu machen.</p>
+
+            <form action="https://script.google.com/macros/s/AKfycbziEFPGaYKPeGvrthycth14TlREJjU5idGg8ZsyOOcBX5zu5caM_J_aAThlEJEosw2Y4A/exec" method="post">
+                <label for="name">Vor- und Nachname:</label>
+                <input type="text" id="
