@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick-Off Meeting – SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Keep your existing styles as-is */
+        /* (Same CSS here — omitted for brevity if you already have it in styles.css) */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kick-Off Meeting – SustAInability</h1>
+    </header>
+
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav_de.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div class="banner-container">
+        <img src="banner.jpg" alt="Banner zu Nachhaltigkeit und KI" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Kick-Off Meeting – 21. November 2024</h2>
+            <p>Willkommen zum Kick-Off Meeting des SustAInability-Projekts! Dieses Treffen markiert den offiziellen Start unserer Initiative zur Integration von KI und Nachhaltigkeit in Bildung und Umweltmanagement.</p>
+            <p>Das Kick-Off Meeting ist eine großartige Gelegenheit für Studierende, sich an einer internationalen Zusammenarbeit zu beteiligen. Während des Treffens besprechen wir die Bildung von Arbeitsgruppen und die Themen, die im Projektverlauf behandelt werden. Gleichzeitig erhalten Teilnehmende Einblicke in den interkulturellen Austausch und lernen von Expert*innen aus den Bereichen Umweltwissenschaften und Künstliche Intelligenz.</p>
+            <p>Die Studierenden treffen auf Fachleute aus Umwelt- und KI-Wissenschaften, mit denen sie gemeinsam die Projekt-Roadmap erarbeiten. Begleitet von Mentor*innen arbeiten sie an spezifischen Themen, präsentieren ihre Fortschritte in bevorstehenden Workshops und können zur wissenschaftlichen Veröffentlichung beitragen.</p>
+            <p>Das Kick-Off Meeting beinhaltet auch eine Vorstellungsrunde, um ein kollaboratives und freundliches Umfeld für die kommenden Aktivitäten zu schaffen.</p>
+            <p><strong>Datum:</strong> 21. November 2024</p>
+            <p><strong>Uhrzeit:</strong> 10:00 – 13:00 (MEZ)</p>
+            <p><strong>Link:</strong> Der Teams-Link zum Online-Workshop ist verfügbar:  
+                <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzhlYjk2MTctMmQzOC00NDRiLWI3YmMtM2IzZjRjODk4YjYw%40thread.v2/0?context=%7b%22Tid%22%3a%22787048c4-ce0e-4446-81e0-2fa0524ec702%22%2c%22Oid%22%3a%22a4c9a9bf-23ec-4c4e-b6e3-b2a2c03a9163%22%7d">Am Workshop teilnehmen</a></p>
+
+            <h3>Registrierung</h3>
+            <p>Melde dich jetzt an, um deinen Platz im Kick-Off Meeting zu sichern und deine Reise zu einem nachhaltigen Wandel zu beginnen.</p>
+            
+            <form action="https://script.google.com/macros/s/AKfycbziEFPGaYKPeGvrthycth14TlREJjU5idGg8ZsyOOcBX5zu5caM_J_aAThlEJEosw2Y4A/exec" method="post">
+                <label for="name">Name und Nachname:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="institution">Institution/Organisation:</label>
+                <input type="text" id="institution" name="institution">
+
+                <label for="comments">Kommentare:</label>
+                <input type="text" id="comments" name="comments">
+
+                <button type="submit">Registrieren</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
