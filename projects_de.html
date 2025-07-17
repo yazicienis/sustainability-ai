@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte – SustAInability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SustAInability Projekte</h1>
+        <p>Kollaborative Mentoring-Gruppen und ihre Initiativen</p>
+    </header>
+    
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav_de.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <div class="banner-container">
+        <img src="banner.jpg" alt="Banner: Nachhaltigkeit und KI" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Lerngruppen</h2>
+            <p>Entdecken Sie unsere aktiven Lerngruppen mit Fokus auf Nachhaltigkeit und zukunftsweisende Technologien.</p>
+        </div>
+
+        <div class="project">
+            <h3>Studiengruppe: KI für Klimaresilienz</h3>
+            <p>Diese Gruppe konzentriert sich auf den Einsatz von Künstlicher Intelligenz zur Bewältigung zentraler Klimaherausforderungen. Schwerpunkte sind Klimavorhersagen, Optimierung erneuerbarer Energien, urbane Nachhaltigkeit und Präzisionslandwirtschaft – mit dem Ziel, innovative Lösungen für eine widerstandsfähige Zukunft zu entwickeln.</p>
+            <a href="resilience.html">Mehr erfahren</a>
+        </div>
+
+        <div class="project">
+            <h3>Studiengruppe: Physik für eine nachhaltige Zukunft</h3>
+            <p>Erforschung erneuerbarer Energietechnologien, Klimawissenschaft und nachhaltiger Materialien zur Bewältigung ökologischer Herausforderungen durch physikalisches Wissen.</p>
+            <a href="sustainability_physics.html">Mehr erfahren</a>
+        </div>
+
+        <div class="project">
+            <h3>Studiengruppe: Quantencomputer und KI</h3>
+            <p>Diese Gruppe taucht in die Welt der Quanteninformatik und Künstlichen Intelligenz ein und untersucht, wie Quanten­technologien zukünftige Problemlösungen revolutionieren können.</p>
+            <a href="qcai.html">Mehr erfahren</a>
+        </div>
+
+        <div class="project">
+            <h3>Eingebettete Systeme für Nachhaltigkeit</h3>
+            <p>Fokus auf die Entwicklung eingebetteter Systeme mit Mikrocontrollern und Sensoren zur Sammlung und Übertragung von Umweltdaten in die Cloud. Ziel ist die Förderung nachhaltiger Entwicklung durch Echtzeit-Ökoanalysen und langfristige Umweltüberwachung.</p>
+            <a href="embedded.html">Mehr erfahren</a>
+        </div>
+
+        <div class="project">
+            <h3>Projekt TreeStrike</h3>
+            <p>Ein autonomes, drohnengestütztes Aufforstungssystem mit KI und Bildverarbeitung zur Identifikation optimaler Pflanzflächen. Integration von Wetterdaten, Offline-Betrieb und präziser Navigation zur Unterstützung ökologischer Wiederherstellung und nachhaltiger Landnutzung.</p>
+            <a href="treestrike.html">Mehr erfahren</a>
+        </div>
+
+        <div class="project">
+            <h3>Datenbasierte Lösungen für das Wassermanagement in Smart Cities</h3>
+            <p>Diese Gruppe untersucht innovative, datengestützte Ansätze für nachhaltiges städtisches Wassermanagement. Nutzung von IoT-Technologien, Echtzeitanalyse und maschinellem Lernen zur Überwachung, Prognose und Optimierung von Wasserverbrauch und -qualität. Themen reichen von intelligenter Wasserinfrastruktur bis hin zu politischen Rahmenbedingungen.</p>
+            <a href="smart_water.html">Mehr erfahren</a>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
