@@ -1,111 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summer School 2025 - Heidelberg</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer School 2025 - Heidelberg</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 0; }
+        header { background-color: #000080; color: #fff; padding: 20px; text-align: center; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .content { background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2, h3 { color: #000080; }
+        .apply-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff8c00;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .apply-button:hover {
+            background-color: #ffb84d;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Summer School 2025 - Heidelberg</h1>
-    <p>AI, Sustainability, and Cultural Exchange</p>
-  </header>
+    <header>
+        <h1>Summer School 2025 - Heidelberg</h1>
+        <p>AI, Sustainability, and Cultural Exchange</p>
+    </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <div class="dropdown-container">
-      <a href="events.html" class="dropdown-toggle">Events</a>
-      <div class="dropdown-menu">
-        <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
-        <a href="workshop1.html">March 2025 Workshop</a>
-        <a href="summerschool.html">Summer School 2025</a>
-      </div>
+    <div id="nav-placeholder"></div>
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
+    </script>
+
+    <div class="container">
+        <div class="content">
+            <h2>About the Program</h2>
+            <p>The Summer School 2025 at SRH University Heidelberg is designed for students in Germany to explore the dynamic intersection of <strong>Artificial Intelligence</strong> and <strong>Sustainability</strong>. The program includes workshops, excursions, technical visits, and intercultural activities.</p>
+
+            <h3>Location</h3>
+            <p>SRH University Heidelberg, Germany</p>
+
+            <h3>Confirmed Program Dates</h3>
+            <ul>
+                <li><strong>July 27, 2025:</strong> Arrival of participants in Heidelberg</li>
+                <li><strong>July 28–29, 2025:</strong> Excursion to Taschachhaus (Alpine climate observation)</li>
+                <li><strong>July 30, 2025:</strong> Return from the excursion</li>
+                <li><strong>July 31, 2025:</strong> Welcome Day & Campus Tour (with SRH International Office)</li>
+                <li><strong>August 8, 2025:</strong> Closing Dinner</li>
+            </ul>
+
+            <h3>Additional Program Activities (July 31 – August 8, 2025)</h3>
+            <ul>
+                <li><strong>Workshops:</strong> Sessions on AI, IoT, Embedded Systems, and Sustainability. Includes hands-on group projects and student presentations.</li>
+                <li><strong>Site Visit:</strong> Research Lab at TSG Hoffenheim – exploring AI in sports technology.</li>
+                <li><strong>Startup & Innovation Visit:</strong> Guided tour of SRH Gründer Institute and introduction to the startup ecosystem.</li>
+                <li><strong>Cultural Program:</strong> Excursion to Heidelberg Castle and local city tour.</li>
+                <li><strong>Open-air Poster Presentation & Picnic Dialogue</strong></li>
+                <li><strong>Reflection and Closing:</strong> Group presentations, feedback session, and certificate ceremony.</li>
+            </ul>
+
+            <h3>Application Requirements</h3>
+            <ul>
+                <li>Curriculum Vitae (CV) with grade overview</li>
+                <li>Open to students currently enrolled in Heidelberg</li>
+            </ul>
+
+            <h3>Apply Now</h3>
+            <p>Please fill out the Google Form and upload your CV.</p>
+            <p><strong>Application Deadline: July 26, 2025</strong></p>
+
+            <a href="https://forms.gle/1mqbTpiuEZdGMk138" class="apply-button">Apply via Google Form</a>
+        </div>
     </div>
-    <a href="blog.html">Blog</a>
-    <a href="news.html">News</a>
-    <div class="dropdown-container">
-      <a href="#" class="dropdown-toggle">Partners</a>
-      <div class="dropdown-menu">
-        <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
-        <a href="paragon.html">Paragon International University</a>
-        <a href="https://www.ucentralasia.org/">University of Central Asia</a>
-      </div>
-    </div>
-    <a href="#" id="langSwitch" onclick="switchLanguage()">Deutsch</a>
-  </nav>
 
-  <div class="banner-container">
-    <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
-  </div>
-
-  <div class="container">
-    <div class="content">
-      <h2>About the Program</h2>
-      <p>The Summer School 2025 at SRH University Heidelberg is designed for students in Germany to explore the dynamic intersection of <strong>Artificial Intelligence</strong> and <strong>Sustainability</strong>. The program includes workshops, excursions, technical visits, and intercultural activities.</p>
-
-      <h3>Location</h3>
-      <p>SRH University Heidelberg, Germany</p>
-
-      <h3>Confirmed Program Dates</h3>
-      <ul>
-        <li><strong>July 27, 2025:</strong> Arrival of participants in Heidelberg</li>
-        <li><strong>July 28–29, 2025:</strong> Excursion to Taschachhaus (Alpine climate observation)</li>
-        <li><strong>July 30, 2025:</strong> Return from the excursion</li>
-        <li><strong>July 31, 2025:</strong> Welcome Day & Campus Tour (with SRH International Office)</li>
-        <li><strong>August 8, 2025:</strong> Closing Dinner</li>
-      </ul>
-
-      <h3>Additional Program Activities (July 31 – August 8, 2025)</h3>
-      <ul>
-        <li><strong>Workshops:</strong> Sessions on AI, IoT, Embedded Systems, and Sustainability. Includes hands-on group projects and student presentations.</li>
-        <li><strong>Site Visit:</strong> Research Lab at TSG Hoffenheim – exploring AI in sports technology.</li>
-        <li><strong>Startup & Innovation Visit:</strong> Guided tour of SRH Gründer Institute and introduction to the startup ecosystem.</li>
-        <li><strong>Cultural Program:</strong> Excursion to Heidelberg Castle and local city tour.</li>
-        <li><strong>Open-air Poster Presentation & Picnic Dialogue</strong></li>
-        <li><strong>Reflection and Closing:</strong> Group presentations, feedback session, and certificate ceremony.</li>
-      </ul>
-
-      <h3>Application Requirements</h3>
-      <ul>
-        <li>Curriculum Vitae (CV)</li>
-        <li>Open to students currently studying in Heidelberg</li>
-      </ul>
-
-      <h3>Apply Now</h3>
-      <p>Submit your application by filling in the Google Form below and uploading your CV.</p>
-      <p><strong>Application Deadline: 26 July 2025</strong></p>
-      <a href="https://forms.gle/1mqbTpiuEZdGMk138" class="apply-button">Apply via Google Form</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 SustAInability Project | Funded by Baden-Württemberg-STIPENDIUM</p>
-  </footer>
-
-  <script>
-    function switchLanguage() {
-      const filename = window.location.pathname.split('/').pop();
-      let newPage;
-
-      if (filename.includes('_de')) {
-        newPage = filename.replace('_de', '');
-      } else {
-        const parts = filename.split('.');
-        newPage = parts[0] + '_de.' + parts[1];
-      }
-
-      window.location.href = newPage;
-    }
-
-    window.onload = function () {
-      const langLink = document.getElementById('langSwitch');
-      if (!langLink) return;
-
-      const filename = window.location.pathname.split('/').pop();
-      langLink.textContent = filename.includes('_de') ? "English" : "Deutsch";
-    };
-  </script>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('footer').innerHTML = data; });
+    </script>
 </body>
 </html>
