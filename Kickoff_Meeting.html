@@ -1,176 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kick-Off Meeting - SustAInability</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #e6f7f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ff8c00;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 15px;
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #ffb84d;
-            color: #fff;
-        }
-        .dropdown-container {
-            position: relative;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ff8c00;
-            flex-direction: column;
-            z-index: 1;
-        }
-        .dropdown-menu a {
-            padding: 10px;
-            background-color: #ffa64d;
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .dropdown-menu a:hover {
-            background-color: #ffd1a3;
-        }
-        .dropdown-container:hover .dropdown-menu {
-            display: flex;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            width: 80%;
-            margin: 20px auto;
-            position: relative;
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        form label {
-            margin: 10px 0 5px;
-        }
-        form input, form button {
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 1em;
-        }
-        form button {
-            background-color: #000080;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #333399;
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kick-Off Meeting - SustAInability</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Kick-Off Meeting - SustAInability</h1>
-    </header>
+  <header>
+    <h1>Kick-Off Meeting - SustAInability</h1>
+  </header>
 
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+        const langLink = document.getElementById('langSwitch');
+        if (langLink) langLink.textContent = "Deutsch";
+      });
+  </script>
 
-    <div id="nav-placeholder"></div>
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
-    </script>
-        <div class="banner-container">
-        <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
+  <!-- Banner Image -->
+  <div class="banner-container">
+    <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
+  </div>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="content">
+      <h2>Kick-Off Meeting - 21st November 2024</h2>
+      <p>Welcome to the Kick-Off Meeting of the SustAInability project! This meeting marks the official beginning of our initiative to integrate AI and sustainability into educational and environmental management practices.</p>
+      <p>The Kick-Off Meeting is a fantastic opportunity for students to get involved in international collaboration...</p>
+      <p><strong>Date:</strong> 21st November 2024</p>
+      <p><strong>Time:</strong> 10:00 - 13:00 (CET)</p>
+      <p><strong>Link:</strong> <a href="https://teams.microsoft.com/...">Join the Workshop</a></p>
+
+      <h3>Registration</h3>
+      <form action="https://script.google.com/macros/s/.../exec" method="post">
+        <label for="name">Name and Surname:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="institution">Institution/Organization:</label>
+        <input type="text" id="institution" name="institution" />
+
+        <label for="comments">Comments:</label>
+        <input type="text" id="comments" name="comments" />
+
+        <button type="submit">Register</button>
+      </form>
     </div>
+  </div>
 
-    <div class="container">
-        <div class="content">
-            <h2>Kick-Off Meeting - 21st November 2024</h2>
-            <p>Welcome to the Kick-Off Meeting of the SustAInability project! This meeting marks the official beginning of our initiative to integrate AI and sustainability into educational and environmental management practices.</p>
-            <p>The Kick-Off Meeting is a fantastic opportunity for students to get involved in international collaboration. During this meeting, we will discuss the formation of working groups and the topics they will address throughout the project. It's a great chance to experience international cultural exchange while learning from experts in environmental sciences and artificial intelligence.</p>
-            <p>Students will have the opportunity to meet with academics specializing in environmental sciences and AI, and work together to define the roadmap for our project. Guided by mentors, participants will work on specific topics, present their progress in upcoming workshops, and potentially contribute to academic publications.</p>
-            <p>The Kick-Off Meeting will also include an introduction session, where all participants will get to know each other, fostering a collaborative and friendly environment for the upcoming activities.</p>
-            <p><strong>Date:</strong> 21st November 2024</p>
-            <p><strong>Time:</strong> 10:00 - 13:00 (CET)</p>
-            <p><strong>Link:</strong> The Teams link for the online workshop is now available:  <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_YzhlYjk2MTctMmQzOC00NDRiLWI3YmMtM2IzZjRjODk4YjYw%40thread.v2/0?context=%7b%22Tid%22%3a%22787048c4-ce0e-4446-81e0-2fa0524ec702%22%2c%22Oid%22%3a%22a4c9a9bf-23ec-4c4e-b6e3-b2a2c03a9163%22%7d">Join the Workshop</a></p>
-
-            <h3>Registration</h3>
-            <p>Register now to secure your spot in the Kick-Off Meeting and start your journey towards making a meaningful impact.</p>
-            <form action="https://script.google.com/macros/s/AKfycbziEFPGaYKPeGvrthycth14TlREJjU5idGg8ZsyOOcBX5zu5caM_J_aAThlEJEosw2Y4A/exec" method="post">
-
-                <label for="name">Name and Surname:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="institution">Institution/Organization:</label>
-                <input type="text" id="institution" name="institution">
-
-                <label for="comments">Comments:</label>
-                <input type="text" id="comments" name="comments">
-
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    </div>
-
-<div id="footer"></div>
-<script>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script>
     fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-</script>
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
 
+  <!-- Language Switcher Script -->
+  <script>
+    function switchLanguage() {
+      const filename = window.location.pathname.split('/').pop();
+      const parts = filename.split('.');
+      window.location.href = parts[0] + '_de.' + parts[1];
+    }
+  </script>
 </body>
 </html>
