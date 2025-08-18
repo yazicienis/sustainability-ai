@@ -35,7 +35,17 @@
     <script>
         fetch('nav.html')
             .then(response => response.text())
-            .then(data => { document.getElementById('nav-placeholder').innerHTML = data; });
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+                const switchLink = document.getElementById("langSwitch");
+                if (switchLink) {
+                    switchLink.onclick = function () {
+                        const current = window.location.pathname;
+                        const target = current.replace("summerschool.html", "summerschool_de.html");
+                        window.location.href = target;
+                    }
+                }
+            });
     </script>
 
     <div class="container">
