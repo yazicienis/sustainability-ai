@@ -312,3 +312,35 @@ img {
   .nav-menu.open { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin-top: 0.75rem; }
 }
 
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #003366;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background: #003366;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #ff8c00;
+  border-color: #ff8c00;
+  color: #fff;
+}
+
+.btn-ghost {
+  background: #fff;
+  color: #003366;
+  margin-left: 0.5rem;
+}
+
+.btn-ghost:hover {
+  background: #f2f4f7;
+}
+
