@@ -30,7 +30,6 @@
       </div>
     </div>
 
-    <!-- Dil değiştirici kanca (ileride gerçek bağlantılarla eşleştireceğiz) -->
     <div class="lang-switch">
       <a data-lang="en" href="#" aria-current="true">EN</a>
       <span aria-hidden="true">|</span>
@@ -40,41 +39,41 @@
 </nav>
 
 <script>
-  // hamburger
+  // hamburger toggle
   const btn = document.querySelector('.nav-toggle');
   const menu = document.getElementById('nav-menu');
   btn?.addEventListener('click', () => {
-    const exp = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!exp));
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!expanded));
     menu.classList.toggle('open');
   });
 
-  // aktif link
-  const here = location.pathname.split('/').pop() || 'index.html';
+  // highlight current page
+  const current = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-menu a[href]').forEach(a => {
-    if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page');
+    if (a.getAttribute('href') === current) {
+      a.setAttribute('aria-current', 'page');
+    }
   });
 
-  // dropdown klavye
-  document.querySelectorAll('.dropdown').forEach(d => {
-    const b = d.querySelector('.dropbtn'), m = d.querySelector('.dropdown-menu');
-    b.addEventListener('click', () => {
-      const open = b.getAttribute('aria-expanded') === 'true';
-      b.setAttribute('aria-expanded', String(!open));
-      m.classList.toggle('open');
-    });
-    b.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { b.setAttribute('aria-expanded','false'); m.classList.remove('open'); b.focus(); }
+  // dropdown toggle
+  document.querySelectorAll('.dropdown').forEach(drop => {
+    const btn = drop.querySelector('.dropbtn');
+    const menu = drop.querySelector('.dropdown-menu');
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('open');
     });
   });
 
-  // dil değiştirici (yer tutucu mantık)
+  // language switcher logic
   document.querySelectorAll('.lang-switch a').forEach(a=>{
     a.addEventListener('click', e=>{
       const lang = a.dataset.lang;
-      // örnek: Kickoff_Meeting.html -> Kickoff_Meeting_de.html
-      const file = here.replace(/(_de)?\.html$/, lang==='de' ? '_de.html' : '.html');
-      location.href = file;
+      const currentFile = location.pathname.split('/').pop();
+      const target = currentFile.replace(/(_de)?\.html$/, lang==='de' ? '_de.html' : '.html');
+      location.href = target;
       e.preventDefault();
     });
   });
