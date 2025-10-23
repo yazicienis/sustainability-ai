@@ -13,13 +13,9 @@
   </header>
 
   <div id="nav-placeholder"></div>
-  <script>
-    fetch('nav_de.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
-  </script>
+<div id="nav-placeholder"></div>
+<script src="navLoader.js" defer></script>
+
 
   <div class="banner-container">
     <img src="banner.jpg" alt="Banner zu Nachhaltigkeit und KI" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;">
