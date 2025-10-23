@@ -1,241 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI for Climate Change Resilience</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #e6f7f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ff8c00;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 15px;
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #ffb84d;
-            color: #fff;
-        }
-        .dropdown-container {
-            position: relative;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ff8c00;
-            flex-direction: column;
-            z-index: 1;
-        }
-        .dropdown-menu a {
-            padding: 10px;
-            background-color: #ffa64d;
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .dropdown-menu a:hover {
-            background-color: #ffd1a3;
-        }
-        .dropdown-container:hover .dropdown-menu {
-            display: flex;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            width: 80%;
-            margin: 20px auto;
-            position: relative;
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Climate Change Resilience - SustAInability</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="description" content="AI-driven solutions for climate change resilience and sustainability within the SustAInability project.">
+  <meta property="og:title" content="AI for Climate Change Resilience - SustAInability">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="banner.jpg">
+  <meta property="og:url" content="https://sustainability-ai.org/resilience.html">
+  <link rel="canonical" href="https://sustainability-ai.org/resilience.html">
 </head>
 <body>
-    <header>
-        <h1>AI for Climate Change Resilience</h1>
-        <p>AI-Driven Solutions for Climate Resilience and Sustainability</p>
-    </header>
-    
-    <div id="nav-placeholder"></div>
-<script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-        });
-</script>
-    
-      <div class="content">
+  <header>
+    <h1>AI for Climate Change Resilience</h1>
+    <p>AI-Driven Solutions for Climate Resilience and Sustainability</p>
+  </header>
 
-        
-        <strong>AI for Climate Change Resilience</strong> study group will explore cutting-edge applications of artificial intelligence 
-        to address critical challenges posed by climate change.
-    </p>
-    <h3>Group Lead</h3>
-    <p>
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch('nav.html')
+      .then(r => r.text())
+      .then(t => { document.getElementById('nav-placeholder').innerHTML = t; });
+  </script>
+
+  <div class="banner-container">
+    <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width:100%;max-height:400px;object-fit:cover;">
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <h2>Overview</h2>
+      <p>
+        The <strong>AI for Climate Change Resilience</strong> study group explores cutting-edge applications of artificial intelligence to address critical challenges posed by climate change.
+      </p>
+
+      <h3>Group Lead</h3>
+      <p>
         <strong>Dr. Ayman Aljarbouh</strong><br>
         Chair, Computer Science Department<br>
         School of Arts and Sciences, University of Central Asia (UCA)<br>
         Email: <a href="mailto:ayman.aljarbouh@ucentralasia.org">ayman.aljarbouh@ucentralasia.org</a><br>
-        Faculty Profile: <a href="https://ucentralasia.org/faculty-and-staff/dr-ayman-aljarbouh" target="_blank">Dr. Ayman Aljarbouh</a>
-    </p>
-    <h3>Focus Areas:</h3>
-    <ul>
-        <li>
-            <strong>Climate Change Forecasting and Observation</strong>
+        Faculty Profile:
+        <a href="https://ucentralasia.org/faculty-and-staff/dr-ayman-aljarbouh" target="_blank" rel="noopener">Dr. Ayman Aljarbouh</a>
+      </p>
 
-            <ul>
-                <li>
-                    Climate Modeling and Forecasting: AI application in enhancing climate change and models, or to forecast temperature variations and frequency of intense weather conditions, as well as precipitation.
-                </li>
-                <li>
-                    Carbon Emission Tracking: Greenhouse gas emission management and visualization through satellite data and IoT sensors with the help of AI.
-                </li>
-            </ul>
+      <h3>Focus Areas</h3>
+      <ul>
+        <li>
+          <strong>Climate Change Forecasting and Observation</strong>
+          <ul>
+            <li>AI-enhanced climate modeling and forecasting for temperature, precipitation, and extreme-weather prediction.</li>
+            <li>Carbon emission tracking via satellite and IoT data combined with machine-learning visualization.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Solar and Wind Energy Efficiency</strong>
+          <ul>
+            <li>Dynamic solar-panel optimization using AI to adjust orientation and maximize irradiance capture.</li>
+            <li>Real-time turbine control for performance and resilience under changing weather conditions.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Urban Sustainability</strong>
+          <ul>
+            <li>AI solutions for smart-city challenges such as urban-heat-island mitigation, traffic optimization, and waste management.</li>
+            <li>AI-based building-energy-efficiency models integrating smart sensors and predictive analytics.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Agriculture and Water Management</strong>
+          <ul>
+            <li>Precision agriculture via soil-condition prediction, yield assessment, and irrigation forecasting.</li>
+            <li>AI-driven flood-management frameworks for adaptive water distribution and crop protection.</li>
+          </ul>
+        </li>
+      </ul>
 
-    
-
-                
-        </li>
-        <li>
-            <strong>Solar and Wind Energy Efficiency</strong> 
-
-            <ul>
-                <li>
-                Dynamic Solar Panel Optimization: The use of AI techniques to optimize the angles and formation of the panels towards the sun intensity.                
-                </li>
-                
-                <li>
-                Wind Turbine Performance: A real-time artificial intelligence control to enhance the operation of wind turbine under dynamic conditions.    
-                </li>
-                
-                <li>
-                Resilience to Climate Extremes: The use of AI technologies that can enhance the site and operating life of the solar and wind farms during hard weather conditions such as hurricanes or head seasons.    
-                    
-                </li>
-            </ul>
-            
-        </li>
-        
-        <li>
-            <strong>Urban Sustainability</strong>
-            
-        </li>
-         <ul>
-        <li>
-        Smart Cities: AI-based solutions of urban heat islands, smart management of public transport and proper disposal of waste.
-        </li>
-        <li>
-        Building Energy Efficiency: AI in smart building solutions and future in development of smart buildings and integrating energy efficient solutions.    
-        </li>
-        </ul>
-
-        
-        <li>
-            <strong>Agriculture </strong> 
-        </li>
-         <ul>
-        <li>
-            Precision Agriculture: AI-based strategies for predicting soil conditions, assessing of yield levels, and predicting water use under climate change conditions.
-        </li>
-        <li>
-            Flood Management: AI-based structures and frameworks for watering that are adaptable, and therefore prevent the losses of the crops.
-        </li>
-         </ul>
-    
-    </ul>
-    <p>
-        This initiative aims to foster interdisciplinary collaboration and develop innovative 
-        AI-driven solutions to enhance resilience and sustainability in the face of climate change. 
-        Join us as we work towards a sustainable future!
-    </p>
-</div>
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
+      <p>
+        This initiative fosters interdisciplinary collaboration and develops innovative AI-driven solutions to enhance
+        resilience and sustainability in the face of climate change. Join us as we work toward a sustainable future!
+      </p>
     </div>
+  </div>
 
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(t => { document.getElementById('footer').innerHTML = t; });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
