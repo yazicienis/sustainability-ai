@@ -12,14 +12,10 @@
     <p>Collaborative Mentoring Groups and Their Initiatives</p>
   </header>
 
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch('nav.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
-  </script>
+
+<div id="nav-placeholder"></div>
+<script src="navLoader.js" defer></script>
+
 
   <div class="banner-container">
     <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;" />
