@@ -1,15 +1,14 @@
-/* Genel stil tanımları */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Google Fonts örneği */
     line-height: 1.6;
-    background-color: #e6f7f8;
+    background-color: #f4f4f9; /* Daha soft bir arka plan rengi */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #000080;
+    background-color: #003366; /* Daha koyu ve modern bir renk */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -18,182 +17,72 @@ header {
 .container {
     padding: 20px;
     max-width: 1200px;
-    margin: auto;
+    margin: 20px auto;
 }
 
-.news-item {
+.news-item, .project, footer {
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-footer {
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    width: 80%;
-    margin: 20px auto;
-    position: relative;
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Genel menü stili */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: #ff8c00;
+    background-color: #0066cc;
     flex-wrap: wrap;
     padding: 10px;
+    border-radius: 8px;
 }
 
 nav a {
     color: #fff;
+    font-weight: bold;
     padding: 10px 15px;
     text-decoration: none;
+    border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #ffb84d;
+    background-color: #0099ff; /* Hover efektiyle daha belirgin hale gelecek */
     color: #fff;
 }
 
-/* Dropdown menü için gerekli yapı */
-.dropdown-container {
-    position: relative;
-}
-
-.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none;
+.dropdown-container:hover .dropdown-menu {
+    display: block;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ff8c00;
-    flex-direction: column;
-    z-index: 1;
+    background-color: #0066cc;
 }
 
 .dropdown-menu a {
     padding: 10px;
-    background-color: #ffa64d;
+    background-color: #007acc;
     color: #fff;
-    text-decoration: none;
-    white-space: nowrap;
+    border-radius: 4px;
 }
 
-.dropdown-menu a:hover {
-    background-color: #ffd1a3;
-}
-
-.dropdown-container:hover .dropdown-menu {
-    display: flex;
-}
-
-
-
-
-.sub-heading {
-    display: block;  /* Cümleyi blok halinde göstermek için */
-    text-align: center;  /* Cümleyi ortalamak için */
-    margin: 10px 0 20px 0;  /* Üst ve alt boşlukları düzenlemek için */
-    font-size: 1.2em;  /* Cümleyi daha belirgin hale getirmek için */
-    color: #555;
-}
-
-
-.project {
-    background: #fff; /* Kartın arka planını beyaz yapıyoruz */
-    padding: 20px; /* İç boşlukları düzenliyoruz */
-    margin: 20px auto; /* Kartlar arasında dikey boşluk ekliyoruz ve ortalıyoruz */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge ekliyoruz */
-    border-radius: 8px; /* Kenarları yuvarlatıyoruz */
-    max-width: 800px; /* Kart genişliğini sınırlıyoruz */
-    text-align: left; /* Metin hizalamasını sola yapıyoruz */
-}
-
-
-
-
-/* Diğer stil tanımları */
-
-
-.content {
-    display: block; /* Flex yerine block kullanarak dikey hizalama sağlıyoruz */
-    margin: 0 auto; /* Ortaya hizalamak için */
+footer {
+    background-color: #e1e5eb;
+    color: #333;
+    text-align: center;
     padding: 20px;
-    max-width: 1000px; /* İçeriğin genişliğini sınırlayarak daha düzgün görünmesini sağlıyoruz */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-.project {
-    background: #fff; /* Kartın arka planını beyaz yapıyoruz */
-    padding: 20px; /* İçerik boşluklarını düzenliyoruz */
-    margin: 20px auto; /* Kartlar arasında dikey boşluk ve ortalama sağlıyoruz */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge ekliyoruz */
-    border-radius: 8px; /* Kenarları yuvarlıyoruz */
-    max-width: 800px; /* Kartların genişliğini sınırlıyoruz */
-}
-
-
-.content .card {
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 250px;
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .container {
+        padding: 10px;
+    }
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
-
-/* Logo ve Logolar Satırı */
-.logo {
-    height: 100px;
-    width: auto;
-    margin: 20px; /* Her logoya daha fazla boşluk ekledim */
-    object-fit: contain; /* Görüntünün kesilmeden uygun bir şekilde sığmasını sağlar */
-}
-
-.logos-row {
-    display: flex;
-    justify-content: space-around; /* Logolar arasındaki boşlukları dengelemek için ekledim */
-    align-items: center;
-    gap: 20px; /* Logolar arasındaki boşluk */
-}
-
-/* Responsive (Mobil Uyumlu) Stiller */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    .content {
-        flex-direction: column;
-    }
-}
-
-
-.drop-area {
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #f9f9f9;
-}
-.drop-area p {
-    margin: 0;
-}
-.drop-area.dragover {
-    background-color: #ddd;
-}
-
