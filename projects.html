@@ -1,57 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects - SustAInability</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — SustAInability</title>
+  <style>
+    :root { --ink:#0f172a; --muted:#475569; --brand:#0ea5e9; --bg:#f8fafc; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);margin:0}
+    .container{max-width:1080px;margin:auto;padding:24px}
+    .content h1{font-size:clamp(26px,4vw,40px);margin:.2em 0}
+    .lead{color:var(--muted);max-width:80ch}
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px}
+    .card h3{margin:.3em 0}
+    .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:9px 12px;border-radius:10px}
+    .btn.ghost{background:#fff;color:var(--ink);border:1px solid #e2e8f0}
+    ul.clean{list-style:none;padding:0;margin:0}
+    ul.clean li{padding-left:18px;position:relative;margin:6px 0}
+    ul.clean li::before{content:"•";position:absolute;left:0;color:var(--brand)}
+    .muted{color:var(--muted)}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>SustAInability Projects</h1>
-    <p>Collaborative Mentoring Groups and Their Initiatives</p>
+  <nav id="site-nav"></nav>
+
+  <header class="container">
+    <div class="content" style="text-align:center">
+      <h1>Projects</h1>
+      <p class="lead">Short, focused overviews of our active project lines. Each card links to a dedicated page with setup guides, datasets, and teaching materials.</p>
+    </div>
   </header>
 
+  <main>
+    <!-- PROJECT CARDS -->
+    <section class="container" aria-label="Project list">
+      <div class="grid grid-2">
+        <article class="card" id="iot-network">
+          <h3>Global IoT Monitoring Network</h3>
+          <p class="muted">LoRa-based environmental stations (solar, low-power) for temperature, humidity, air quality, and soil moisture across Heidelberg, Phnom Penh, and Naryn.</p>
+          <ul class="clean">
+            <li>Open hardware & firmware; reproducible field kits</li>
+            <li>Data pipeline: gateway → CSV/DB → lightweight dashboards</li>
+            <li>Use in student labs, class projects, and community pilots</li>
+          </ul>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="iot_network.html">Project page</a>
+            <a class="btn ghost" href="docs/iot_network_overview.pdf">One‑pager (PDF)</a>
+          </div>
+        </article>
 
-<div id="nav-placeholder"></div>
-<script src="navLoader.js" defer></script>
+        <article class="card" id="ai-climate">
+          <h3>AI & Data for Climate Action</h3>
+          <p class="muted">ML for forecasting and anomaly detection on sensor time series; energy optimization studies with open datasets.</p>
+          <ul class="clean">
+            <li>Feature engineering & baselines (AR/ARIMA, regression)</li>
+            <li>Lightweight neural models for on-device/edge inference</li>
+            <li>Transparent evaluation & reproducible notebooks</li>
+          </ul>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="ai_climate.html">Project page</a>
+            <a class="btn ghost" href="resources.html">Datasets & notebooks</a>
+          </div>
+        </article>
 
+        <article class="card" id="quantum">
+          <h3>Quantum Technologies for Sustainability</h3>
+          <p class="muted">Intro modules and toy problems for optimization & simulation; hybrid QC/AI thinking for future-ready curricula.</p>
+          <ul class="clean">
+            <li>Small-scale demos (variational optimization, scheduling)</li>
+            <li>Conceptual bridges to energy systems & materials topics</li>
+            <li>Teaching-first: simple APIs, clear learning outcomes</li>
+          </ul>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="quantum.html">Project page</a>
+            <a class="btn ghost" href="resources.html#quantum">Learning resources</a>
+          </div>
+        </article>
 
-  <div class="banner-container">
-    <img src="banner.jpg" alt="Sustainability and AI Banner" class="banner-image" style="width: 100%; max-height: 400px; object-fit: cover;" />
-  </div>
+        <article class="card" id="climate-education">
+          <h3>Climate Change & Education</h3>
+          <p class="muted">Integrating climate topics into courses and outreach: physics, environmental science, and digital literacy with local case studies.</p>
+          <ul class="clean">
+            <li>Course modules + worksheets for schools & universities</li>
+            <li>Community activities with NGO/school partners</li>
+            <li>Alignment with SDG 4/13/17 and local needs</li>
+          </ul>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="climate_education.html">Project page</a>
+            <a class="btn ghost" href="outreach.html">Outreach highlights</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-  <div class="container">
-    <div class="content">
-      <h2>Study Groups</h2>
-      <p>Explore our active study groups focused on sustainability and cutting-edge technologies.</p>
-    </div>
+    <!-- FOLLOW-UP / NEXT STEPS -->
+    <section class="container" aria-label="Follow-up projects">
+      <div class="content">
+        <h2>Follow‑up & Next Steps</h2>
+        <ul class="clean">
+          <li><strong>Scale the IoT network</strong>: additional stations per site; standardized enclosures; quick‑start deployment kit.</li>
+          <li><strong>Shared data hub</strong>: unified CSV/JSON schema; auto‑updated public dashboard; open license.</li>
+          <li><strong>Edge AI pilots</strong>: on‑device anomaly flags; low‑power models for field alerts.</li>
+          <li><strong>Teaching packages</strong>: short, reusable modules (IoT, data, ethics) with assessments and rubrics.</li>
+          <li><strong>Joint workshops</strong>: rotating online sessions & annual on‑site sprint with partner universities.</li>
+        </ul>
+        <p class="muted">Interested in contributing a site, dataset, or classroom pilot? <a href="mailto:sustainability-ai@example.org">Contact the team</a>.</p>
+      </div>
+    </section>
+  </main>
 
-    <!-- Your project entries stay unchanged -->
-    <!-- ... -->
-  </div>
-
-  <div id="footer"></div>
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
-
-  <!-- Language Switcher Script -->
-  <script>
-    function switchLanguage() {
-      const path = window.location.pathname;
-      const file = path.substring(path.lastIndexOf("/") + 1);
-      if (file.includes("_de.html")) {
-        window.location.href = file.replace("_de.html", ".html");
-      } else {
-        const base = file.replace(".html", "");
-        window.location.href = base + "_de.html";
-      }
-    }
-  </script>
+  <footer id="site-footer"></footer>
 </body>
 </html>
