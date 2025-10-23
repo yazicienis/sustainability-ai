@@ -13,15 +13,9 @@
 
   <!-- Navigation -->
   <div id="nav-placeholder"></div>
-  <script>
-    fetch('nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-        const langLink = document.getElementById('langSwitch');
-        if (langLink) langLink.textContent = "Deutsch";
-      });
-  </script>
+<div id="nav-placeholder"></div>
+<script src="navLoader.js" defer></script>
+
 
   <!-- Banner Image -->
   <div class="banner-container">
@@ -77,3 +71,4 @@
   </script>
 </body>
 </html>
+
