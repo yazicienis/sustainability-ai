@@ -1,30 +1,81 @@
-<nav>
+<!-- nav.html -->
+<nav class="site-nav" role="navigation" aria-label="Primary">
+  <a class="brand" href="index.html">SustAInability</a>
+
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+    <span class="sr-only">Menu</span> ☰
+  </button>
+
+  <div id="nav-menu" class="nav-menu">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
 
-    <div class="dropdown-container">
-        <a href="events.html" class="dropdown-toggle">Events</a>
-        <div class="dropdown-menu">
-            <a href="Kickoff_Meeting.html">Kick-Off Meeting</a>
-            <a href="workshop1.html">March 2025 Workshop</a>
-            <a href="summerschool.html">Summer School 2025</a>
-        </div>
+    <div class="dropdown">
+      <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Events ▾</button>
+      <div class="dropdown-menu" role="menu">
+        <a role="menuitem" href="events.html">All Events</a>
+        <a role="menuitem" href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+      </div>
     </div>
 
     <a href="blog.html">Blog</a>
     <a href="news.html">News</a>
 
-    <div class="dropdown-container">
-        <a href="#" class="dropdown-toggle">Partners</a>
-        <div class="dropdown-menu">
-            <a href="https://www.srh-hochschule-heidelberg.de/">SRH University Heidelberg</a>
-            <a href="paragon.html">Paragon International University</a>
-            <a href="https://www.ucentralasia.org/">University of Central Asia</a>
-        </div>
+    <div class="dropdown">
+      <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Partners ▾</button>
+      <div class="dropdown-menu" role="menu">
+        <a role="menuitem" href="https://www.srh-hochschule-heidelberg.de/" target="_blank" rel="noopener">SRH University Heidelberg</a>
+        <a role="menuitem" href="paragon.html">Paragon International University</a>
+        <a role="menuitem" href="https://www.ucentralasia.org/" target="_blank" rel="noopener">University of Central Asia</a>
+      </div>
     </div>
 
-    <!-- Dynamic Language Switcher -->
-    <a href="#" id="langSwitch" onclick="switchLanguage()">Deutsch</a>
+    <!-- Dil değiştirici kanca (ileride gerçek bağlantılarla eşleştireceğiz) -->
+    <div class="lang-switch">
+      <a data-lang="en" href="#" aria-current="true">EN</a>
+      <span aria-hidden="true">|</span>
+      <a data-lang="de" href="#">DE</a>
+    </div>
+  </div>
 </nav>
 
+<script>
+  // hamburger
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  btn?.addEventListener('click', () => {
+    const exp = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!exp));
+    menu.classList.toggle('open');
+  });
 
+  // aktif link
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-menu a[href]').forEach(a => {
+    if (a.getAttribute('href') === here) a.setAttribute('aria-current', 'page');
+  });
+
+  // dropdown klavye
+  document.querySelectorAll('.dropdown').forEach(d => {
+    const b = d.querySelector('.dropbtn'), m = d.querySelector('.dropdown-menu');
+    b.addEventListener('click', () => {
+      const open = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', String(!open));
+      m.classList.toggle('open');
+    });
+    b.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { b.setAttribute('aria-expanded','false'); m.classList.remove('open'); b.focus(); }
+    });
+  });
+
+  // dil değiştirici (yer tutucu mantık)
+  document.querySelectorAll('.lang-switch a').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const lang = a.dataset.lang;
+      // örnek: Kickoff_Meeting.html -> Kickoff_Meeting_de.html
+      const file = here.replace(/(_de)?\.html$/, lang==='de' ? '_de.html' : '.html');
+      location.href = file;
+      e.preventDefault();
+    });
+  });
+</script>
