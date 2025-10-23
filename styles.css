@@ -40,11 +40,13 @@ p {
    Header / Hero Area
 ========================================================= */
 header {
-  background-color: #003366;
-  color: #fff;
+  background-color: #fff;
+  color: #003366;
   text-align: center;
   padding: 2rem 1rem;
+  border-bottom: 2px solid #ff8c00;
 }
+
 header h1 {
   margin-bottom: 0.5rem;
 }
@@ -297,3 +299,4 @@ img {
   .nav-menu a[aria-current="page"], .nav-menu a:hover, .dropbtn:hover { color: #ffb84d; }
   .content, .project, .news-item { background-color: #1f242e; color: #eee; box-shadow: 0 0 10px rgba(255,255,255,0.05); }
 }
+
