@@ -1,9 +1,9 @@
 <!-- nav.html -->
-<nav class="site-nav" role="navigation" aria-label="Primary">
+<nav class="site-nav" role="navigation" aria-label="Main Navigation">
   <a class="brand" href="index.html">SustAInability</a>
 
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-    <span class="sr-only">Menu</span> ☰
+    <span class="sr-only">Toggle menu</span> ☰
   </button>
 
   <div id="nav-menu" class="nav-menu">
@@ -39,42 +39,42 @@
 </nav>
 
 <script>
-  // hamburger toggle
-  const btn = document.querySelector('.nav-toggle');
-  const menu = document.getElementById('nav-menu');
-  btn?.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-    menu.classList.toggle('open');
+  // --- hamburger toggle ---
+  const toggleBtn = document.querySelector('.nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  toggleBtn?.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    navMenu.classList.toggle('open');
   });
 
-  // highlight current page
-  const current = location.pathname.split('/').pop() || 'index.html';
+  // --- current page highlight ---
+  const currentFile = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-menu a[href]').forEach(a => {
-    if (a.getAttribute('href') === current) {
+    if (a.getAttribute('href') === currentFile) {
       a.setAttribute('aria-current', 'page');
     }
   });
 
-  // dropdown toggle
+  // --- dropdown toggle (desktop + mobile) ---
   document.querySelectorAll('.dropdown').forEach(drop => {
     const btn = drop.querySelector('.dropbtn');
     const menu = drop.querySelector('.dropdown-menu');
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
       const open = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!open));
       menu.classList.toggle('open');
     });
   });
 
-  // language switcher logic
-  document.querySelectorAll('.lang-switch a').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const lang = a.dataset.lang;
-      const currentFile = location.pathname.split('/').pop();
-      const target = currentFile.replace(/(_de)?\.html$/, lang==='de' ? '_de.html' : '.html');
-      location.href = target;
+  // --- language switcher ---
+  document.querySelectorAll('.lang-switch a').forEach(a => {
+    a.addEventListener('click', e => {
       e.preventDefault();
+      const lang = a.dataset.lang;
+      const file = currentFile.replace(/(_de)?\.html$/, lang === 'de' ? '_de.html' : '.html');
+      location.href = file;
     });
   });
 </script>
