@@ -1,286 +1,299 @@
-/* Genel stil tanımları */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #e6f7f8;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #000080;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.news-item {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    width: 80%;
-    margin: 20px auto;
-    position: relative;
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Genel menü stili */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ff8c00;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-nav a {
-    color: #fff;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #ffb84d;
-    color: #fff;
-}
-
-/* Dropdown menü için gerekli yapı */
-.dropdown-container {
-    position: relative;
-}
-
-.dropdown-toggle {
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #ff8c00;
-    flex-direction: column;
-    z-index: 1;
-}
-
-.dropdown-menu a {
-    padding: 10px;
-    background-color: #ffa64d;
-    color: #fff;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.dropdown-menu a:hover {
-    background-color: #ffd1a3;
-}
-
-.dropdown-container:hover .dropdown-menu {
-    display: flex;
-}
-
-
-
-
-.sub-heading {
-    display: block;  /* Cümleyi blok halinde göstermek için */
-    text-align: center;  /* Cümleyi ortalamak için */
-    margin: 10px 0 20px 0;  /* Üst ve alt boşlukları düzenlemek için */
-    font-size: 1.2em;  /* Cümleyi daha belirgin hale getirmek için */
-    color: #555;
-}
-
-
-.project {
-    background: #fff; /* Kartın arka planını beyaz yapıyoruz */
-    padding: 20px; /* İç boşlukları düzenliyoruz */
-    margin: 20px auto; /* Kartlar arasında dikey boşluk ekliyoruz ve ortalıyoruz */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge ekliyoruz */
-    border-radius: 8px; /* Kenarları yuvarlatıyoruz */
-    max-width: 800px; /* Kart genişliğini sınırlıyoruz */
-    text-align: left; /* Metin hizalamasını sola yapıyoruz */
-}
-
-
-
-
-/* Diğer stil tanımları */
-
-
-.content {
-    display: block; /* Flex yerine block kullanarak dikey hizalama sağlıyoruz */
-    margin: 0 auto; /* Ortaya hizalamak için */
-    padding: 20px;
-    max-width: 1000px; /* İçeriğin genişliğini sınırlayarak daha düzgün görünmesini sağlıyoruz */
-}
-
-
-.project {
-    background: #fff; /* Kartın arka planını beyaz yapıyoruz */
-    padding: 20px; /* İçerik boşluklarını düzenliyoruz */
-    margin: 20px auto; /* Kartlar arasında dikey boşluk ve ortalama sağlıyoruz */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Gölge ekliyoruz */
-    border-radius: 8px; /* Kenarları yuvarlıyoruz */
-    max-width: 800px; /* Kartların genişliğini sınırlıyoruz */
-}
-
-
-.content .card {
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 250px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Logo ve Logolar Satırı */
-.logo {
-    height: 100px;
-    width: auto;
-    margin: 20px; /* Her logoya daha fazla boşluk ekledim */
-    object-fit: contain; /* Görüntünün kesilmeden uygun bir şekilde sığmasını sağlar */
-}
-
-.logos-row {
-    display: flex;
-    justify-content: space-around; /* Logolar arasındaki boşlukları dengelemek için ekledim */
-    align-items: center;
-    gap: 20px; /* Logolar arasındaki boşluk */
-}
-
-/* Responsive (Mobil Uyumlu) Stiller */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    .content {
-        flex-direction: column;
-    }
-}
-
-
-.drop-area {
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #f9f9f9;
-}
-.drop-area p {
-    margin: 0;
-}
-.drop-area.dragover {
-    background-color: #ddd;
-}
-
-/* Core visual clean-up */
-body {
-  background-color: #e6f7f8;
-  color: #333;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* =========================================================
+   Global Reset & Base Styles
+========================================================= */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: #000080;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f8fa;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-.content {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-}
-
-.banner-image {
-  border-radius: 12px;
-}
-
+/* =========================================================
+   Typography & Links
+========================================================= */
 a {
-  color: #000080;
+  color: #003366;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
+  color: #ff8c00;
   text-decoration: underline;
 }
 
-/* nav + footer modern layout */
+h1, h2, h3, h4 {
+  color: #003366;
+  margin-bottom: 0.75em;
+}
+p {
+  margin-bottom: 1em;
+}
 
+/* =========================================================
+   Header / Hero Area
+========================================================= */
+header {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+}
+header p {
+  color: #dce3eb;
+  font-size: 1.05rem;
+}
+
+/* =========================================================
+   Layout Containers
+========================================================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+.content {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* =========================================================
+   Banner
+========================================================= */
+.banner-container {
+  width: 100%;
+}
+.banner-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* =========================================================
+   Cards / Project Boxes / News Items
+========================================================= */
+.project, .news-item {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 900px;
+}
+.project h3, .news-item h2 {
+  color: #003366;
+}
+
+/* =========================================================
+   Logos Row
+========================================================= */
+.logos-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.logo {
+  height: 80px;
+  object-fit: contain;
+}
+
+/* =========================================================
+   Modern NAVBAR (matches new nav.html)
+========================================================= */
 .site-nav {
-  display:flex; align-items:center; flex-wrap:wrap;
-  background:#fff; border-bottom:1px solid #ddd;
-  padding:0.5rem 1rem; position:sticky; top:0; z-index:1000;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.site-nav .brand { font-weight:700; color:#000080; margin-right:auto; }
+.site-nav .brand {
+  font-weight: 700;
+  color: #003366;
+  font-size: 1.25rem;
+  text-decoration: none;
+  margin-right: auto;
+}
 .nav-toggle {
-  background:none; border:1px solid #ccc; border-radius:6px; font-size:1.25rem;
-  padding:.25rem .5rem; cursor:pointer;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #003366;
 }
-.nav-menu { display:flex; align-items:center; gap:1rem; }
-.nav-menu.open { display:block; width:100%; margin-top:1rem; }
-.dropdown { position:relative; }
-.dropbtn { background:none; border:none; font-weight:600; cursor:pointer; }
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.nav-menu a {
+  color: #003366;
+  font-weight: 500;
+}
+.nav-menu a[aria-current="page"] {
+  color: #ff8c00;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  color: #ff8c00;
+}
+.dropdown {
+  position: relative;
+}
+.dropbtn {
+  background: none;
+  border: none;
+  color: #003366;
+  font-weight: 600;
+  cursor: pointer;
+}
 .dropdown-menu {
-  display:none; position:absolute; top:100%; left:0;
-  background:#fff; border:1px solid #ddd; border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
 }
-.dropdown-menu.open { display:block; }
-.dropdown-menu a { display:block; padding:0.5rem 1rem; white-space:nowrap; }
-.dropdown-menu a:hover { background:#f2f2f2; }
+.dropdown-menu.open {
+  display: block;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #003366;
+}
+.dropdown-menu a:hover {
+  background-color: #f5f5f5;
+}
+.lang-switch {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lang-switch a {
+  font-weight: 600;
+}
+.lang-switch a:hover {
+  color: #ff8c00;
+}
 
-.lang-switch { margin-left:auto; display:flex; gap:0.5rem; }
+/* ---------- Mobile Menu ---------- */
+@media (max-width: 820px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .lang-switch {
+    margin-left: 0;
+  }
+}
 
+/* =========================================================
+   FOOTER
+========================================================= */
 .site-footer {
-  text-align:center; padding:2rem 1rem;
-  background:#f9f9f9; color:#333; font-size:0.95rem;
-  border-top:1px solid #ddd;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+  color: #333;
+  font-size: 0.95rem;
+  border-top: 1px solid #ddd;
 }
-.site-footer p { max-width:900px; margin:0 auto 1.5rem; line-height:1.5; }
+.site-footer p {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
 .footer-logos {
-  display:flex; flex-wrap:wrap; justify-content:center; align-items:center;
-  gap:1rem; margin-bottom:1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.footer-logos img { max-height:60px; width:auto; }
+.footer-logos img {
+  max-height: 60px;
+  width: auto;
+}
 .footer-social a {
-  color:#000080; font-size:1.2rem; margin:0 0.4rem;
-  transition:color 0.3s;
+  color: #003366;
+  font-size: 1.2rem;
+  margin: 0 0.4rem;
+  transition: color 0.3s ease;
 }
-.footer-social a:hover { color:#ff8c00; }
+.footer-social a:hover {
+  color: #ff8c00;
+}
 
+/* =========================================================
+   Miscellaneous Utility Classes
+========================================================= */
+.sub-heading {
+  display: block;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.drop-area.dragover {
+  background-color: #ddd;
+}
 
+/* =========================================================
+   Dark Mode Support (optional)
+========================================================= */
+@media (prefers-color-scheme: dark) {
+  body { background-color: #0f1218; color: #eee; }
+  .site-nav, .dropdown-menu, .site-footer { background-color: #1a1d24; color: #ddd; border-color: #333; }
+  .nav-menu a, .dropbtn, .brand, .footer-social a { color: #ddd; }
+  .nav-menu a[aria-current="page"], .nav-menu a:hover, .dropbtn:hover { color: #ffb84d; }
+  .content, .project, .news-item { background-color: #1f242e; color: #eee; box-shadow: 0 0 10px rgba(255,255,255,0.05); }
+}
