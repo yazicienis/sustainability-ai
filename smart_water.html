@@ -1,66 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data-Driven Solutions for Water Management in Smart Cities - SustAInability</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Water Management — SustAInability</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Data-driven water management for smart cities: IoT sensing, ML analytics, dashboards, and policy for sustainable urban water systems." />
 </head>
 <body>
-    <header>
-        <h1>Data-Driven Solutions for Water Management in Smart Cities</h1>
-        <p>Exploring Smart Technologies for Sustainable Urban Water Infrastructure</p>
-    </header>
+  <!-- Unified Header -->
+  <header>
+    <h1>Data-Driven Solutions for Water Management in Smart Cities</h1>
+    <p class="sub-heading">Exploring smart technologies for sustainable urban water infrastructure</p>
+  </header>
 
-    <div id="nav-placeholder"></div>
-    <script>
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
-    </script>
+  <!-- Unified NAV -->
+  <div id="nav-placeholder"></div>
+  <script src="navLoader.js" defer></script>
 
-    <div class="container">
-        <div class="content">
-            <h2>About the Study Group</h2>
-            <p>The <strong>Data-Driven Solutions for Water Management in Smart Cities</strong> study group focuses on utilizing cutting-edge technologies to address water-related challenges faced by rapidly growing urban populations. The group aims to develop and apply innovative data-driven methodologies for efficient and sustainable water management.</p>
+  <!-- Optional Banner (remove if you don't want a hero image) -->
+  <div class="banner-container">
+    <img src="banner.jpg" alt="Smart Water banner" class="banner-image" style="width:100%;max-height:360px;object-fit:cover;">
+  </div>
 
-            <h3>Project Objectives</h3>
-            <ul>
-                <li>Integrating IoT devices for comprehensive real-time monitoring of water resources.</li>
-                <li>Employing advanced data analytics and machine learning techniques to predict water demand, detect leaks, and manage water quality.</li>
-                <li>Exploring policy frameworks and sustainable practices to enhance urban resilience to water-related challenges.</li>
-            </ul>
+  <div class="container">
+    <section class="content">
+      <h2>About the Study Group</h2>
+      <p>
+        The Smart Water group develops <strong>IoT-enabled monitoring</strong> and <strong>machine-learning analytics</strong> to improve
+        urban water systems: demand forecasting, leak detection, and water-quality insights that support resilient, sustainable cities.
+      </p>
+    </section>
 
-            <h3>Main Areas of Study</h3>
-            <ul>
-                <li><strong>Smart Water Management Introduction:</strong> Fundamentals of smart urban water infrastructures.</li>
-                <li><strong>IoT and Real-Time Monitoring:</strong> Application of IoT sensors for monitoring water usage, leakage, and quality.</li>
-                <li><strong>Data Analytics and Machine Learning:</strong> Techniques for analyzing real-time water data and predictive modeling.</li>
-                <li><strong>Sustainable Practices and Policy Implications:</strong> Strategies to incorporate innovative solutions into actionable urban water policies.</li>
-            </ul>
+    <section class="content" style="margin-top:1rem">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Integrate distributed IoT sensors for real-time flow/quality monitoring.</li>
+        <li>Apply data analytics & ML for <em>demand forecasts</em> and <em>leak/anomaly detection</em>.</li>
+        <li>Translate evidence into <em>dashboards</em>, alerts, and policy-ready summaries.</li>
+      </ul>
+    </section>
 
-            <h3>Group Lead</h3>
-            <p>
-                <strong>Ulrike Gayh</strong><br>
-                Head of Water Technology Master Program,<br>
-                SRH Hochschule Heidelberg<br>
-                Email: <a href="mailto:ulrike.gayh@srh.de">ulrike.gayh@srh.de</a>
-            </p>
+    <section class="content" style="margin-top:1rem">
+      <h2>Main Areas of Study</h2>
+      <ul>
+        <li><strong>Smart Water Basics:</strong> network topology, metering, uncertainty, QA/QC.</li>
+        <li><strong>IoT & Real-Time Monitoring:</strong> sensor selection, low-power nodes, data pipelines.</li>
+        <li><strong>Analytics & ML:</strong> time-series, anomaly models, short-term forecasting.</li>
+        <li><strong>Practice & Policy:</strong> KPIs, reporting, and governance for sustainable operations.</li>
+      </ul>
+    </section>
 
-            <h3>Join the Group</h3>
-            <p>If you're interested in contributing or learning more about sustainable urban water management through smart data-driven solutions, please contact Ulrike for more details.</p>
-        </div>
-    </div>
+    <section class="content" style="margin-top:1rem">
+      <h2>Lead & Contact</h2>
+      <p>
+        <strong>Prof. Ulrike Gayh</strong> — Head of Water Technology Master Program, SRH Heidelberg<br>
+        <a class="btn btn-primary" href="mailto:ulrike.gayh@srh.de">Contact</a>
+        <a class="btn btn-ghost" href="projects.html">Back to Projects →</a>
+      </p>
+    </section>
 
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+    <section class="content" style="margin-top:1rem">
+      <h2>Related</h2>
+      <p>
+        See also: <a href="sustainability_physics.html">Physics for a Sustainable Future</a> (IoT & Climate Education) ·
+        <a href="workshop1.html">AI for Sustainability — Workshop Report</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- Unified Footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html').then(r => r.text()).then(t => { document.getElementById('footer').innerHTML = t; });
+  </script>
+
+  <!-- Language switcher (site-wide behavior) -->
+  <script>
+    function switchLanguage() {
+      const path = window.location.pathname;
+      const file = path.substring(path.lastIndexOf('/') + 1);
+      if (file.includes('_de.html')) {
+        window.location.href = file.replace('_de.html', '.html');
+      } else {
+        const base = file.replace('.html', '');
+        window.location.href = base + '_de.html';
+      }
+    }
+  </script>
 </body>
 </html>
