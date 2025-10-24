@@ -1,93 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics for a Sustainable Future - SustAInability</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #e6f7f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            width: 80%;
-            margin: 20px auto;
-            position: relative;
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-        @media (max-width: 768px) {
-            nav { flex-direction: column; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics for a Sustainable Future — SustAInability</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Study group linking core physics with sustainability projects. Includes IoT Monitoring Network and Climate Change & Education initiatives." />
 </head>
 <body>
-    <header>
-        <h1>Physics for a Sustainable Future</h1>
-        <p>Exploring Physics for Addressing Environmental Challenges</p>
-    </header>
+  <!-- Unified Page Header (matches site style) -->
+  <header>
+    <h1>Physics for a Sustainable Future</h1>
+    <p>Core physics + applied projects for real‑world sustainability</p>
+  </header>
 
-    <!-- unified nav -->
-    <div id="nav-placeholder"></div>
-    <script>
-        fetch('nav.html').then(r=>r.text()).then(t=>{
-            document.getElementById('nav-placeholder').innerHTML=t;
-        });
-    </script>
+  <!-- Unified NAV (same loader used across the site) -->
+  <div id="nav-placeholder"></div>
+  <script src="navLoader.js" defer></script>
 
-    <div class="container">
-        <div class="content">
-            <h2>About the Study Group</h2>
-            <p>The <strong>Physics for a Sustainable Future Study Group</strong> is dedicated to understanding the physics behind sustainability. Our primary goal is to provide students with a deep and thorough understanding of fundamental physics concepts, emphasizing how these principles are crucial for developing sustainable solutions. By focusing on the core physics principles, students will gain the skills necessary to make impactful contributions to sustainability.</p>
-            <p>In this group, we explore a wide range of physics topics, including Chaos Theory, Thermodynamics, and Quantum Physics. We aim to form specialized sub-research groups that allow students to delve deeper into specific areas of interest. This initiative is designed as a long-term, immersive learning journey that encourages students to develop a solid foundation in physics and apply their knowledge to real-world sustainability challenges.</p>
-            <p>Mentorship will be provided by <a href="https://www.srh-hochschule-heidelberg.de/hochschule/hochschulteam/enis-yazici/">Enis Yazıcı</a>, a lecturer with a background in physics and engineering, currently teaching at SRH University Heidelberg. For more information or to join the group, please contact Enis Yazıcı at <a href="mailto:enis.yazici@srh.de">enis.yazici@srh.de</a>.</p>
+  <!-- Optional banner -->
+  <div class="banner-container">
+    <img src="banner.jpg" alt="Physics and Sustainability banner" class="banner-image" style="width: 100%; max-height: 360px; object-fit: cover;" />
+  </div>
 
-            <h2>Areas of Study</h2>
-            <ul>
-                <li><strong>Renewable Energy Systems:</strong> Understanding the physics of solar, wind, and hydroelectric power generation, focusing on energy efficiency and transformation. Topics include electromagnetic induction, fluid dynamics, and energy conservation.</li>
-                <li><strong>Climate Science:</strong> Basics of thermodynamics, the greenhouse effect, and atmospheric physics to understand climate change mechanisms. This includes studying heat transfer, radiation, and the physics of weather systems.</li>
-                <li><strong>Sustainable Materials:</strong> Exploring the properties of recyclable and biodegradable materials and their applications in sustainable technologies. Topics include material strength, thermal properties, and conductivity.</li>
-                <li><strong>Water Management:</strong> Studying fluid dynamics and its application in water resource management and conservation. Topics include Bernoulli's principle, pressure, and flow rate calculations.</li>
-                <li><strong>Energy Storage:</strong> Basics of batteries, capacitors, and innovative storage methods contributing to sustainability. Topics include electrochemistry, electric fields, and energy density.</li>
-            </ul>
+  <div class="container">
+    <!-- About -->
+    <section class="content">
+      <h2>About the Study Group</h2>
+      <p>
+        The <strong>Physics for a Sustainable Future</strong> group connects fundamental physics with concrete sustainability
+        challenges. We focus on quantitative reasoning, experimental method, and data‑driven analysis to build solutions that
+        scale beyond the classroom.
+      </p>
+      <p>
+        Mentorship: <a href="https://www.srh-hochschule-heidelberg.de/hochschule/hochschulteam/enis-yazici/" target="_blank" rel="noopener">Enis Yazıcı</a>
+        (SRH University Heidelberg). Contact: <a href="mailto:enis.yazici@srh.de">enis.yazici@srh.de</a>.
+      </p>
+    </section>
 
-            <h2>Join Us</h2>
-            <p>If you are passionate about learning physics and want to understand how these fundamental concepts can address environmental challenges, this is the perfect study group for you. We meet regularly to conduct experiments, analyze data, and develop new ideas for a sustainable future.</p>
-        </div>
-    </div>
+    <!-- Focus Areas -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Focus Areas</h2>
+      <ul>
+        <li><strong>Renewable Energy Systems:</strong> solar, wind, hydro; energy conversion and efficiency; power measurement.</li>
+        <li><strong>Climate & Thermodynamics:</strong> heat transfer, radiation balance, simple climate models, uncertainty.</li>
+        <li><strong>Sustainable Materials:</strong> mechanical/thermal properties, durability, recyclability, life‑cycle thinking.</li>
+        <li><strong>Fluids & Water:</strong> Bernoulli, continuity, pipe/river flow; measurement and control in networks.</li>
+        <li><strong>Instrumentation & Data:</strong> sensors, calibration, error analysis, Python notebooks, dashboards.</li>
+      </ul>
+    </section>
 
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html').then(r=>r.text()).then(t=>{
-            document.getElementById('footer').innerHTML=t;
-        });
-    </script>
+    <!-- Projects hosted under this page -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Projects hosted in this group</h2>
+      <div class="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem">
+
+        <article class="project">
+          <h3>IoT Monitoring & Embedded Systems</h3>
+          <p>
+            Solar‑powered LoRa sensor nodes and low‑cost data loggers for temperature, humidity, and air‑quality monitoring.
+            The network supports comparative field studies across partner campuses and local communities.
+          </p>
+          <a href="#iot" class="btn btn-ghost">See details ↓</a>
+        </article>
+
+        <article class="project">
+          <h3>Climate Change & Education</h3>
+          <p>
+            Teaching and outreach materials that blend physics with climate science. Citizen‑science kits, classroom labs,
+            and public engagement tools to foster awareness and practical action.
+          </p>
+          <a href="#edu" class="btn btn-ghost">See details ↓</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- IoT project detail -->
+    <section id="iot" class="content" style="margin-top:1rem">
+      <h2>IoT Monitoring & Embedded Systems — Details</h2>
+      <p>
+        We aim to design and deploy field‑ready sensor stations (temperature, humidity, particulate matter). Nodes communicate via
+        LoRa or Wi‑Fi, log data locally, and publish to a central database for analysis and visualization. Students work in
+        small teams on hardware integration, low‑power firmware, and web dashboards.
+      </p>
+      <ul>
+        <li><strong>Hardware:</strong> microcontrollers, LoRa radios, solar modules, calibrated sensors.</li>
+        <li><strong>Data:</strong> time‑series ingestion, metadata, QA/QC, simple ML for anomaly detection.</li>
+        <li><strong>Outcomes:</strong> live dashboards, comparative studies across cities/campuses, open datasets.</li>
+      </ul>
+      <div style="margin-top:.5rem">
+        <a href="smart_water.html" class="btn btn-primary">Related: Smart Water Management →</a>
+        <a href="projects.html" class="btn btn-ghost">All projects →</a>
+      </div>
+    </section>
+
+
+    <section id="edu" class="content" style="margin-top:1rem">
+      <h2>Climate Change & Education — Details</h2>
+      <p>
+        We integrate physics‑based climate topics into lessons and workshops. The group aims to build clear, hands‑on materials that
+        translate abstract models (energy balance, feedbacks, diffusion) into measurable experiments and data stories.
+      </p>
+      <ul>
+        <li>Printable kits for heat transfer and radiation experiments.</li>
+        <li>Notebook activities connecting measurements to simple models.</li>
+        <li>Community sessions and demo days for sharing results.</li>
+      </ul>
+      <div style="margin-top:.5rem">
+        <a href="resilience.html" class="btn btn-primary">Related: AI & Data for Climate →</a>
+        <a href="projects.html" class="btn btn-ghost">All projects →</a>
+      </div>
+    </section>
+
+    <!-- Join -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Join Us</h2>
+      <p>
+        If you want rigorous physics with practical impact, join a project stream or propose your own topic. We welcome
+        students from partner universities for hybrid collaboration.
+      </p>
+      <div>
+        <a class="btn btn-primary" href="mailto:enis.yazici@srh.de">Contact</a>
+        <a class="btn btn-ghost" href="index.html">Back to Home →</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Unified Footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(t=>{ document.getElementById('footer').innerHTML = t; });
+  </script>
+
+  <!-- Language Switcher (site‑wide behavior) -->
+  <script>
+    function switchLanguage() {
+      const path = window.location.pathname;
+      const file = path.substring(path.lastIndexOf('/') + 1);
+      if (file.includes('_de.html')) {
+        window.location.href = file.replace('_de.html', '.html');
+      } else {
+        const base = file.replace('.html', '');
+        window.location.href = base + '_de.html';
+      }
+    }
+  </script>
 </body>
 </html>
