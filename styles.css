@@ -51,9 +51,11 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 header p {
-  color: #dce3eb;
+  color: #3b4f6b;   
+  font-weight: 600; 
   font-size: 1.05rem;
 }
+
 
 /* =========================================================
    Layout Containers
@@ -343,4 +345,5 @@ img {
 .btn-ghost:hover {
   background: #f2f4f7;
 }
+
 
