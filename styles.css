@@ -346,4 +346,42 @@ img {
   background: #f2f4f7;
 }
 
+/* Dropdown temel */
+.dropdown { position: relative; }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;                  /* varsayılan: sola aç */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 180px;
+  max-width: 260px;         /* genişliği sınırla */
+  max-height: 70vh;         /* taşarsa kaydır */
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,.1);
+  padding: .5rem 0;
+  z-index: 1001;
+}
+
+/* Sağdaki son dropdown (Partners) sağa hizalansın, taşmasın */
+.nav-menu > .dropdown:last-of-type .dropdown-menu {
+  left: auto;
+  right: 0;                 /* sağ kenara yapıştır */
+}
+
+/* Mobilde dropdown menu normal akışta görünsün */
+@media (max-width: 820px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #eee;
+    width: 100%;
+    max-height: none;
+  }
+}
+
+
+
 
