@@ -15,6 +15,9 @@
       <div class="dropdown-menu" role="menu">
         <a role="menuitem" href="events.html">All Events</a>
         <a role="menuitem" href="Kickoff_Meeting.html">Kick-Off Meeting</a>
+        <a role="menuitem" href="heidelberg_visit.html">Heidelberg Summer School 2025</a>
+        <a role="menuitem" href="workshop1.html">Online Workshop — Mar 2025</a>
+        <a role="menuitem" href="workshop2.html">Online Workshop — Nov 2025</a>
       </div>
     </div>
 
@@ -29,18 +32,10 @@
         <a role="menuitem" href="https://www.ucentralasia.org/" target="_blank" rel="noopener">University of Central Asia</a>
       </div>
     </div>
-
-    <div class="lang-switch">
-      <a data-lang="en" href="#" aria-current="true">EN</a>
-      <span aria-hidden="true">|</span>
-      <a data-lang="de" href="#">DE</a>
-    </div>
   </div>
 </nav>
 
-<!-- Dikkat: harici dosya yerine inline JS (navLoader bunu çalıştırır) -->
 <script>
-  // hamburger toggle
   const toggleBtn = document.querySelector('.nav-toggle');
   const navMenu = document.getElementById('nav-menu');
   toggleBtn?.addEventListener('click', () => {
@@ -49,13 +44,11 @@
     navMenu.classList.toggle('open');
   });
 
-  // current page highlight
   const currentFile = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-menu a[href]').forEach(a => {
     if (a.getAttribute('href') === currentFile) a.setAttribute('aria-current', 'page');
   });
 
-  // dropdown toggle
   document.querySelectorAll('.dropdown').forEach(drop => {
     const btn = drop.querySelector('.dropbtn');
     const menu = drop.querySelector('.dropdown-menu');
@@ -64,16 +57,6 @@
       const open = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!open));
       menu.classList.toggle('open');
-    });
-  });
-
-  // language switcher
-  document.querySelectorAll('.lang-switch a').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const lang = a.dataset.lang;
-      const target = currentFile.replace(/(_de)?\.html$/, lang === 'de' ? '_de.html' : '.html');
-      location.href = target;
     });
   });
 </script>
