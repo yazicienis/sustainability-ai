@@ -304,12 +304,32 @@ img {
    Dark Mode Support (optional)
 ========================================================= */
 @media (prefers-color-scheme: dark) {
-  body { background-color: #0f1218; color: #eee; }
-  .site-nav, .dropdown-menu, .site-footer { background-color: #1a1d24; color: #ddd; border-color: #333; }
-  .nav-menu a, .dropbtn, .brand, .footer-social a { color: #ddd; }
-  .nav-menu a[aria-current="page"], .nav-menu a:hover, .dropbtn:hover { color: #ffb84d; }
-  .content, .project, .news-item { background-color: #1f242e; color: #eee; box-shadow: 0 0 10px rgba(255,255,255,0.05); }
+  /* Metin ve zemin zaten var; başlık & linkleri düzeltelim */
+  h1, h2, h3, h4 { color: #e6f0ff; }              /* açık mavi-beyaz */
+  a { color: #9ec1ff; }                           /* linkler */
+  a:hover { color: #ffb84d; }
+
+  /* Kart içi başlıkların mavisini bastır */
+  .project h3, .news-item h2 { color: #e6f0ff; }
+
+  /* Mobil menü için okunur renkler */
+  .site-nav, .dropdown-menu { background-color: #1a1d24; }
+  .nav-menu a, .dropbtn { color: #e6e6e6; }
+  .dropdown-menu a:hover { background: #2a2f3a; }
 }
+
+@media (prefers-color-scheme: dark) {
+  .content, .project, .news-item {
+    background-color: #222834;   /* eskisi #1f242e idi, bir ton daha açık */
+    color: #eee;
+    box-shadow: 0 0 8px rgba(0,0,0,0.35);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header p { color: #cfd7e2; }   /* koyu zeminde okunur */
+}
+
 
 /* Hamburger butonunu sadece mobilde göster */
 @media (min-width: 821px) {
@@ -390,6 +410,7 @@ img {
     max-height: none;
   }
 }
+
 
 
 
