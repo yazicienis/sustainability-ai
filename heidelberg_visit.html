@@ -113,15 +113,52 @@
 
 <section class="content" style="margin-top:2rem">
       <h2>Photo Highlights</h2>
-      <div class="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem">
-        <figure class="project"><img src="photos/1.HEIC" alt="photo 1" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
-        <figure class="project"><img src="photos/2.HEIC" alt="photo 2" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
-        <figure class="project"><img src="photos/3.HEIC" alt="photo 3" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
-        <figure class="project"><img src="photos/4.HEIC" alt="photo 4" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
-        <figure class="project"><img src="photos/5.HEIC" alt="photo 5" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
-        <figure class="project"><img src="photos/6.HEIC" alt="photo 6" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
-        <figure class="project"><img src="photos/7.HEIC" alt="photo 7" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:10px" /></figure>
+
+      <style>
+        .hg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+        .hg-card{position:relative;overflow:hidden;border-radius:14px;box-shadow:0 8px 18px rgba(0,0,0,.08);background:#f8f9fb}
+        .hg-card img{width:100%;height:220px;object-fit:cover;display:block;transform:scale(1.02);transition:transform .35s ease, filter .35s ease}
+        .hg-card:hover img{transform:scale(1.06);filter:contrast(1.05) saturate(1.02)}
+        .hg-lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.75);backdrop-filter:saturate(120%) blur(2px);z-index:9999}
+        .hg-lightbox.open{display:flex}
+        .hg-lightbox img{max-width:92vw;max-height:86vh;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+        .hg-close{position:fixed;top:18px;right:22px;font-size:28px;color:#fff;cursor:pointer;user-select:none}
+      </style>
+
+      <div id="hg-grid" class="hg-grid"></div>
+
+      <div id="hg-lightbox" class="hg-lightbox">
+        <span id="hg-close" class="hg-close">×</span>
+        <img id="hg-full" src="" alt="photo" />
       </div>
+
+      <script>
+        const PHOTO_COUNT = 14;
+        const grid = document.getElementById('hg-grid');
+        const frag = document.createDocumentFragment();
+
+        for (let i = 1; i <= PHOTO_COUNT; i++) {
+          const fig = document.createElement('figure');
+          fig.className = 'hg-card';
+          const img = document.createElement('img');
+          img.loading = 'lazy';
+          img.alt = `photo ${i}`;
+          img.src = `photos/${i}.jpg`;
+          img.addEventListener('click', () => openLightbox(img.src, img.alt));
+          fig.appendChild(img);
+          frag.appendChild(fig);
+        }
+        grid.appendChild(frag);
+
+        const lb = document.getElementById('hg-lightbox');
+        const lbImg = document.getElementById('hg-full');
+        const lbClose = document.getElementById('hg-close');
+        function openLightbox(src, alt){ lbImg.src = src; lbImg.alt = alt; lb.classList.add('open'); }
+        function closeLightbox(){ lb.classList.remove('open'); lbImg.src=''; }
+        lb.addEventListener('click', (e)=>{ if(e.target===lb || e.target===lbImg) closeLightbox(); });
+        lbClose.addEventListener('click', closeLightbox);
+        window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
+      </script>
     </section>
 
     <!-- Testimonials / Reflections -->
