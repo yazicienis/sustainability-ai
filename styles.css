@@ -125,7 +125,7 @@ header p {
   flex-wrap: wrap;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem; 
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -149,7 +149,7 @@ header p {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .6rem;
   flex-wrap: wrap;
 }
 .nav-menu a {
@@ -172,6 +172,9 @@ header p {
   color: #003366;
   font-weight: 600;
   cursor: pointer;
+  padding: .35rem .5rem;     /* daralt */
+  font-size: .95rem;         /* küçült */
+  line-height: 1.2;
 }
 .dropdown-menu {
   display: none;
@@ -381,6 +384,7 @@ img {
     max-height: none;
   }
 }
+
 
 
 
