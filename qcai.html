@@ -1,139 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Computers and AI</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #e6f7f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #000080;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ff8c00;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            padding: 10px 15px;
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #ffb84d;
-            color: #fff;
-        }
-        .dropdown-container {
-            position: relative;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #ff8c00;
-            flex-direction: column;
-            z-index: 1;
-        }
-        .dropdown-menu a {
-            padding: 10px;
-            background-color: #ffa64d;
-            color: #fff;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-        .dropdown-menu a:hover {
-            background-color: #ffd1a3;
-        }
-        .dropdown-container:hover .dropdown-menu {
-            display: flex;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .content {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        footer {
-            background-color: #f8f9fa;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            width: 80%;
-            margin: 20px auto;
-            position: relative;
-            font-family: 'Georgia', serif;
-            font-style: italic;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Computing & AI — SustAInability</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Study group on quantum computing and AI for sustainability: algorithms, simulation, optimization, and education links." />
 </head>
 <body>
-    <header>
-        <h1>Quantum Computers and AI</h1>
-        <p>Exploring Quantum Computing and Its Impact on Artificial Intelligence</p>
-    </header>
-    
-    <div id="nav-placeholder"></div>
-<script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('nav-placeholder').innerHTML = data;
-        });
-</script>
-    
-    <div class="container">
-        <div class="content">
-            <h2>About the Study Group</h2>
-            <p>The <strong>Quantum Computers and AI Study Group</strong> is focused on exploring the exciting possibilities of quantum computing and its potential impact on the future of technology. Quantum computers are fundamentally different from classical computers—they leverage the principles of quantum mechanics, such as superposition and entanglement, to solve problems that are currently intractable for classical machines. This means quantum computing has the potential to revolutionize industries like cryptography, optimization, and artificial intelligence by providing unprecedented computational power.</p>
-            <p>Our group is designed for those who are eager to understand and learn about the cutting-edge field of quantum computing. We believe in learning by doing, and this will be a volunteer-based initiative where we explore these concepts together, mentor one another, and grow collectively. Mentorship will be provided by <a href="https://www.srh-hochschule-heidelberg.de/hochschule/hochschulteam/enis-yazici/">Enis Yazıcı</a>, who has a strong background in physics and engineering, currently teaching at SRH University Heidelberg. For more information or to join the group, please contact Enis Yazıcı at <a href="mailto:enis.yazici@srh.de">enis.yazici@srh.de</a>.</p>
-            
-            <h2>Areas of Study</h2>
-            <ul>
-                <li><strong>Quantum Mechanics Basics:</strong> Understanding fundamental concepts such as superposition, entanglement, and the uncertainty principle.</li>
-                <li><strong>Quantum Algorithms:</strong> Exploring quantum algorithms, including Grover's and Shor's algorithms, and understanding their advantages over classical algorithms.</li>
-                <li><strong>Quantum Computing in AI:</strong> Investigating how quantum computing can enhance machine learning and AI, focusing on potential applications and benefits.</li>
-                <li><strong>Quantum Cryptography:</strong> Exploring quantum encryption methods and understanding how quantum mechanics can make data transmission more secure.</li>
-                            </ul>
-            
-            <h2>Join Us</h2>
-            <p>If you are curious about the future of computing and excited to learn about how quantum technologies can change the world, join our study group! We meet regularly to study quantum concepts, conduct simulations, and work on real-world applications of quantum computing and AI. Together, we will learn, experiment, and grow in our understanding of this groundbreaking field.</p>
-        </div>
-    </div>
+  <!-- Unified Header (matches site style) -->
+  <header>
+    <h1>Quantum Computing & AI</h1>
+    <p>Exploring quantum algorithms, simulation, and AI links for sustainable systems</p>
+  </header>
 
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+  <!-- Unified NAV -->
+  <div id="nav-placeholder"></div>
+  <script src="navLoader.js" defer></script>
+
+  <!-- Optional banner -->
+  <div class="banner-container">
+    <img src="banner.jpg" alt="Quantum computing banner" class="banner-image" style="width:100%;max-height:360px;object-fit:cover;" />
+  </div>
+
+  <div class="container">
+    <!-- About -->
+    <section class="content">
+      <h2>About the Study Group</h2>
+      <p>
+        The <strong>Quantum Computing & AI</strong> group investigates where quantum methods can complement classical analytics for
+        sustainability. We connect fundamentals (states, gates, measurement) with applications (optimization, simulation,
+        machine learning) and emphasize clear, reproducible experiments using open tools.
+      </p>
+      <p>
+        Mentorship: <a href="https://www.srh-hochschule-heidelberg.de/hochschule/hochschulteam/enis-yazici/" target="_blank" rel="noopener">Enis Yazıcı</a> — contact: <a href="mailto:enis.yazici@srh.de">enis.yazici@srh.de</a>.
+      </p>
+    </section>
+
+    <!-- Focus Areas -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Focus Areas</h2>
+      <ul>
+        <li><strong>Quantum Essentials:</strong> states & superposition, entanglement, measurement, circuit model.</li>
+        <li><strong>Algorithms:</strong> amplitude amplification (Grover), period finding (Shor ideas), variational methods (VQE/QAOA).</li>
+        <li><strong>Optimization for Sustainability:</strong> routing, grid balancing, assignment problems; mapping to Ising/QUBO.</li>
+        <li><strong>Quantum‑inspired ML:</strong> kernels, feature maps, and variational classifiers; benchmarking vs classical baselines.</li>
+        <li><strong>Simulation & Materials:</strong> toy Hamiltonians, simple Trotterization ideas; education‑friendly demos.</li>
+      </ul>
+    </section>
+
+    <!-- Study Links / Cross‑projects -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Related Projects</h2>
+      <p>
+        Our work links to other SustAInability streams:
+        <a href="ai_climate.html">AI & Data for Climate</a> ·
+        <a href="sustainability_physics.html">Physics for a Sustainable Future</a> ·
+        <a href="heidelberg_visit.html">Heidelberg Summer School 2025</a>
+      </p>
+    </section>
+
+    <!-- Visiting Student -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Visiting Student (Fall 2025)</h2>
+      <p>
+        <strong>Aisha Toichieva</strong> (University of Central Asia) is a three‑month exchange student at SRH Heidelberg, staying
+        through <strong>December 2025</strong>. She is developing a <em>hands‑on, simulation‑based</em> training module to promote quantum
+        computing within our community — focusing on beginner‑friendly circuit building, small variational workflows, and
+        simple optimization demos that can be reproduced in class notebooks.
+      </p>
+      <ul>
+        <li><strong>Focus:</strong> intro circuits, variational algorithms (VQE/QAOA‑style), and quantum‑inspired ML sketches</li>
+        <li><strong>Outputs:</strong> notebook labs, short demo scripts for workshops, and a quick‑start guide for instructors</li>
+      </ul>
+    </section>
+
+    <!-- Join -->
+    <section class="content" style="margin-top:1rem">
+      <h2>Join Us</h2>
+      <p>
+        We welcome motivated students across partner universities. Bring a problem idea (optimization, modeling, or education)
+        and we will prototype it together with clear benchmarks and documentation.
+      </p>
+      <div>
+        <a class="btn btn-primary" href="mailto:enis.yazici@srh.de">Contact</a>
+        <a class="btn btn-ghost" href="projects.html">Back to Projects →</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Unified Footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(t=>{ document.getElementById('footer').innerHTML = t; });
+  </script>
+
+  <!-- Language Switcher (site‑wide behavior) -->
+  <script>
+    function switchLanguage() {
+      const path = window.location.pathname;
+      const file = path.substring(path.lastIndexOf('/') + 1);
+      if (file.includes('_de.html')) {
+        window.location.href = file.replace('_de.html', '.html');
+      } else {
+        const base = file.replace('.html', '');
+        window.location.href = base + '_de.html';
+      }
+    }
+  </script>
 </body>
 </html>
