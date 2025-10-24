@@ -137,6 +137,12 @@ header p {
   text-decoration: none;
   margin-right: auto;
 }
+
+/* --- TEMP: Hide top-left site brand link --- */
+.site-nav .brand {
+  display: none;
+}
+
 .nav-toggle {
   background: none;
   border: 1px solid #ccc;
@@ -384,6 +390,7 @@ img {
     max-height: none;
   }
 }
+
 
 
 
