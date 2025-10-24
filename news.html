@@ -1,50 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SustAInability News</title>
-    <link rel="stylesheet" href="styles.css">
-    
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SustAInability — News & Updates</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Latest news, events, and reports from the SustAInability network."/>
 </head>
 <body>
-    <header>
-        <h1>SustAInability News</h1>
-        <p>Latest Updates on Our Project and Activities</p>
-    </header>
+  <!-- Unified Header -->
+  <header>
+    <h1>News & Updates</h1>
+    <p>Announcements, events, and reports from our cross-cultural education network</p>
+  </header>
 
-    
-<div id="nav-placeholder"></div>
-<script src="navLoader.js" defer></script>
+  <!-- Unified NAV -->
+  <div id="nav-placeholder"></div>
+  <script src="navLoader.js" defer></script>
 
-    
-    <div class="container">
+  <div class="container">
 
-              <div class="news-item">
-            <h2>Upcoming Event: Online Workshop - AI for Sustainability</h2>
-            <p><strong>March 27-28, 2025:</strong> Join us for a two-day international online event exploring AI-driven sustainability solutions! Researchers and students will share innovative approaches in climate resilience, smart water management, IoT-based monitoring, and AI-powered environmental projects.</p>
-            <p>🔹 <strong>Study Group Presentations</strong> - Get involved in ongoing research!<br>
-               🔹 <strong>Talks</strong> - Learn about AI sustainability applications<br>
-               🔹 <strong>Project Showcases</strong> - Real-world AI and IoT solutions<br>
-               🔹 <strong>Networking & Collaboration</strong> - Connect with global experts & researchers</p>
-            <p><strong>More details & registration:</strong> <a href="workshop1.html">Online Workshop: AI for Sustainability</a></p>
-        </div>
-      
-        <div class="news-item">
-            <h2>Project Kickoff Completed</h2>
-            <p><strong>November 2024:</strong> The SustAInability project successfully held its kickoff meeting online on <strong>November 21, 2024</strong>. Participants engaged in discussions about project goals, research collaborations, and the application process.</p>
-        </div>
-        
+    <!-- Latest / Featured -->
+    <article class="news-item">
+      <h2>Upcoming: Online Workshop II — AI & Immersive Tech for STEM (Nov 27–28, 2025)</h2>
+      <p>
+        Join our second online workshop focused on AI and immersive technologies (VR/AR) in STEM education.
+        Two mornings of short talks, demos, and discussions with students and experts.
+      </p>
+      <ul>
+        <li><strong>Dates:</strong> 27–28 November 2025</li>
+        <li><strong>Time:</strong> 09:00–12:00 (Germany) / 11:00–14:00 (Turkey) / 13:00–16:00 (Kyrgyzstan) / 14:00–17:00 (Cambodia)</li>
+        <li><strong>Format:</strong> Online — Microsoft Teams</li>
+      </ul>
+      <p>
+        <a class="btn btn-primary" href="https://forms.office.com/e/zbrWFmHjrJ" target="_blank" rel="noopener">📝 Register (Microsoft Forms)</a>
+        <a class="btn btn-ghost" href="workshop2.html">Event page →</a>
+      </p>
+    </article>
 
-    </div>
+    <!-- Past events -->
+    <article class="news-item">
+      <h2>Report: Online Workshop I — AI for Sustainability (Mar 27–28, 2025)</h2>
+      <p>
+        Two-day international workshop with ~50 participants. Talks and study-group pitches on IoT sensing, AI for
+        environmental monitoring, Smart Water, and education. Read the full recap with highlights and resources.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="workshop1.html">Read the workshop report →</a>
+      </p>
+    </article>
 
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+    <article class="news-item">
+      <h2>Heidelberg Summer School 2025 — Program & Highlights</h2>
+      <p>
+        Two weeks of hands-on learning and cultural exchange in Heidelberg and the Alps: embedded systems, AI, quantum,
+        guided city/castle tours, and group projects culminating in a demo day.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="heidelberg_visit.html">See the program & highlights →</a>
+      </p>
+    </article>
+
+    <article class="news-item">
+      <h2>Project Kick-Off — Summary (Nov 21, 2024)</h2>
+      <p>
+        Our kickoff meeting introduced teams, aligned expectations, and formed initial study groups across partner universities.
+        Read the agenda recap and next steps.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="Kickoff_Meeting.html">Kick-Off report →</a>
+      </p>
+    </article>
+
+  </div>
+
+  <!-- Unified Footer -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html').then(r=>r.text()).then(t=>{ document.getElementById('footer').innerHTML = t; });
+  </script>
 </body>
 </html>
