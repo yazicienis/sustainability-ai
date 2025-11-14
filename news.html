@@ -40,13 +40,15 @@
 
     <!-- Past events -->
     <article class="news-item">
-      <h2>Report: Online Workshop I — AI for Sustainability (Mar 27–28, 2025)</h2>
+      <h2>Report: SustAInability at SRH Symposium “Sustainable Development” (Sept 25–26, 2025)</h2>
       <p>
-        Two-day international workshop with ~50 participants. Talks and study-group pitches on IoT sensing, AI for
-        environmental monitoring, Smart Water, and education. Read the full recap with highlights and resources.
+        Our SustAInability project was represented at the SRH-wide symposium on sustainable development.
+        Exchange student <strong>Aisha Toichieva</strong> (University of Central Asia) presented our work on
+        AI-supported environmental monitoring, international partnerships, and student-centred project activities
+        in Heidelberg, Kyrgyzstan, and Cambodia.
       </p>
       <p>
-        <a class="btn btn-primary" href="workshop1.html">Read the workshop report →</a>
+        <a class="btn btn-primary" href="berlin.html">Read the session report →</a>
       </p>
     </article>
 
@@ -58,6 +60,17 @@
       </p>
       <p>
         <a class="btn btn-primary" href="heidelberg_visit.html">See the program & highlights →</a>
+      </p>
+    </article>
+
+    <article class="news-item">
+      <h2>Report: Online Workshop I — AI for Sustainability (Mar 27–28, 2025)</h2>
+      <p>
+        Two-day international workshop with ~50 participants. Talks and study-group pitches on IoT sensing, AI for
+        environmental monitoring, Smart Water, and education. Read the full recap with highlights and resources.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="workshop1.html">Read the workshop report →</a>
       </p>
     </article>
 
@@ -77,7 +90,9 @@
   <!-- Unified Footer -->
   <div id="footer"></div>
   <script>
-    fetch('footer.html').then(r=>r.text()).then(t=>{ document.getElementById('footer').innerHTML = t; });
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(t => { document.getElementById('footer').innerHTML = t; });
   </script>
 </body>
 </html>
