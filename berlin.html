@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- Header (same style as news.html) -->
   <header>
     <h1>SustAInability at the SRH Symposium “Sustainable Development”</h1>
     <p class="sub-heading">
@@ -17,15 +18,18 @@
     </p>
   </header>
 
+  <!-- NAV (same loader as news.html) -->
   <div id="nav-placeholder"></div>
   <script src="navLoader.js" defer></script>
 
+  <!-- Language switcher -->
   <div class="language-switcher">
     <a href="berlin.html" class="active">EN</a> |
     <a href="berlin_de.html">DE</a>
   </div>
 
-  <main class="content">
+  <!-- Main content wrapped in .container like news.html -->
+  <div class="container content">
     <p class="breadcrumb">
       <a href="index.html">Home</a> &gt;
       <a href="news.html">News</a> &gt;
@@ -71,18 +75,20 @@
     <section>
       <h2>Presentation by Exchange Student Aisha Toichieva</h2>
 
-        <div class="image-container">
-    <img src="berlin_aisha.jpg" alt="Aisha Toichieva presenting at the SRH Symposium" class="responsive-image">
-    <p class="caption">Aisha Toichieva presenting the SustAInability project at the SRH Symposium.</p>
-    </div>
-      
+      <div class="image-container">
+        <img src="berlin_aisha.jpg"
+             alt="Aisha Toichieva presenting the SustAInability project at the SRH Symposium"
+             class="responsive-image">
+        <p class="caption">
+          Aisha Toichieva presenting the SustAInability project at the SRH Symposium.
+        </p>
+      </div>
+
       <p>
         The session presentation was delivered by <strong>Aisha Toichieva</strong>, an exchange student from the
         University of Central Asia, who stayed in Heidelberg for three months within the SustAInability project.
       </p>
-      <p>
-        In her talk, Aisha:
-      </p>
+      <p>In her talk, Aisha:</p>
       <ul>
         <li>Introduced the international setup of SustAInability and the motivation for focusing on climate and environmental issues.</li>
         <li>Explained how AI techniques and IoT-based data acquisition can help to monitor local environmental conditions in Central Asia and Southeast Asia.</li>
@@ -145,7 +151,7 @@
       </p>
     </section>
 
-    <!-- Optional: adjust the file path if you want to link the proposal PDF -->
+    <!-- Optional download block -->
     <!--
     <section>
       <h2>Downloads</h2>
@@ -156,9 +162,14 @@
       </p>
     </section>
     -->
-  </main>
+  </div>
 
-  <div id="footer-placeholder"></div>
-  <script src="footerLoader.js" defer></script>
+  <!-- Footer (same pattern as news.html) -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(t => { document.getElementById('footer').innerHTML = t; });
+  </script>
 </body>
 </html>
