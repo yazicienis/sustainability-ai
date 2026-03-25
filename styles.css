@@ -1,4 +1,9 @@
 /* =========================================================
+   Google Fonts — Inter
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =========================================================
    Global Reset & Base Styles
 ========================================================= */
 * {
@@ -9,10 +14,10 @@
 
 html, body {
   height: 100%;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f8fa;
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.65;
+  color: #1a2233;
+  background-color: #f4f7fb;
 }
 
 /* =========================================================
@@ -21,17 +26,25 @@ html, body {
 a {
   color: #003366;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 a:hover {
-  color: #ff8c00;
+  color: #f59e0b;
   text-decoration: underline;
 }
 
 h1, h2, h3, h4 {
   color: #003366;
   margin-bottom: 0.75em;
+  line-height: 1.25;
+  font-weight: 700;
 }
+
+h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); }
+h2 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h3 { font-size: clamp(1.05rem, 2.5vw, 1.35rem); }
+h4 { font-size: clamp(0.95rem, 2vw, 1.1rem); }
+
 p {
   margin-bottom: 1em;
 }
@@ -40,36 +53,41 @@ p {
    Header / Hero Area
 ========================================================= */
 header {
-  background-color: #fff;
-  color: #003366;
+  background: linear-gradient(135deg, #002855 0%, #003d82 60%, #004fa3 100%);
+  color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
-  border-bottom: 2px solid #ff8c00;
+  padding: clamp(2rem, 5vw, 3.5rem) 1.25rem;
+  border-bottom: 3px solid #f59e0b;
 }
 
 header h1 {
-  margin-bottom: 0.5rem;
-}
-header p {
-  color: #3b4f6b;   
-  font-weight: 600; 
-  font-size: 1.05rem;
+  color: #fff;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
 }
 
+header p {
+  color: #c8d9f0;
+  font-weight: 500;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  margin-bottom: 0;
+}
 
 /* =========================================================
    Layout Containers
 ========================================================= */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 1.5rem 1.25rem;
 }
+
 .content {
   background: #fff;
-  padding: 1.25rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  margin-bottom: 1rem;
 }
 
 /* =========================================================
@@ -82,7 +100,7 @@ header p {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;
   display: block;
 }
 
@@ -91,15 +109,37 @@ header p {
 ========================================================= */
 .project, .news-item {
   background: #fff;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  max-width: 900px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.25rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  max-width: 860px;
+  border-left: 4px solid #f59e0b;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.project:hover, .news-item:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+  transform: translateY(-2px);
 }
 .project h3, .news-item h2 {
   color: #003366;
 }
+
+/* Cards (event cards) */
+article.card {
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+article.card:hover {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.11);
+  transform: translateY(-2px);
+}
+
+/* Muted helper */
+.muted { color: #4a5568; font-size: 0.97rem; }
 
 /* =========================================================
    Logos Row
@@ -117,58 +157,66 @@ header p {
 }
 
 /* =========================================================
-   Modern NAVBAR (matches new nav.html)
+   Modern NAVBAR
 ========================================================= */
 .site-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 0.5rem 0.75rem; 
+  border-bottom: 2px solid #f59e0b;
+  padding: 0.6rem 1.25rem;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
+
 .site-nav .brand {
   font-weight: 700;
   color: #003366;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   text-decoration: none;
   margin-right: auto;
+  letter-spacing: -0.01em;
 }
-
-/* --- TEMP: Hide top-left site brand link --- */
-.site-nav .brand {
-  display: none;
+.site-nav .brand:hover {
+  color: #f59e0b;
+  text-decoration: none;
 }
 
 .nav-toggle {
   background: none;
   border: 1px solid #ccc;
   border-radius: 6px;
-  padding: 0.25rem 0.5rem;
-  font-size: 1.25rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 1.2rem;
   cursor: pointer;
   color: #003366;
 }
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: .6rem;
+  gap: 0.25rem;
   flex-wrap: wrap;
 }
 .nav-menu a {
   color: #003366;
   font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
 }
 .nav-menu a[aria-current="page"] {
-  color: #ff8c00;
-  font-weight: 600;
+  color: #f59e0b;
+  font-weight: 700;
 }
 .nav-menu a:hover {
-  color: #ff8c00;
+  color: #f59e0b;
+  text-decoration: none;
+  background: #fdf6e3;
 }
+
 .dropdown {
   position: relative;
 }
@@ -177,117 +225,195 @@ header p {
   border: none;
   color: #003366;
   font-weight: 600;
+  font-family: 'Inter', Arial, sans-serif;
   cursor: pointer;
-  padding: .35rem .5rem;     /* daralt */
-  font-size: .95rem;         /* küçült */
+  padding: 0.3rem 0.5rem;
+  font-size: 0.95rem;
   line-height: 1.2;
+  border-radius: 6px;
+}
+.dropbtn:hover {
+  color: #f59e0b;
+  background: #fdf6e3;
 }
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  min-width: 180px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  border: 1px solid #e8ecf0;
+  border-radius: 10px;
+  min-width: 210px;
+  max-width: 270px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
   padding: 0.5rem 0;
+  z-index: 1001;
 }
 .dropdown-menu.open {
   display: block;
 }
 .dropdown-menu a {
   display: block;
-  padding: 0.5rem 1rem;
-  color: #003366;
+  padding: 0.55rem 1.1rem;
+  color: #1a2233;
+  font-size: 0.93rem;
+  border-radius: 0;
 }
 .dropdown-menu a:hover {
-  background-color: #f5f5f5;
+  background-color: #f4f7fb;
+  color: #003366;
+  text-decoration: none;
 }
+
+/* Right-align last dropdown (Partners) */
+.nav-menu > .dropdown:last-of-type .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
 .lang-switch {
   margin-left: auto;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.lang-switch a {
-  font-weight: 600;
-}
-.lang-switch a:hover {
-  color: #ff8c00;
-}
+.lang-switch a { font-weight: 600; }
+.lang-switch a:hover { color: #f59e0b; }
 
-/* ---------- Mobile Menu ---------- */
+/* Mobile hamburger */
+@media (min-width: 821px) {
+  .nav-toggle { display: none; }
+}
 @media (max-width: 820px) {
+  .nav-toggle { display: inline-block; }
   .nav-menu {
     display: none;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+    gap: 0.1rem;
   }
-  .nav-menu.open {
-    display: flex;
-  }
-  .lang-switch {
-    margin-left: 0;
+  .nav-menu.open { display: flex; }
+  .lang-switch { margin-left: 0; }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    width: 100%;
+    max-height: none;
+    margin-top: 0.25rem;
   }
 }
 
 /* =========================================================
-   FOOTER
+   Buttons
+========================================================= */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #003366;
+  font-weight: 600;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary {
+  background: #003366;
+  color: #fff;
+  border-color: #003366;
+}
+.btn-primary:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: #fff;
+  color: #003366;
+  border-color: #ccd6e0;
+  margin-left: 0.5rem;
+}
+.btn-ghost:hover {
+  background: #f4f7fb;
+  border-color: #003366;
+  text-decoration: none;
+}
+
+/* =========================================================
+   Footer
 ========================================================= */
 .site-footer {
   text-align: center;
-  padding: 2rem 1rem;
-  background: #f9f9f9;
-  color: #333;
-  font-size: 0.95rem;
-  border-top: 1px solid #ddd;
+  padding: 2.5rem 1.25rem;
+  background: #1a2233;
+  color: #c8d9f0;
+  font-size: 0.92rem;
+  border-top: 3px solid #f59e0b;
+  margin-top: 2rem;
 }
 .site-footer p {
-  max-width: 900px;
+  max-width: 820px;
   margin: 0 auto 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #c8d9f0;
+}
+.site-footer a {
+  color: #f59e0b;
+}
+.site-footer a:hover {
+  color: #fff;
 }
 .footer-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 .footer-logos img {
-  max-height: 60px;
+  max-height: 54px;
   width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+.footer-logos img:hover {
+  opacity: 1;
 }
 .footer-social a {
-  color: #003366;
-  font-size: 1.2rem;
-  margin: 0 0.4rem;
-  transition: color 0.3s ease;
+  color: #c8d9f0;
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
+  transition: color 0.25s ease;
 }
 .footer-social a:hover {
-  color: #ff8c00;
+  color: #f59e0b;
 }
 
 /* =========================================================
-   Miscellaneous Utility Classes
+   Miscellaneous Utility
 ========================================================= */
 .sub-heading {
   display: block;
   text-align: center;
-  margin: 10px 0 20px 0;
-  font-size: 1.1rem;
-  color: #555;
+  margin: 0.5rem 0 1.5rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #c8d9f0;
 }
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
+
 .drop-area {
   border: 2px dashed #ccc;
   padding: 20px;
@@ -301,119 +427,52 @@ img {
 }
 
 /* =========================================================
-   Dark Mode Support (optional)
+   Dark Mode
 ========================================================= */
 @media (prefers-color-scheme: dark) {
-  /* Metin ve zemin zaten var; başlık & linkleri düzeltelim */
-  h1, h2, h3, h4 { color: #e6f0ff; }              /* açık mavi-beyaz */
-  a { color: #9ec1ff; }                           /* linkler */
-  a:hover { color: #ffb84d; }
+  html, body {
+    background-color: #111827;
+    color: #e2e8f0;
+  }
+  h1, h2, h3, h4 { color: #e2e8f0; }
+  a { color: #93c5fd; }
+  a:hover { color: #fbbf24; }
 
-  /* Kart içi başlıkların mavisini bastır */
-  .project h3, .news-item h2 { color: #e6f0ff; }
+  header {
+    background: linear-gradient(135deg, #0a1628 0%, #0d2452 60%, #0f3470 100%);
+  }
 
-  /* Mobil menü için okunur renkler */
-  .site-nav, .dropdown-menu { background-color: #1a1d24; }
-  .nav-menu a, .dropbtn { color: #e6e6e6; }
-  .dropdown-menu a:hover { background: #2a2f3a; }
-}
-
-@media (prefers-color-scheme: dark) {
   .content, .project, .news-item {
-    background-color: #222834;   /* eskisi #1f242e idi, bir ton daha açık */
-    color: #eee;
-    box-shadow: 0 0 8px rgba(0,0,0,0.35);
+    background-color: #1e2a3b;
+    color: #e2e8f0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
   }
-}
+  .project h3, .news-item h2 { color: #e2e8f0; }
 
-@media (prefers-color-scheme: dark) {
-  header p { color: #cfd7e2; }   /* koyu zeminde okunur */
-}
+  article.card {
+    background: #1e2a3b;
+    color: #e2e8f0;
+  }
+  .muted { color: #94a3b8; }
 
-
-/* Hamburger butonunu sadece mobilde göster */
-@media (min-width: 821px) {
-  .nav-toggle { display: none; }
-}
-
-/* Mobilde menü kapalı başlasın, buton açıp kapatsın */
-@media (max-width: 820px) {
-  .nav-toggle { display: inline-block; }
-  .nav-menu { display: none; }
-  .nav-menu.open { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin-top: 0.75rem; }
-}
-
-/* --- Buttons --- */
-.btn {
-  display: inline-block;
-  padding: 0.7rem 1rem;
-  border-radius: 10px;
-  border: 1px solid #003366;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-primary {
-  background: #003366;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: #ff8c00;
-  border-color: #ff8c00;
-  color: #fff;
-}
-
-.btn-ghost {
-  background: #fff;
-  color: #003366;
-  margin-left: 0.5rem;
-}
-
-.btn-ghost:hover {
-  background: #f2f4f7;
-}
-
-/* Dropdown temel */
-.dropdown { position: relative; }
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;                  /* varsayılan: sola aç */
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  min-width: 180px;
-  max-width: 260px;         /* genişliği sınırla */
-  max-height: 70vh;         /* taşarsa kaydır */
-  overflow-y: auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,.1);
-  padding: .5rem 0;
-  z-index: 1001;
-}
-
-/* Sağdaki son dropdown (Partners) sağa hizalansın, taşmasın */
-.nav-menu > .dropdown:last-of-type .dropdown-menu {
-  left: auto;
-  right: 0;                 /* sağ kenara yapıştır */
-}
-
-/* Mobilde dropdown menu normal akışta görünsün */
-@media (max-width: 820px) {
+  .site-nav {
+    background-color: #0f172a;
+    border-bottom-color: #f59e0b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  .site-nav .brand, .nav-menu a, .dropbtn { color: #e2e8f0; }
+  .nav-menu a:hover, .dropbtn:hover { color: #fbbf24; background: #1e2a3b; }
   .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: 1px solid #eee;
-    width: 100%;
-    max-height: none;
+    background: #1e2a3b;
+    border-color: #2d3748;
   }
+  .dropdown-menu a { color: #e2e8f0; }
+  .dropdown-menu a:hover { background: #2d3748; }
+
+  .btn-primary { background: #1d4ed8; border-color: #1d4ed8; }
+  .btn-primary:hover { background: #f59e0b; border-color: #f59e0b; }
+  .btn-ghost { background: #1e2a3b; color: #e2e8f0; border-color: #4a5568; }
+  .btn-ghost:hover { background: #2d3748; }
+
+  .site-footer { background: #0a1120; }
 }
-
-
-
-
-
-
-
