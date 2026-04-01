@@ -414,6 +414,52 @@ img {
   border-radius: 6px;
 }
 
+.slide-figure {
+  margin: 1.5rem 0 2rem 0;
+}
+
+.slide-figure img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  display: block;
+}
+
+.slide-figure figcaption {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.45rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.slide-figure-right {
+  float: right;
+  width: 48%;
+  margin: 0 0 1.5rem 2rem;
+}
+
+.slide-figure-right img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  display: block;
+}
+
+.slide-figure-right figcaption {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.45rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .drop-area {
   border: 2px dashed #ccc;
   padding: 20px;
