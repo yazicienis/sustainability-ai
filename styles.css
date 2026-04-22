@@ -377,15 +377,13 @@ article.card:hover {
   align-items: center;
   gap: 1.25rem;
   margin-bottom: 1.25rem;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
 }
 .footer-logos img {
   max-height: 54px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
-}
-.footer-logos img:hover {
-  opacity: 1;
 }
 .footer-social a {
   color: #c8d9f0;
